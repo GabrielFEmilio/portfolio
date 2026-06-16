@@ -1,44 +1,124 @@
-# Portfolio Gabriel
+# Portfolio Gabriel Emilio
 
-🌐 **Português** · [English](README.md) · [Français](README.fr.md)
+**Português** | [English](README.md) | [Français](README.fr.md)
 
-Site-portfólio dark premium, em **um único arquivo** (`index.html`). Sem build, sem dependências obrigatórias. Abre dando duplo clique.
+Portfólio profissional de engenharia de software criado para apresentar Gabriel Emilio, seus projetos, sua base técnica, seus sites publicados e a atividade pública do GitHub em um único lugar.
 
-## Como os projetos abrem
-Clicar num card abre um modal com preview + **"Abrir site completo"** (nova aba) e **"Ver código"**. Marcar `embeddable:true` adiciona a opção de carregar o site dentro do modal. O iframe entra sob demanda e não pesa o carregamento. A maioria dos sites bloqueia iframe, então o padrão é `false`.
+O objetivo é direto: permitir que um líder técnico, recrutador ou cliente entenda rapidamente o que eu construo, quais tecnologias domino e como rodar o projeto localmente, sem precisar abrir os arquivos JavaScript para adivinhar o funcionamento do site.
 
-## Idiomas
-PT / EN / FR no topo direito. Toda a interface e as descrições dos projetos têm os 3 idiomas dentro do `CONFIG`.
+## Objetivo do Site
 
-## Receber mensagens no e-mail
-Como o site é estático, ele não deve guardar senha SMTP/Gmail no JavaScript. Use um endpoint externo:
+Este site funciona como um perfil técnico vivo. Ele reúne projetos, repositórios públicos, sites publicados, canais de contato e uma seção visual chamada "Code Sphere", que transforma dados de linguagens do GitHub em uma constelação interativa.
 
-1. Crie um formulário em **Formspree**: https://formspree.io
-2. Configure o destino como `gabriel.emilio.dev@gmail.com`.
-3. Copie a URL do endpoint, algo como `https://formspree.io/f/abcdwxyz`.
-4. Cole no `CONFIG`:
+O portfólio foi pensado para comunicar:
 
-```js
-formEndpoint: "https://formspree.io/f/abcdwxyz",
+- quem é Gabriel Emilio como estudante de Engenharia de Computação e desenvolvedor em formação;
+- quais tecnologias fazem parte da stack atual;
+- quais projetos estão publicados ou disponíveis no GitHub;
+- como a interface, os idiomas e as integrações técnicas foram implementados.
+
+## Funcionalidades Principais
+
+- Portfólio responsivo em página única, com suporte a português, inglês e francês.
+- Cards de projetos carregados a partir de repositórios públicos do GitHub.
+- Seção de sites publicados para projetos próprios, entregas e trabalhos em produção.
+- "Code Sphere" com estatísticas de repositórios, repositórios recentes e constelação de linguagens.
+- Formulário de contato integrado ao Formspree, com fallback para composição no Gmail.
+- SEO com metadados, Open Graph, dados estruturados, `robots.txt` e `sitemap.xml`.
+- Animações e interações que respeitam `prefers-reduced-motion`.
+
+## Tecnologias
+
+### Stack técnica apresentada no portfólio
+
+- C
+- Java
+- JavaScript (JS)
+
+### Tecnologias usadas na construção do site
+
+- HTML5
+- CSS3
+- JavaScript
+- Canvas API
+- GitHub REST API
+- Formspree
+- Google Fonts
+- GSAP via CDNJS
+
+O projeto não exige build nem instalação de pacotes. A aplicação principal está em `index.html`, com imagens e arquivos de apoio dentro de `assets/`.
+
+## Como Rodar Localmente
+
+1. Clone ou baixe este repositório.
+2. Abra um terminal dentro da pasta do projeto.
+3. Inicie um servidor estático local:
+
+```bash
+python -m http.server 5500
 ```
 
-Com `formEndpoint` vazio, o site abre uma janela de composicao do Gmail ja preenchida com a mensagem.
+4. Acesse no navegador:
 
-## Publicar (grátis)
-- **GitHub Pages**: suba a pasta num repo → Settings → Pages → branch `main`.
-- **Vercel / Netlify**: arraste a pasta em vercel.com/new ou app.netlify.com/drop.
+```txt
+http://localhost:5500
+```
 
-## SEO / metadados
-O `index.html`, o `robots.txt` e o `sitemap.xml` usam como URL canonica:
+Também é possível abrir o `index.html` diretamente no navegador, mas o servidor local é recomendado porque APIs externas, fontes e comportamento do navegador ficam mais próximos do ambiente publicado.
+
+Não há dependências para instalar:
+
+```bash
+# nada para instalar
+```
+
+## Estrutura do Projeto
+
+```txt
+.
+├── index.html
+├── assets/
+│   ├── profile-portrait.png
+│   ├── profile-portrait.webp
+│   ├── css/
+│   └── js/
+├── robots.txt
+├── sitemap.xml
+├── README.md
+├── README.ptbr.md
+└── README.fr.md
+```
+
+## Configuração
+
+A maior parte dos dados editáveis do portfólio fica no objeto `CONFIG`, dentro de `index.html`:
+
+- usuário do GitHub;
+- e-mail de contato e endpoint do Formspree;
+- stack em destaque;
+- sites publicados;
+- ajustes manuais de linguagens por repositório;
+- textos da interface em três idiomas.
+
+Se `formEndpoint` estiver vazio, o fluxo de contato abre uma janela do Gmail já preenchida.
+
+## Publicação
+
+Como o site é estático, ele pode ser publicado em:
+
+- GitHub Pages
+- Vercel
+- Netlify
+- qualquer hospedagem de arquivos estáticos
+
+A URL canônica configurada em `index.html`, `robots.txt` e `sitemap.xml` é:
 
 ```txt
 https://feltrinemilio.dev/
 ```
 
-Se publicar em outro dominio, atualize essa URL nos metadados do `<head>`, no `robots.txt` e no `sitemap.xml`.
+Se publicar em outro domínio, atualize essa URL nos três arquivos.
 
-## Apoio na criação
-Este site foi criado por Gabriel Emilio com apoio de ferramentas de IA, incluindo Codex e Claude, usadas como auxiliares no desenvolvimento, revisão e refinamento do projeto.
+## Apoio na Criação
 
-## Notas técnicas
-Animações nativas (Canvas + IntersectionObserver + rAF), sem CDN obrigatório, então funciona offline e abrindo direto do arquivo. Respeita `prefers-reduced-motion`. Os arquivos antigos em `assets/css` e `assets/js` não são mais usados (tudo está dentro do `index.html`) e podem ser apagados.
+Este portfólio foi criado por Gabriel Emilio com apoio de ferramentas de IA, incluindo Codex e Claude, usadas como assistentes no desenvolvimento, revisão e refinamento do projeto.

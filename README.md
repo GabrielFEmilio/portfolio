@@ -1,44 +1,124 @@
-# Portfolio Gabriel
+# Gabriel Emilio Portfolio
 
-🌐 **English** · [Português](README.ptbr.md) · [Français](README.fr.md)
+[Português](README.ptbr.md) | **English** | [Français](README.fr.md)
 
-A premium dark portfolio site in **a single file** (`index.html`). No build step, no required dependencies. Just double-click to open.
+Professional software engineering portfolio built to present Gabriel Emilio's work, technical range, published projects and public GitHub activity in one place.
 
-## How projects open
-Clicking a card opens a modal with a preview + **"Open full site"** (new tab) and **"View code"**. Setting `embeddable:true` adds the option to load the site inside the modal. The iframe loads on demand and doesn't slow down the initial load. Most sites block iframes, so the default is `false`.
+The goal is simple: give a technical lead or recruiter enough context to understand what I build, which technologies I work with and how to inspect the project without having to reverse-engineer the JavaScript files.
 
-## Languages
-PT / EN / FR in the top right. The entire interface and the project descriptions are available in all 3 languages inside `CONFIG`.
+## Site Objective
 
-## Receiving messages by email
-Because the site is static, it should not store an SMTP/Gmail password in JavaScript. Use an external endpoint:
+This site works as a living technical profile. It highlights software projects, public repositories, published websites, contact channels and a visual "Code Sphere" that turns GitHub language data into an interactive language constellation.
 
-1. Create a form on **Formspree**: https://formspree.io
-2. Set the destination to `gabriel.emilio.dev@gmail.com`.
-3. Copy the endpoint URL, something like `https://formspree.io/f/abcdwxyz`.
-4. Paste it into `CONFIG`:
+The portfolio is designed to communicate:
 
-```js
-formEndpoint: "https://formspree.io/f/abcdwxyz",
+- who Gabriel Emilio is as a software engineering student and developer;
+- which technologies are part of the current stack;
+- which projects are live or available on GitHub;
+- how the interface, multilingual content and GitHub integrations were implemented.
+
+## Main Features
+
+- Responsive one-page portfolio in Portuguese, English and French.
+- Project cards loaded from public GitHub repositories.
+- Published-sites section for deployed work and client/self-authored projects.
+- "Code Sphere" with repository stats, recent repositories and language constellation.
+- Contact form connected to Formspree, with Gmail fallback.
+- SEO metadata, Open Graph tags, structured data, `robots.txt` and `sitemap.xml`.
+- Motion-aware interface that respects `prefers-reduced-motion`.
+
+## Technologies
+
+### Core technical stack presented in the portfolio
+
+- C
+- Java
+- JavaScript (JS)
+
+### Technologies used to build the site
+
+- HTML5
+- CSS3
+- JavaScript
+- Canvas API
+- GitHub REST API
+- Formspree
+- Google Fonts
+- GSAP via CDNJS
+
+The project does not require a build step or package installation. The main application lives in `index.html`, with image assets under `assets/`.
+
+## How to Run Locally
+
+1. Clone or download this repository.
+2. Open a terminal in the project folder.
+3. Start a local static server:
+
+```bash
+python -m http.server 5500
 ```
 
-When `formEndpoint` is empty, the site opens a Gmail compose window already filled in with the message.
+4. Open the site in the browser:
 
-## Publish (free)
-- **GitHub Pages**: push the folder to a repo → Settings → Pages → branch `main`.
-- **Vercel / Netlify**: drag the folder onto vercel.com/new or app.netlify.com/drop.
+```txt
+http://localhost:5500
+```
 
-## SEO / metadata
-`index.html`, `robots.txt`, and `sitemap.xml` use this canonical URL:
+You can also open `index.html` directly in the browser, but a local server is recommended because external APIs, fonts and browser behavior are closer to production.
+
+No dependency installation is required:
+
+```bash
+# nothing to install
+```
+
+## Project Structure
+
+```txt
+.
+├── index.html
+├── assets/
+│   ├── profile-portrait.png
+│   ├── profile-portrait.webp
+│   ├── css/
+│   └── js/
+├── robots.txt
+├── sitemap.xml
+├── README.md
+├── README.ptbr.md
+└── README.fr.md
+```
+
+## Configuration
+
+Most editable portfolio data is inside the `CONFIG` object in `index.html`:
+
+- GitHub username;
+- contact email and Formspree endpoint;
+- highlighted stack;
+- published sites;
+- repository language overrides;
+- multilingual interface text.
+
+If `formEndpoint` is empty, the contact flow opens a pre-filled Gmail compose window.
+
+## Publishing
+
+Because the site is static, it can be deployed on:
+
+- GitHub Pages
+- Vercel
+- Netlify
+- any static hosting service
+
+The canonical URL currently used in `index.html`, `robots.txt` and `sitemap.xml` is:
 
 ```txt
 https://feltrinemilio.dev/
 ```
 
-If you publish to a different domain, update this URL in the `<head>` metadata, in `robots.txt`, and in `sitemap.xml`.
+Update that URL in all three files if the project is published under a different domain.
 
-## Creation support
-This site was created by Gabriel Emilio with the support of AI tools, including Codex and Claude, used as assistants in the development, review, and refinement of the project.
+## Creation Support
 
-## Technical notes
-Native animations (Canvas + IntersectionObserver + rAF), no required CDN, so it works offline and when opened directly from the file. It respects `prefers-reduced-motion`. The old files in `assets/css` and `assets/js` are no longer used (everything is inside `index.html`) and can be deleted.
+This portfolio was created by Gabriel Emilio with support from AI tools, including Codex and Claude, used as assistants for development, review and refinement.

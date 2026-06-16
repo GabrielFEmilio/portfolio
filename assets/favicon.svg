@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Minimal orbital constellation favicon">
+  <defs>
+    <linearGradient id="cyanLine" x1="92" y1="92" x2="420" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0067d8"/>
+      <stop offset=".48" stop-color="#09c8ff"/>
+      <stop offset="1" stop-color="#68eaff"/>
+    </linearGradient>
+    <radialGradient id="nodeFill" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#d6faff"/>
+      <stop offset=".34" stop-color="#14cfff"/>
+      <stop offset="1" stop-color="#044cab"/>
+    </radialGradient>
+    <filter id="cyanGlow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="2.3" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 .02 0 0 0 0 .58 0 0 0 0 1 0 0 0 .34 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(-25.6 -25.6) scale(1.1)">
+    <g fill="none" stroke="#001329" stroke-linecap="round" stroke-linejoin="round" opacity=".98">
+      <path d="M112 324a170 170 0 0 1 248-184" stroke-width="15"/>
+      <path d="M386 154a170 170 0 0 1-52 264" stroke-width="14"/>
+      <path d="M151 286a118 118 0 0 1 207-80" stroke-width="12"/>
+      <path d="M160 336a118 118 0 0 0 190-92" stroke-width="12"/>
+      <path d="M256 256 104 128M256 256 346 116M256 256 424 258M256 256 288 410M256 256 104 340" stroke-width="16"/>
+    </g>
+    <g fill="#001329" opacity=".99">
+      <circle cx="256" cy="256" r="78"/>
+      <circle cx="104" cy="128" r="40"/>
+      <circle cx="346" cy="116" r="58"/>
+      <circle cx="424" cy="258" r="40"/>
+      <circle cx="288" cy="410" r="45"/>
+      <circle cx="135" cy="323" r="62"/>
+    </g>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M112 324a170 170 0 0 1 248-184" stroke="url(#cyanLine)" stroke-width="8.8" filter="url(#cyanGlow)"/>
+      <path d="M386 154a170 170 0 0 1-52 264" stroke="#f8fbff" stroke-width="7.6" opacity=".96" filter="url(#cyanGlow)"/>
+      <path d="M151 286a118 118 0 0 1 207-80" stroke="#dff8ff" stroke-width="6.4" opacity=".93"/>
+      <path d="M160 336a118 118 0 0 0 190-92" stroke="url(#cyanLine)" stroke-width="6.4" opacity=".92"/>
+      <path d="M256 256 104 128M256 256 346 116M256 256 424 258M256 256 288 410M256 256 104 340" stroke="#b8f3ff" stroke-width="10.4" opacity=".9"/>
+    </g>
+    <g filter="url(#cyanGlow)">
+      <circle cx="256" cy="256" r="68" fill="url(#nodeFill)"/>
+      <circle cx="104" cy="128" r="31" fill="url(#nodeFill)"/>
+      <circle cx="346" cy="116" r="48" fill="url(#nodeFill)"/>
+      <circle cx="424" cy="258" r="31" fill="url(#nodeFill)"/>
+      <circle cx="288" cy="410" r="35" fill="url(#nodeFill)"/>
+      <circle cx="104" cy="340" r="52" fill="url(#nodeFill)"/>
+    </g>
+  </g>
+</svg>

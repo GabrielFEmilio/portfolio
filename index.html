@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#04050a" />
+<meta name="color-scheme" content="dark" />
+<title>Gabriel Emilio | Portfólio de Engenharia de Software</title>
+<meta name="description" content="Site-portfólio de Gabriel Emilio, estudante de Engenharia de Computação no IFSP e desenvolvedor em formação. Reúne projetos, estudos e soluções digitais com foco em clareza técnica, performance, experiência de uso e evolução contínua." />
+<meta name="author" content="Gabriel Emilio" />
+<meta name="creator" content="Gabriel Emilio" />
+<meta name="publisher" content="Gabriel Emilio" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="keywords" content="Gabriel Emilio, portfólio Gabriel Emilio, engenheiro de software, estudante de Engenharia de Computação, IFSP, software engineer, desenvolvedor web, portfolio de tecnologia, desenvolvimento de software, projetos digitais" />
+<meta name="application-name" content="Portfolio Gabriel Emilio" />
+<meta http-equiv="content-language" content="pt-BR" />
+<link rel="canonical" href="https://feltrinemilio.dev/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Portfolio Gabriel Emilio" />
+<meta property="og:title" content="Gabriel Emilio | Portfólio de Engenharia de Software" />
+<meta property="og:description" content="Site-portfólio de Gabriel Emilio: estudante de Engenharia de Computação no IFSP e desenvolvedor em formação, reunindo projetos, estudos e soluções digitais." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://feltrinemilio.dev/" />
+<meta property="og:image" content="https://feltrinemilio.dev/assets/profile-portrait.png" />
+<meta property="og:image:alt" content="Retrato de Gabriel Emilio no site-portfolio de engenharia de software" />
+<meta property="og:image:type" content="image/png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gabriel Emilio | Portfólio de Engenharia de Software" />
+<meta name="twitter:description" content="Estudante de Engenharia de Computação no IFSP e desenvolvedor em formação, reunindo projetos, estudos e soluções digitais." />
+<meta name="twitter:image" content="https://feltrinemilio.dev/assets/profile-portrait.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://feltrinemilio.dev/#person",
+      "name": "Gabriel Emilio",
+      "url": "https://feltrinemilio.dev/",
+      "image": "https://feltrinemilio.dev/assets/profile-portrait.png",
+      "jobTitle": "Engenheiro de Software",
+      "description": "Gabriel Emilio é estudante de Engenharia de Computação no IFSP e desenvolvedor em formação. Seu site-portfólio reúne projetos, estudos e soluções digitais com foco em clareza técnica, performance, experiência de uso e evolução contínua.",
+      "email": "mailto:gabriel.emilio.dev@gmail.com",
+      "sameAs": [
+        "https://github.com/GabrielFEmilio",
+        "https://www.linkedin.com/in/gabriel-emilio/"
+      ],
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "Instituto Federal de São Paulo",
+        "alternateName": "IFSP"
+      },
+      "knowsAbout": [
+        "Engenharia de Software",
+        "Engenharia de Computação",
+        "Desenvolvimento Web",
+        "Arquitetura de Software",
+        "Performance Web",
+        "Experiência de Usuário",
+        "Interfaces Interativas",
+        "Automação",
+        "Desenvolvimento de Jogos",
+        "Projetos Digitais"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://feltrinemilio.dev/#website",
+      "url": "https://feltrinemilio.dev/",
+      "name": "Portfolio Gabriel Emilio",
+      "description": "Site-portfólio de Gabriel Emilio com projetos, estudos, soluções digitais e canais de contato profissional.",
+      "inLanguage": ["pt-BR", "en", "fr"],
+      "about": {
+        "@id": "https://feltrinemilio.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://feltrinemilio.dev/#person"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://feltrinemilio.dev/#profile",
+      "url": "https://feltrinemilio.dev/",
+      "name": "Gabriel Emilio | Portfólio de Engenharia de Software",
+      "description": "Página profissional de Gabriel Emilio, estudante de Engenharia de Computação no IFSP e desenvolvedor em formação.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://feltrinemilio.dev/#website"
+      },
+      "mainEntity": {
+        "@id": "https://feltrinemilio.dev/#person"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+<style>
+:root{
+  --bg:#04050a; --bg2:#070912; --ink:#0a0d18; --ink2:#0c1020; --panel:rgba(13,17,30,.55);
+  --line:rgba(150,178,255,.11); --line2:rgba(150,178,255,.06);
+  --text:#eef0f7; --muted:#949bb2; --faint:#5a6178;
+  --cyan:#43d6ee; --blue:#5b8cff; --ice:#9cc0ff; --violet:#8a6bff; --indigo:#6f57ff;
+  --gold:#d9bd8c; --champ:#ecd9af;
+  --grad:linear-gradient(122deg,#9cc0ff 0%,#5b8cff 42%,#8a6bff 100%);
+  --grad-cv:linear-gradient(122deg,#43d6ee 0%,#5b8cff 50%,#8a6bff 100%);
+  --grad-gold:linear-gradient(120deg,#ecd9af,#d9bd8c);
+  --fd:"Syne",system-ui,sans-serif; --fb:"Inter",system-ui,sans-serif; --fm:"JetBrains Mono",ui-monospace,monospace;
+  --fh:"Fraunces",Georgia,"Times New Roman",serif;
+  --max:1220px; --pad:clamp(20px,5vw,64px); --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;color:inherit;background:none;border:none;cursor:pointer}
+img{display:block;max-width:100%}
+::selection{background:rgba(91,140,255,.3);color:#fff}
+@media (hover:hover) and (pointer:fine){body.cc,body.cc *{cursor:none}}
+
+/* ===== ambient layers ===== */
+#dust{position:fixed;inset:0;z-index:0;pointer-events:none}
+.neb{position:fixed;z-index:0;border-radius:50%;filter:blur(150px);pointer-events:none;will-change:transform}
+.n1{top:-24%;left:-18%;width:64vw;height:64vw;background:radial-gradient(circle,rgba(67,108,255,.22),transparent 62%)}
+.n2{bottom:-30%;right:-20%;width:66vw;height:66vw;background:radial-gradient(circle,rgba(138,107,255,.17),transparent 62%)}
+.n3{top:36%;left:50%;width:42vw;height:42vw;transform:translateX(-50%);background:radial-gradient(circle,rgba(217,189,140,.07),transparent 66%)}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.vig{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(135% 120% at 50% 0%,transparent 52%,rgba(0,0,0,.6))}
+#spot{position:fixed;inset:0;z-index:2;pointer-events:none;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(120,160,255,.05),transparent 60%)}
+.wrap{position:relative;z-index:3}
+.container{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+section{position:relative;padding-block:clamp(86px,13vh,176px)}
+
+/* ===== custom cursor ===== */
+.cur-d,.cur-r{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;border-radius:50%;will-change:transform}
+.cur-d{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--ice);box-shadow:0 0 10px rgba(156,192,255,.9);transition:opacity .25s,background .3s,transform .12s}
+.cur-r{width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid rgba(156,192,255,.45);transition:width .35s var(--ease),height .35s var(--ease),border-color .3s,background .3s,opacity .3s}
+body.hov .cur-r{width:60px;height:60px;margin:-30px 0 0 -30px;border-color:rgba(67,214,238,.7);background:rgba(91,140,255,.06)}
+body.hov .cur-d{opacity:0}
+body.down .cur-r{width:26px;height:26px;margin:-13px 0 0 -13px}
+@media (hover:none),(pointer:coarse){.cur-d,.cur-r{display:none}}
+
+/* ===== nav ===== */
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:200;width:calc(100% - 28px);max-width:1150px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px 10px 20px;border-radius:16px;
+  background:rgba(8,10,18,.5);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);
+  border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.4);transition:transform .55s var(--ease),background .35s,border-color .35s}
+.nav.sc{background:rgba(6,8,15,.78);border-color:rgba(150,178,255,.16)}
+.nav.hide{transform:translateX(-50%) translateY(-180%)}
+.logo{font-family:var(--fd);font-weight:700;font-size:1.02rem;letter-spacing:.01em;display:flex;align-items:center;gap:11px;min-width:0;flex:none}
+.logo b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.logo .d{width:9px;height:9px;border-radius:50%;background:var(--grad-cv);box-shadow:0 0 12px rgba(67,214,238,.8);flex:none}
+.logo .sm{color:var(--faint);font-family:var(--fm);font-size:.66rem;letter-spacing:.08em;font-weight:400}
+.nav-links{display:flex;gap:2px;align-items:center;justify-content:center;min-width:0;flex:1}
+.nav-links a{font-size:.84rem;color:var(--muted);padding:9px 15px;border-radius:9px;position:relative;transition:color .3s;display:flex;align-items:center;gap:6px}
+.nav-links a:hover{color:var(--text)}
+.nav-links a i{color:var(--faint);font-family:var(--fm);font-size:.6rem;font-style:normal}
+.nav-right{display:flex;align-items:center;gap:10px;flex:none}
+.lang{display:flex;gap:1px;padding:3px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid var(--line2)}
+.lang button{font-family:var(--fm);font-size:.66rem;min-width:36px;min-height:34px;padding:6px 9px;border-radius:7px;color:var(--faint);transition:.3s;text-transform:uppercase;letter-spacing:.05em}
+.lang button.on{color:#05060c;background:var(--grad);font-weight:600}
+.burger{display:none;flex:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;width:44px;height:44px;padding:0}
+.burger span{width:21px;height:1.6px;background:var(--text);border-radius:2px;transition:.3s var(--ease)}
+body.menu .burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+body.menu .burger span:nth-child(2){opacity:0}
+body.menu .burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.panel{position:fixed;inset:0;z-index:199;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  background:rgba(4,5,10,.97);backdrop-filter:blur(22px);transform:translateY(-100%);opacity:0;visibility:hidden;transition:.55s var(--ease)}
+.panel a{font-family:var(--fd);font-size:1.9rem;font-weight:700;color:var(--muted);transition:color .3s}
+.panel a:hover{color:var(--text)}
+.panel-lang{margin-top:18px}
+.panel-lang button{min-width:52px;min-height:42px}
+body.menu .panel{transform:none;opacity:1;visibility:visible}
+body.menu{overflow:hidden}
+
+/* ===== buttons ===== */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;font-size:.9rem;font-weight:500;padding:15px 28px;border-radius:13px;isolation:isolate;overflow:hidden;transition:transform .3s var(--ease)}
+.btn svg{width:16px;height:16px}
+.btn-p{color:#05060c;font-weight:600}
+.btn-p::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--grad);transition:filter .3s}
+.btn-p:hover::before{filter:brightness(1.1) saturate(1.15)}
+.btn-p::after{content:"";position:absolute;inset:-1px;z-index:-2;border-radius:inherit;background:var(--grad);filter:blur(18px);opacity:0;transition:opacity .4s}
+.btn-p:hover::after{opacity:.7}
+.btn-g{color:var(--text);border:1px solid var(--line);background:rgba(255,255,255,.02)}
+.btn-g:hover{border-color:rgba(67,214,238,.5);background:rgba(255,255,255,.045)}
+
+/* ===== type ===== */
+.idx{font-family:var(--fm);font-size:.72rem;letter-spacing:.18em;color:var(--gold);margin-bottom:16px;display:inline-flex;align-items:center;gap:10px}
+.idx::before{content:"";width:26px;height:1px;background:var(--grad-gold)}
+h1,h2,h3{font-family:var(--fd);font-weight:700;letter-spacing:-.02em;line-height:1.04}
+.s-title{font-family:var(--fh);font-size:clamp(1.78rem,3.7vw,2.85rem);margin-bottom:20px;letter-spacing:-.012em;font-weight:500;line-height:1.08}
+.s-sub{color:var(--muted);font-size:1.02rem;max-width:580px;font-weight:300;letter-spacing:.005em}
+.grad{background:var(--grad);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradShift 9s ease-in-out infinite}
+@keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.gold{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ===== hero ===== */
+.hero{min-height:100svh;display:flex;align-items:center;padding-top:128px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;width:100%}
+.hero-copy{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--fm);font-size:.72rem;letter-spacing:.08em;color:var(--muted);padding:8px 15px;border-radius:11px;background:rgba(255,255,255,.025);border:1px solid var(--line);margin-bottom:28px}
+.eyebrow .p{width:7px;height:7px;border-radius:50%;background:#46d39a;box-shadow:0 0 0 0 rgba(70,211,154,.5);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(70,211,154,0)}100%{box-shadow:0 0 0 0 rgba(70,211,154,0)}}
+.hero h1{font-family:var(--fh);font-size:clamp(2.25rem,5.1vw,4.25rem);line-height:1.05;margin-bottom:28px;letter-spacing:-.018em;font-weight:400}
+.hero h1 .grad{font-style:italic;font-weight:500}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .ln>span{display:block;transform:translateY(112%)}
+.who{display:flex;align-items:center;gap:13px;margin-bottom:22px}
+.who .nm{font-family:var(--fd);font-weight:700;font-size:1.04rem;letter-spacing:.01em}
+.who .rl{font-family:var(--fm);font-size:.74rem;color:var(--muted);letter-spacing:.04em}
+.who .bar{width:1px;height:20px;background:var(--line)}
+.hero p.sub{color:var(--muted);font-size:clamp(.98rem,1.15vw,1.1rem);font-weight:300;line-height:1.75;letter-spacing:.004em;max-width:500px;margin-bottom:34px}
+.cta{display:flex;gap:13px;flex-wrap:wrap}
+.readout{margin-top:40px;display:flex;gap:30px;flex-wrap:wrap}
+.ro{display:flex;flex-direction:column;gap:5px}
+.ro .k{font-family:var(--fm);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.ro .v{font-family:var(--fm);font-size:.84rem;color:var(--text)}
+.ro .v b{color:var(--cyan);font-weight:500}
+
+/* portrait */
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.portrait{position:relative;width:min(635px,100%);aspect-ratio:4/4.7;will-change:transform;isolation:isolate;transform-style:preserve-3d}
+.portrait::before{content:"";position:absolute;inset:6% -2% 12% -9%;z-index:0;pointer-events:none;border-radius:50%;
+  background:radial-gradient(ellipse at 46% 45%,rgba(67,214,238,.2),rgba(67,214,238,.08) 38%,transparent 66%),
+    radial-gradient(ellipse at 62% 47%,rgba(217,189,140,.18),rgba(217,189,140,.06) 34%,transparent 68%);
+  filter:blur(12px);animation:auraDrift 9s ease-in-out infinite alternate;mix-blend-mode:screen}
+.portrait::after{content:"";position:absolute;left:-4%;right:-4%;bottom:6%;height:38%;z-index:6;pointer-events:none;
+  background:linear-gradient(180deg,transparent 0%,rgba(4,7,11,.25) 40%,rgba(4,5,10,.88) 100%);filter:blur(18px)}
+.portrait .ring{position:absolute;left:50%;top:43%;transform:translate(-50%,-50%);border-radius:50%;z-index:1;pointer-events:none;opacity:.92}
+.portrait .r1{width:78%;aspect-ratio:1;background:conic-gradient(from 22deg,transparent 0 12%,rgba(67,214,238,.9) 14%,transparent 23%,transparent 49%,rgba(67,214,238,.35) 53%,transparent 62%,transparent 100%);
+  -webkit-mask:radial-gradient(circle,transparent 0 65%,#000 66% 67.5%,transparent 69%);mask:radial-gradient(circle,transparent 0 65%,#000 66% 67.5%,transparent 69%);filter:drop-shadow(0 0 12px rgba(67,214,238,.45));animation:spin 34s linear infinite}
+.portrait .r2{width:106%;aspect-ratio:1;background:conic-gradient(from 180deg,transparent 0 20%,rgba(217,189,140,.72) 22%,transparent 31%,transparent 55%,rgba(67,214,238,.45) 58%,transparent 70%,transparent 100%);
+  -webkit-mask:radial-gradient(circle,transparent 0 67%,#000 68% 69%,transparent 70.5%);mask:radial-gradient(circle,transparent 0 67%,#000 68% 69%,transparent 70.5%);filter:drop-shadow(0 0 10px rgba(217,189,140,.32));animation:spin 56s linear infinite reverse}
+.portrait .ring .pip{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan);top:16%;left:70%}
+.portrait .r2 .pip{background:var(--gold);box-shadow:0 0 14px var(--gold);top:74%;left:22%}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.portrait .glow-b{position:absolute;left:-9%;top:20%;width:76%;height:52%;z-index:2;border-radius:52% 48% 58% 42%;
+  background:linear-gradient(120deg,transparent 4%,rgba(67,214,238,.08) 18%,rgba(67,214,238,.46) 36%,rgba(67,214,238,.12) 58%,transparent 78%);
+  filter:blur(13px);animation:waveFlow 7.5s ease-in-out infinite alternate;mix-blend-mode:screen}
+.portrait .glow-a{position:absolute;right:-2%;top:25%;width:46%;height:50%;z-index:2;border-radius:50%;
+  background:linear-gradient(116deg,transparent 6%,rgba(217,189,140,.09) 24%,rgba(217,189,140,.42) 42%,rgba(217,189,140,.08) 66%,transparent 88%);
+  filter:blur(16px);animation:waveFlow 8.5s ease-in-out infinite alternate-reverse;mix-blend-mode:screen}
+@keyframes breathe{from{opacity:.65;transform:scale(.96)}to{opacity:1;transform:scale(1.06)}}
+.portrait .floor{position:absolute;left:50%;bottom:5%;transform:translateX(-50%);width:78%;height:84px;z-index:3;border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(67,214,238,.23),rgba(217,189,140,.1) 42%,transparent 72%);filter:blur(20px)}
+.portrait canvas.net{position:absolute;inset:2% -8% 13% -10%;width:118%;height:85%;z-index:3;pointer-events:none;opacity:.95;
+  -webkit-mask:radial-gradient(ellipse at 50% 48%,#000 0 60%,rgba(0,0,0,.55) 75%,transparent 92%);mask:radial-gradient(ellipse at 50% 48%,#000 0 60%,rgba(0,0,0,.55) 75%,transparent 92%)}
+.portrait .imgwrap{position:absolute;inset:-7% -15% -3% -13%;z-index:5;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.portrait .imgwrap::after{content:"";position:absolute;left:9%;right:9%;bottom:4%;height:32%;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,transparent 0%,rgba(5,10,14,.38) 54%,rgba(4,5,10,.9) 100%);filter:blur(18px)}
+.portrait img{position:absolute;left:50%;bottom:-5%;z-index:1;width:148%;height:auto;transform:translateX(-50%);object-fit:contain;
+  filter:contrast(1.09) saturate(1.07) drop-shadow(-7px 0 15px rgba(67,214,238,.36)) drop-shadow(8px 3px 18px rgba(217,189,140,.26)) drop-shadow(0 36px 66px rgba(0,0,0,.72))}
+.portrait .sheen{position:absolute;inset:0;z-index:5;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(108deg,transparent 28%,rgba(141,238,255,.1) 43%,transparent 57%),repeating-linear-gradient(180deg,rgba(255,255,255,.02) 0 1px,transparent 1px 6px);
+  background-size:240% 240%;animation:sheen 7s ease-in-out infinite;mix-blend-mode:screen;
+  -webkit-mask:radial-gradient(ellipse at 50% 45%,#000 0 58%,transparent 86%);mask:radial-gradient(ellipse at 50% 45%,#000 0 58%,transparent 86%)}
+@keyframes sheen{0%,100%{background-position:0% 0%}50%{background-position:100% 100%}}
+.portrait .badge{position:absolute;z-index:5;font-family:var(--fm);font-size:.64rem;letter-spacing:.04em;color:var(--text);
+  padding:8px 12px;border-radius:11px;background:rgba(10,13,22,.58);backdrop-filter:blur(10px);border:1px solid var(--line);display:flex;align-items:center;gap:8px;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.portrait .badge .dt{width:7px;height:7px;border-radius:50%}
+.portrait .b1{top:14%;left:-6%}.portrait .b2{bottom:20%;right:-8%}
+@keyframes auraDrift{from{opacity:.72;transform:translate3d(-10px,8px,0) scale(.98)}to{opacity:1;transform:translate3d(10px,-8px,0) scale(1.04)}}
+@keyframes waveFlow{from{opacity:.55;transform:translate3d(-10px,8px,0) rotate(-6deg) scale(.96)}to{opacity:1;transform:translate3d(12px,-6px,0) rotate(5deg) scale(1.06)}}
+/* premium portrait layers */
+.portrait .halo{position:absolute;left:50%;top:42%;width:94%;aspect-ratio:1;transform:translate(-50%,-50%);z-index:0;border-radius:50%;pointer-events:none;mix-blend-mode:screen;
+  background:conic-gradient(from 0deg,rgba(67,214,238,0),rgba(67,214,238,.22) 16%,rgba(91,140,255,.06) 34%,rgba(217,189,140,.2) 60%,rgba(217,189,140,0) 80%,rgba(67,214,238,0));
+  -webkit-mask:radial-gradient(circle,transparent 0 47%,#000 60%,transparent 82%);mask:radial-gradient(circle,transparent 0 47%,#000 60%,transparent 82%);
+  filter:blur(7px);opacity:.8;animation:spin 42s linear infinite}
+.portrait .beam{position:absolute;left:50%;top:-7%;width:36%;height:72%;transform:translateX(-50%);z-index:1;pointer-events:none;mix-blend-mode:screen;
+  background:linear-gradient(180deg,rgba(141,238,255,.18),rgba(141,238,255,.04) 48%,transparent 78%);filter:blur(15px);
+  -webkit-mask:linear-gradient(180deg,#000,transparent);mask:linear-gradient(180deg,#000,transparent);animation:beamPulse 6.5s ease-in-out infinite}
+@keyframes beamPulse{0%,100%{opacity:.45}50%{opacity:.9}}
+.portrait .energy{position:absolute;left:-13%;top:12%;width:86%;height:76%;z-index:2;pointer-events:none;mix-blend-mode:screen;border-radius:60% 40% 58% 42%;
+  background:radial-gradient(58% 78% at 32% 42%,rgba(67,214,238,.55),rgba(67,214,238,.12) 50%,transparent 70%),
+    conic-gradient(from 130deg at 42% 50%,transparent,rgba(141,238,255,.42) 18%,transparent 42%,transparent 100%);
+  filter:blur(15px);animation:enFlow 9.5s ease-in-out infinite alternate}
+@keyframes enFlow{0%{transform:translate(-8px,8px) rotate(-9deg) scale(.95);opacity:.55}100%{transform:translate(12px,-10px) rotate(7deg) scale(1.1);opacity:1}}
+.scrollhint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:9px;font-family:var(--fm);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint)}
+.scrollhint .ms{width:21px;height:33px;border:1px solid var(--faint);border-radius:12px;position:relative}
+.scrollhint .ms::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:2.6px;height:6px;border-radius:3px;background:var(--cyan);animation:wheel 1.7s infinite}
+@keyframes wheel{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,9px)}}
+
+/* ===== marquee ===== */
+.marq{overflow:hidden;padding:20px 0;border-block:1px solid var(--line2);
+  -webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marq-t{display:flex;width:max-content;animation:mx 38s linear infinite}
+.marq-t:hover{animation-play-state:paused}
+.marq-t span{font-family:var(--fd);font-weight:700;font-size:1rem;letter-spacing:.02em;color:var(--faint);display:flex;align-items:center;gap:42px;padding-right:42px;white-space:nowrap;text-transform:uppercase}
+.marq-t span::after{content:"◆";color:var(--gold);font-size:.56rem}
+@keyframes mx{to{transform:translateX(-50%)}}
+
+/* ===== about ===== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,6vw,80px);align-items:center}
+.about p{color:var(--muted);font-size:1.04rem;font-weight:300;line-height:1.78;margin-bottom:18px;max-width:540px}
+.about p b{color:var(--text);font-weight:500}
+.stats{display:flex;gap:11px;flex-wrap:wrap;margin-top:36px}
+.stat{flex:1;min-width:128px;padding:24px 20px;border-radius:16px;background:linear-gradient(165deg,var(--ink),var(--bg2));border:1px solid var(--line);position:relative;overflow:hidden}
+.stat::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--grad);opacity:.6}
+.stat .n{font-family:var(--fd);font-size:clamp(2rem,3.5vw,2.7rem);font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .l{color:var(--muted);font-size:.8rem;margin-top:8px}
+.term{border-radius:18px;background:linear-gradient(165deg,var(--ink),var(--bg2));border:1px solid var(--line);overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.term .bar{display:flex;align-items:center;gap:7px;padding:14px 18px;border-bottom:1px solid var(--line2)}
+.term .bar i{width:11px;height:11px;border-radius:50%}
+.term .bar i:nth-child(1){background:#ff5f57}.term .bar i:nth-child(2){background:#febc2e}.term .bar i:nth-child(3){background:#28c840}
+.term .bar em{margin-left:8px;font-family:var(--fm);font-size:.7rem;color:var(--faint);font-style:normal}
+.term code{font-family:var(--fm);font-size:.82rem;color:var(--muted);line-height:1.95;display:block;padding:22px 24px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.term .k{color:var(--violet)}.term .s{color:var(--cyan)}.term .f{color:var(--gold)}.term .c{color:var(--faint)}
+
+/* ===== projects ===== */
+.p-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter{font-family:var(--fm);font-size:.76rem;color:var(--muted);padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.02);transition:.3s;letter-spacing:.02em}
+.filter.on{color:#05060c;background:var(--grad);border-color:transparent;font-weight:600}
+.filter:not(.on):hover{color:var(--text);border-color:rgba(67,214,238,.4)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{position:relative;border-radius:18px;overflow:hidden;min-height:280px;cursor:pointer;border:1px solid var(--line);
+  background:linear-gradient(165deg,var(--ink),var(--bg2));display:flex;flex-direction:column;justify-content:flex-end;padding:26px;
+  transition:transform .5s var(--ease),border-color .4s,box-shadow .5s;opacity:0;transform:translateY(26px)}
+.card.in{opacity:1;transform:none}
+.card.big{grid-column:span 2}
+.card:hover{transform:translateY(-7px);border-color:rgba(67,214,238,.3);box-shadow:0 34px 80px rgba(0,0,0,.55)}
+.card .glw{position:absolute;inset:0;z-index:0;opacity:0;transition:opacity .5s;background:radial-gradient(440px circle at var(--cx,50%) var(--cy,50%),rgba(91,140,255,.16),transparent 56%)}
+.card:hover .glw{opacity:1}
+.card .mesh{position:absolute;inset:0;z-index:0;opacity:.5;background-image:linear-gradient(var(--line2) 1px,transparent 1px),linear-gradient(90deg,var(--line2) 1px,transparent 1px);background-size:34px 34px;-webkit-mask:radial-gradient(120% 80% at 80% 0%,#000,transparent 70%);mask:radial-gradient(120% 80% at 80% 0%,#000,transparent 70%)}
+.card .top{position:absolute;top:24px;left:26px;right:26px;z-index:2;display:flex;justify-content:space-between;align-items:center}
+.cat{font-family:var(--fm);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border-radius:8px;background:rgba(8,11,20,.55);border:1px solid var(--line);color:var(--ice);display:flex;align-items:center;gap:7px}
+.cat .dt{width:7px;height:7px;border-radius:50%}
+.repo-meta{font-family:var(--fm);font-size:.72rem;color:var(--muted);display:flex;gap:13px}
+.repo-meta b{color:var(--text);font-weight:500;display:inline-flex;align-items:center;gap:4px}
+.card .body{position:relative;z-index:2}
+.card h3{font-size:1.4rem;margin-bottom:9px;letter-spacing:-.02em;word-break:break-word}
+.card.big h3{font-size:1.85rem}
+.card .desc{color:var(--muted);font-size:.92rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:14px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tags span{font-family:var(--fm);font-size:.66rem;color:var(--muted);padding:5px 9px;border-radius:7px;background:rgba(255,255,255,.04);border:1px solid var(--line2)}
+.card .open{position:absolute;bottom:24px;right:26px;z-index:3;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.05);border:1px solid var(--line);transition:transform .45s var(--ease),background .4s}
+.card:hover .open{transform:translate(3px,-3px);background:var(--grad)}
+.card .open svg{width:16px;height:16px;stroke:var(--text);transition:stroke .4s}
+.card:hover .open svg{stroke:#05060c}
+.p-empty{grid-column:1/-1;text-align:center;padding:60px 20px;border:1px dashed var(--line);border-radius:18px;color:var(--muted)}
+.p-empty .skel{display:flex;gap:16px;justify-content:center;margin-bottom:22px}
+.p-empty .sk{width:54px;height:54px;border-radius:14px;background:linear-gradient(110deg,var(--ink) 8%,var(--ink2) 18%,var(--ink) 33%);background-size:200% 100%;animation:shimmer 1.4s linear infinite}
+@keyframes shimmer{to{background-position:-200% 0}}
+
+/* ===== code sphere ===== */
+.gh-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:22px;align-items:stretch}
+.gh-grid>*,.gh-orbit,.gh-side,.gh-langs,.gh-repos{min-width:0}
+.gh-orbit{position:relative;border-radius:20px;background:radial-gradient(circle at 50% 42%,rgba(91,140,255,.12),transparent 60%),linear-gradient(165deg,var(--ink),var(--bg2));border:1px solid var(--line);min-height:430px;display:grid;place-items:center;overflow:hidden}
+.gh-orbit .label{position:absolute;top:20px;left:22px;font-family:var(--fm);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.constel{position:relative;width:min(390px,100%);max-width:calc(100vw - 48px);aspect-ratio:1;height:auto}
+.constel .core{position:absolute;top:50%;left:50%;width:56px;height:56px;border-radius:50%;transform:translate(-50%,-50%);
+  background:radial-gradient(circle at 38% 32%,#fff,#5b8cff 66%);box-shadow:0 0 40px rgba(91,140,255,.7);z-index:3}
+.constel .core span{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--fm);font-size:.56rem;color:#05060c;font-weight:600}
+.constel .spin{position:absolute;inset:0;animation:rot 60s linear infinite;transform-origin:center}
+@keyframes rot{to{transform:rotate(360deg)}}
+.constel .orb{position:absolute;top:50%;left:50%;border:1px solid var(--line2);border-radius:50%;transform:translate(-50%,-50%)}
+.constel .node{position:absolute;inset:0;z-index:2;pointer-events:none}
+.constel .node .dot{position:absolute;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 14px currentColor;transition:transform .3s;pointer-events:auto}
+.constel .node .dot:hover{transform:translate(-50%,-50%) scale(1.4)}
+.constel .node small{position:absolute;transform:translate(-50%,-50%);font-family:var(--fm);font-size:.62rem;color:var(--muted);background:rgba(7,10,18,.7);padding:2px 7px;border-radius:6px;white-space:nowrap;max-width:min(112px,28vw);overflow:hidden;text-overflow:ellipsis;animation:counter 60s linear infinite}
+@keyframes counter{to{transform:translate(-50%,-50%) rotate(-360deg)}}
+.constel svg.links{position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:visible}
+.gh-side{display:flex;flex-direction:column;gap:14px}
+.gh-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.gh-stat{min-width:0;padding:22px 14px;border-radius:15px;background:linear-gradient(165deg,var(--ink),var(--bg2));border:1px solid var(--line);text-align:center;position:relative;overflow:hidden}
+.gh-stat::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--grad-cv);opacity:.6}
+.gh-stat .n{font-family:var(--fd);font-size:1.85rem;font-weight:800}
+.gh-stat .l{color:var(--muted);font-size:.72rem;margin-top:5px;overflow-wrap:anywhere}
+.gh-langs,.gh-repos{padding:22px;border-radius:15px;background:linear-gradient(165deg,var(--ink),var(--bg2));border:1px solid var(--line)}
+.gh-langs h4,.gh-repos h4{font-family:var(--fm);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:15px;font-weight:500;display:flex;justify-content:space-between}
+.gh-langs h4 a,.gh-repos h4 a{color:var(--cyan);text-transform:none;letter-spacing:0}
+.lbar{height:9px;border-radius:6px;overflow:hidden;display:flex;margin-bottom:15px;background:rgba(255,255,255,.05)}
+.lbar i{height:100%;transition:width .9s var(--ease)}
+.llist{display:flex;flex-wrap:wrap;gap:9px 18px}
+.llist li{display:flex;align-items:center;gap:7px;font-size:.78rem;color:var(--muted)}
+.llist .d{width:9px;height:9px;border-radius:50%}
+.repo{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line2);transition:.25s}
+.repo:last-child{border-bottom:none}
+.repo:hover{padding-inline:10px;background:rgba(255,255,255,.025);border-radius:10px}
+.repo .nm{font-family:var(--fm);font-size:.84rem;display:flex;align-items:center;gap:9px;min-width:0}
+.repo .nm span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.repo .nm .d{width:8px;height:8px;border-radius:50%;flex:none}
+.repo .mt{display:flex;gap:14px;font-size:.72rem;color:var(--faint);font-family:var(--fm);flex:none}
+.gh-load{color:var(--faint);font-family:var(--fm);font-size:.8rem;padding:16px 0}
+
+/* ===== published sites ===== */
+.published-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:22px;align-items:stretch}
+.pub-panel,.pub-list{border-radius:20px;background:linear-gradient(165deg,var(--ink),var(--bg2));border:1px solid var(--line);position:relative;overflow:hidden}
+.pub-panel{min-height:390px;padding:30px;display:flex;flex-direction:column;justify-content:space-between}
+.pub-panel::before,.pub-list::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--grad-cv);opacity:.58}
+.pub-count{font-family:var(--fd);font-size:clamp(4rem,10vw,7.2rem);font-weight:800;line-height:.9;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pub-label{font-family:var(--fm);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+.pub-note{color:var(--muted);max-width:340px}
+.pub-list{padding:10px 24px}
+.pub-item{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:19px 0;border-bottom:1px solid var(--line2)}
+.pub-item:last-child{border-bottom:none}
+.pub-item:hover .pub-title{color:var(--cyan)}
+.pub-title{font-family:var(--fd);font-size:1.1rem;font-weight:700;transition:.25s}
+.pub-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-family:var(--fm);font-size:.72rem;color:var(--faint)}
+.pub-meta span{display:inline-flex;align-items:center;gap:6px}
+.pub-dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.pub-open{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);color:var(--muted);transition:.25s;flex:none}
+.pub-item:hover .pub-open{border-color:rgba(67,214,238,.5);color:var(--cyan);transform:translateX(3px)}
+.pub-open svg{width:17px;height:17px;stroke:currentColor}
+.pub-empty{padding:28px 0;color:var(--faint);font-family:var(--fm);font-size:.82rem}
+
+/* ===== contact ===== */
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,72px);align-items:start}
+.form{display:flex;flex-direction:column;gap:15px}
+.field{position:relative}
+.field input,.field textarea{width:100%;padding:18px 17px;border-radius:13px;background:rgba(255,255,255,.025);border:1px solid var(--line);color:var(--text);font-family:inherit;font-size:.93rem;transition:.3s;resize:vertical}
+.field textarea{min-height:140px}
+.field input:focus,.field textarea:focus{outline:none;border-color:rgba(67,214,238,.55);background:rgba(255,255,255,.05);box-shadow:0 0 0 4px rgba(67,214,238,.07)}
+.field label{position:absolute;top:18px;left:16px;color:var(--faint);font-size:.93rem;pointer-events:none;transition:.22s var(--ease);padding:0 5px}
+.field input:focus+label,.field input:not(:placeholder-shown)+label,.field textarea:focus+label,.field textarea:not(:placeholder-shown)+label{top:-8px;left:12px;font-size:.68rem;color:var(--cyan);background:var(--bg)}
+.form-ok{font-family:var(--fm);font-size:.8rem;color:#46d39a;opacity:0;transition:.3s}
+.form-ok.err{color:#ff8a8a}
+.form-ok.show{opacity:1}
+.form button[disabled]{opacity:.58;cursor:progress}
+.aside{display:flex;flex-direction:column;gap:11px}
+.clink{display:flex;align-items:center;gap:15px;padding:17px 19px;border-radius:15px;background:linear-gradient(165deg,var(--ink),var(--bg2));border:1px solid var(--line);transition:transform .35s var(--ease),border-color .35s}
+.clink:hover{transform:translateX(6px);border-color:rgba(67,214,238,.4)}
+.clink .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.04);border:1px solid var(--line);flex:none}
+.clink .ic svg{width:19px;height:19px}
+.clink .t{font-family:var(--fm);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--faint)}
+.clink .v{font-size:.94rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.clink .ar{margin-left:auto;color:var(--faint);transition:.3s;flex:none}
+.clink:hover .ar{transform:translateX(4px);color:var(--cyan)}
+
+/* ===== footer ===== */
+.footer{padding:44px 0 38px;border-top:1px solid var(--line2)}
+.footer .in{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.footer small{color:var(--faint);font-size:.8rem;font-family:var(--fm)}
+.policy-link{color:var(--muted);font-family:var(--fm);font-size:.8rem;text-decoration:underline;text-decoration-color:rgba(148,155,178,.35);text-underline-offset:4px;transition:color .25s,text-decoration-color .25s}
+.policy-link:hover{color:var(--cyan);text-decoration-color:rgba(67,214,238,.7)}
+.toTop{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);background:rgba(255,255,255,.02);transition:.3s}
+.toTop:hover{background:var(--grad)}.toTop:hover svg{stroke:#05060c}
+.toTop svg{width:17px;height:17px;stroke:var(--text)}
+
+/* ===== modal ===== */
+.modal{position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;padding:22px;opacity:0;visibility:hidden;transition:.35s}
+.modal.on{opacity:1;visibility:visible}
+.modal .back{position:absolute;inset:0;background:rgba(2,3,8,.76);backdrop-filter:blur(9px)}
+.modal .box{position:relative;z-index:1;width:min(720px,100%);max-height:88vh;overflow:hidden;display:flex;flex-direction:column;
+  border-radius:20px;background:rgba(10,13,22,.95);backdrop-filter:blur(24px);border:1px solid var(--line);box-shadow:0 44px 120px rgba(0,0,0,.7);
+  transform:translateY(24px) scale(.97);transition:transform .45s var(--ease)}
+.modal.on .box{transform:none}
+.modal .head{position:relative;padding:30px 30px 0}
+.modal .mcat{font-family:var(--fm);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:7px}
+.modal h3{font-family:var(--fh);font-weight:500;font-size:1.62rem;margin:9px 0 0;letter-spacing:-.01em;word-break:break-word}
+.modal .cont{padding:18px 30px 30px;overflow-y:auto}
+.modal .mdesc{color:var(--muted);font-size:1rem;margin-bottom:18px}
+.modal .mstats{display:flex;gap:22px;margin-bottom:18px;font-family:var(--fm);font-size:.8rem;color:var(--muted);flex-wrap:wrap}
+.modal .mstats b{color:var(--text);font-weight:500}
+.modal .mtags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:24px}
+.modal .mtags span{font-family:var(--fm);font-size:.7rem;color:var(--muted);padding:6px 11px;border-radius:8px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+.modal .acts{display:flex;gap:11px;flex-wrap:wrap}
+.modal .x{position:absolute;top:16px;right:16px;z-index:3;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.05);border:1px solid var(--line);transition:.3s}
+.modal .x:hover{background:rgba(255,90,90,.18);border-color:rgba(255,90,90,.4)}
+.modal .x svg{width:16px;height:16px}
+.policy-modal .box{width:min(880px,100%)}
+.policy-modal .cont{display:grid;gap:18px}
+.policy-modal h4{font-family:var(--fd);font-size:1rem;margin-bottom:8px;letter-spacing:0}
+.policy-modal p,.policy-modal li{color:var(--muted);font-size:.92rem;line-height:1.7}
+.policy-modal ul{display:grid;gap:7px;padding-left:18px;list-style:disc}
+.policy-modal .updated{font-family:var(--fm);font-size:.72rem;color:var(--faint);margin-top:4px}
+
+/* ===== reveal ===== */
+.rv{opacity:0;transform:translateY(38px)}
+.rv.in{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.stg>*{opacity:0;transform:translateY(26px)}
+.stg.in>*{opacity:1;transform:none;transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.stg.in>*:nth-child(2){transition-delay:.08s}.stg.in>*:nth-child(3){transition-delay:.16s}
+body.ready .hero .rv{opacity:1;transform:none;transition:opacity 1s var(--ease) .2s,transform 1s var(--ease) .2s}
+
+@media (max-width:1000px){
+  .hero-grid,.about-grid,.published-grid,.gh-grid,.c-grid{grid-template-columns:1fr;gap:40px}
+  .hero-visual{order:-1}
+  .portrait{width:min(520px,94%)}
+  .grid{grid-template-columns:repeat(2,1fr)}.card.big{grid-column:span 2}
+}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .panel{padding:96px var(--pad) 40px}
+}
+@media (max-width:520px){
+  .nav{left:8px;right:auto;width:calc(100vw - 16px);max-width:calc(100vw - 16px);transform:none;padding:8px 10px 8px 14px;border-radius:14px}
+  .nav.hide{transform:translateY(-180%)}
+  .logo{font-size:.9rem;gap:8px}
+  .logo b{max-width:min(48vw,168px)}
+  .logo .sm{display:none}
+  .nav-right .lang{display:none}
+}
+@media (max-width:660px){
+  .hero{padding-top:110px}
+  .portrait{width:min(410px,100%)}
+  .who{flex-wrap:wrap;gap:9px}
+  .logo{font-size:.92rem;gap:8px}
+  .logo .sm{display:none}
+  .scrollhint{display:none}
+  .grid{grid-template-columns:1fr}.card.big{grid-column:auto}
+  .pub-panel{min-height:280px}
+  .pub-item{grid-template-columns:1fr}
+  .pub-open{width:100%;height:38px}
+  .footer .in{flex-direction:column;text-align:center}
+  .portrait .badge{display:none}
+  .term code{font-size:.74rem;padding:20px 16px;overflow-wrap:anywhere}
+  .term code span{overflow-wrap:anywhere}
+  .gh-orbit{min-height:360px}
+  .constel{width:min(300px,100%);max-width:100%}
+  .gh-stat{padding:18px 9px}
+  .gh-stat .n{font-size:1.55rem}
+  .gh-langs,.gh-repos{padding:20px}
+  .gh-langs h4,.gh-repos h4{gap:10px;flex-wrap:wrap}
+  .repo{align-items:flex-start}
+  .repo .mt{justify-content:flex-end;gap:8px;flex-wrap:wrap}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .rv,.stg>*,.card,.hero h1 .ln>span{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body class="cc">
+
+<canvas id="dust"></canvas>
+<div class="neb n1"></div><div class="neb n2"></div><div class="neb n3"></div>
+<div class="grain"></div><div class="vig"></div><div id="spot"></div>
+<div class="cur-r"></div><div class="cur-d"></div>
+
+<nav class="nav" id="nav">
+  <a href="#hero" class="logo magnetic" data-hover><span class="d"></span><b id="logoName">Gabriel Emilio</b><span class="sm">/ SWE</span></a>
+  <div class="nav-links">
+    <a href="#about" data-hover><i>01</i><span data-i="nav_about">Sobre</span></a>
+    <a href="#published" data-hover><i>02</i><span data-i="nav_published">Sites</span></a>
+    <a href="#projects" data-hover><i>03</i><span data-i="nav_projects">Projetos</span></a>
+    <a href="#github" data-hover><i>04</i><span data-i="nav_github">Code Sphere</span></a>
+    <a href="#contact" data-hover><i>05</i><span data-i="nav_contact">Contato</span></a>
+  </div>
+  <div class="nav-right">
+    <div class="lang" id="lang"><button data-l="pt" class="on">PT</button><button data-l="en">EN</button><button data-l="fr">FR</button></div>
+    <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="panel" id="panel">
+  <a href="#about" data-i="nav_about">Sobre</a>
+  <a href="#published" data-i="nav_published">Sites</a>
+  <a href="#projects" data-i="nav_projects">Projetos</a>
+  <a href="#github" data-i="nav_github">Code Sphere</a>
+  <a href="#contact" data-i="nav_contact">Contato</a>
+  <div class="panel-lang lang" aria-label="idioma"><button data-l="pt" class="on">PT</button><button data-l="en">EN</button><button data-l="fr">FR</button></div>
+</div>
+
+<main class="wrap">
+
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow rv"><span class="p"></span><span data-i="hero_tag">Disponível para projetos globais</span></span>
+        <h1>
+          <span class="ln"><span data-i="hero_a">Eu construo</span></span>
+          <span class="ln"><span class="grad" data-i="hero_b">software de</span></span>
+          <span class="ln"><span data-i="hero_c">alto impacto.</span></span>
+        </h1>
+        <div class="who rv">
+          <span class="nm" id="whoName">Gabriel Emilio</span>
+          <span class="bar"></span>
+          <span class="rl" data-i="hero_role">Software Engineer</span>
+        </div>
+        <p class="sub rv" id="heroSub" data-i="hero_sub">Sou estudante de Engenharia de Computação no IFSP e desenvolvedor em formação, construindo minha base por meio de projetos, estudos e prática constante. Busco transformar ideias e problemas em soluções claras, funcionais e bem estruturadas, evoluindo a cada desafio. Este portfólio reúne meus aprendizados, minhas iniciativas e meus projetos, refletindo minha vontade de crescer e me tornar um profissional cada vez mais completo em tecnologia.</p>
+        <div class="cta rv">
+          <a href="#published" class="btn btn-p magnetic" data-hover><span data-i="hero_cta1">Ver sites</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#contact" class="btn btn-g magnetic" data-hover><span data-i="hero_cta2">Falar comigo</span></a>
+        </div>
+        <div class="readout rv">
+          <div class="ro"><span class="k" data-i="ro_status">Status</span><span class="v"><b>● </b><span data-i="ro_avail">Disponível</span></span></div>
+          <div class="ro"><span class="k" data-i="ro_focus">Foco</span><span class="v" id="heroFocusLangs">--</span></div>
+          <div class="ro"><span class="k" data-i="ro_scope">Alcance</span><span class="v" data-i="ro_global">Global</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="portrait" id="portrait">
+          <div class="halo"></div>
+          <div class="beam"></div>
+          <div class="ring r1"><span class="pip"></span></div>
+          <div class="ring r2"><span class="pip"></span></div>
+          <div class="energy"></div>
+          <div class="glow-b"></div><div class="glow-a"></div>
+          <canvas class="net" id="net"></canvas>
+          <div class="floor"></div>
+          <div class="imgwrap"><picture><source srcset="assets/profile-portrait.webp" type="image/webp" /><img id="photo" src="assets/profile-portrait.png" alt="Gabriel Emilio" width="860" height="940" /></picture></div>
+          <div class="sheen"></div>
+          <div class="badge b1"><span class="dt" style="background:#43d6ee;box-shadow:0 0 8px #43d6ee"></span><span data-i="badge1">Systems &amp; Performance</span></div>
+          <div class="badge b2"><span class="dt" style="background:#d9bd8c;box-shadow:0 0 8px #d9bd8c"></span><span data-i="badge2">Global Mindset</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="scrollhint"><div class="ms"></div><span data-i="hero_scroll">role para explorar</span></div>
+  </section>
+
+  <div class="marq"><div class="marq-t" id="marq"></div></div>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="rv">
+        <span class="idx">01 - <span data-i="about_k">Sobre</span></span>
+        <h2 class="s-title" data-i="about_t">Mentalidade de engenharia, visão de produto.</h2>
+        <p data-i="about_p1">Trabalho na interseção entre profundidade técnica e visão de mercado. Penso em sistemas: arquitetura limpa, performance no detalhe e decisões que escalam.</p>
+        <p data-i="about_p2">Aprendizado contínuo impulsiona novas linguagens, novas tecnologias e novos idiomas. Busco problemas difíceis e os resolvo com discernimento, não com força bruta.</p>
+        <div class="stats stg" id="stats"></div>
+      </div>
+      <div class="term rv">
+        <div class="bar"><i></i><i></i><i></i><em>~ gabriel / zsh</em></div>
+        <code><span class="c">// engineer.profile</span><br/>
+<span class="k">const</span> gabriel = {<br/>
+&nbsp;&nbsp;focus: <span class="s" id="terminalFocusLangs">[]</span>,<br/>
+&nbsp;&nbsp;mindset: <span class="s">"systems &amp; performance"</span>,<br/>
+&nbsp;&nbsp;scope: <span class="f">"global"</span>,<br/>
+&nbsp;&nbsp;learning: <span class="k">true</span><br/>
+};<br/>
+gabriel.<span class="f">solve</span>(<span class="s">"hard problems"</span>);<br/>
+<span class="c">// → shipped.</span></code>
+      </div>
+    </div>
+  </section>
+
+  <section class="published" id="published">
+    <div class="container">
+      <div class="rv" style="margin-bottom:44px">
+        <span class="idx">02 - <span data-i="pub_k">Sites publicados</span></span>
+        <h2 class="s-title" data-i="pub_t">No ar, funcionando, acessivel.</h2>
+        <p class="s-sub" data-i="pub_sub">Sites que construi/criei e que estao publicados na internet, entre projetos proprios e entregas para clientes.</p>
+      </div>
+      <div class="published-grid">
+        <div class="pub-panel rv">
+          <div>
+            <div class="pub-count" id="pubCount">0</div>
+            <div class="pub-label" data-i="pub_count">sites publicados</div>
+          </div>
+          <p class="pub-note" data-i="pub_note">Cada item aqui representa um projeto entregue e acessivel publicamente.</p>
+        </div>
+        <div class="pub-list rv" id="pubList"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="p-head">
+        <div class="rv">
+          <span class="idx">03 - <span data-i="proj_k">Projetos &amp; Cases</span></span>
+          <h2 class="s-title" data-i="proj_t">Construído de verdade.</h2>
+          <p class="s-sub" data-i="proj_sub">Projetos reais, direto do meu GitHub e atualizados automaticamente.</p>
+        </div>
+        <div class="filters rv" id="filters"></div>
+      </div>
+      <div class="grid" id="grid">
+        <div class="p-empty"><div class="skel"><span class="sk"></span><span class="sk"></span><span class="sk"></span></div><span data-i="proj_load">Carregando repositórios públicos reais…</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="github" id="github">
+    <div class="container">
+      <div class="rv" style="margin-bottom:44px">
+        <span class="idx">04 - <span data-i="gh_k">Code Sphere</span></span>
+        <h2 class="s-title" data-i="gh_t">Dados de quem constrói de verdade.</h2>
+        <p class="s-sub" data-i="gh_sub">Repositórios públicos, linguagens e atividade da minha conta em tempo real.</p>
+      </div>
+      <div class="gh-grid">
+        <div class="gh-orbit rv">
+          <div class="label" data-i="gh_constel">Constelação de linguagens</div>
+          <div class="constel" id="constel"><div class="core"><span id="coreInit">G</span></div></div>
+        </div>
+        <div class="gh-side">
+          <div class="gh-stats stg">
+            <div class="gh-stat"><div class="n grad" id="ghRepos">0</div><div class="l" data-i="gh_repos">Repositórios Públicos</div></div>
+            <div class="gh-stat"><div class="n grad" id="ghSites">0</div><div class="l" data-i="gh_sites">Sites</div></div>
+            <div class="gh-stat"><div class="n grad" id="ghFoll">0</div><div class="l" data-i="gh_foll">Seguidores</div></div>
+          </div>
+          <div class="gh-langs rv"><h4><span data-i="gh_langs">Linguagens</span></h4><div class="lbar" id="lbar"></div><ul class="llist" id="llist"></ul></div>
+          <div class="gh-repos rv"><h4><span data-i="gh_recent">Repositórios públicos recentes</span><a href="https://github.com/GabrielFEmilio" target="_blank" rel="noopener" data-hover>@GabrielFEmilio ↗</a></h4><div id="repos"><div class="gh-load">$ fetching…</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="rv" style="margin-bottom:44px">
+        <span class="idx">05 - <span data-i="c_k">Contato</span></span>
+        <h2 class="s-title" data-i="c_t">Vamos construir algo notável.</h2>
+        <p class="s-sub" data-i="c_sub">Estou aberto a oportunidades globais, parcerias e projetos ambiciosos.</p>
+      </div>
+      <div class="c-grid">
+        <form class="form rv" id="form">
+          <div class="field"><input id="fn" name="name" autocomplete="name" required placeholder=" "/><label for="fn" data-i="f_name">Nome</label></div>
+          <div class="field"><input id="fe" name="email" type="email" autocomplete="email" required placeholder=" "/><label for="fe" data-i="f_email">E-mail</label></div>
+          <div class="field"><textarea id="fmsg" name="message" required placeholder=" "></textarea><label for="fmsg" data-i="f_msg">Mensagem</label></div>
+          <button type="submit" class="btn btn-p magnetic" data-hover style="align-self:flex-start"><span data-i="f_send">Enviar mensagem</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+          <span class="form-ok" id="formOk" data-i="f_ok" role="status" aria-live="polite">Mensagem pronta no seu e-mail!</span>
+        </form>
+        <div class="aside rv">
+          <a class="clink magnetic" data-hover href="https://www.linkedin.com/in/gabriel-emilio/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V10.2H6.06V17h2.28zM7.2 9.24a1.32 1.32 0 1 0 0-2.64 1.32 1.32 0 0 0 0 2.64zM18 17v-3.73c0-1.99-.43-3.52-2.76-3.52-1.12 0-1.87.61-2.18 1.2h-.03v-1.02H10.84V17h2.27v-3.37c0-.89.17-1.75 1.27-1.75 1.09 0 1.1 1.02 1.1 1.81V17H18z"/></svg></span><div><div class="t">LinkedIn</div><div class="v">/in/gabriel-emilio</div></div><span class="ar">↗</span></a>
+          <a class="clink magnetic" data-hover href="https://github.com/GabrielFEmilio" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.72c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></span><div><div class="t">GitHub</div><div class="v">@GabrielFEmilio</div></div><span class="ar">↗</span></a>
+          <a class="clink magnetic" data-hover href="https://mail.google.com/mail/?view=cm&fs=1&to=gabriel.emilio.dev%40gmail.com" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><div class="t">E-mail</div><div class="v">gabriel.emilio.dev@gmail.com</div></div><span class="ar">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container in">
+      <small>© <span id="yr"></span> <span id="footName">Gabriel Emilio</span>. <span data-i="foot_r">Todos os direitos reservados.</span></small>
+      <button type="button" class="policy-link" id="policyOpen" data-hover data-i="policy_link">Políticas</button>
+      <small data-i="foot_b">Projetado e codado com precisão, com apoio de Codex e Claude.</small>
+      <a href="#hero" class="toTop magnetic" data-hover aria-label="topo"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+    </div>
+  </footer>
+</main>
+
+<div class="modal" id="modal">
+  <div class="back" data-x></div>
+  <div class="box">
+    <button class="x" data-x aria-label="fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="head">
+      <span class="mcat" id="mCat"></span>
+      <h3 id="mTitle"></h3>
+    </div>
+    <div class="cont">
+      <p class="mdesc" id="mDesc"></p>
+      <div class="mstats" id="mStats"></div>
+      <div class="mtags" id="mTags"></div>
+      <div class="acts" id="mActs"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal policy-modal" id="policyModal" aria-hidden="true">
+  <div class="back" data-policy-x></div>
+  <div class="box" role="dialog" aria-modal="true" aria-labelledby="policyTitle">
+    <button class="x" data-policy-x aria-label="fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="head">
+      <span class="mcat" data-i="policy_cat">Transparência e privacidade</span>
+      <h3 id="policyTitle" data-i="policy_t">Políticas do site</h3>
+      <p class="updated" data-i="policy_updated">Última atualização: 16 de junho de 2026.</p>
+    </div>
+    <div class="cont">
+      <section>
+        <h4 data-i="policy_owner_t">Responsável e contato</h4>
+        <p data-i="policy_owner_p">Este site-portfólio é mantido por Gabriel Emilio. Para solicitações sobre privacidade, dados pessoais, correções ou remoções, use o e-mail: gabriel.emilio.dev@gmail.com.</p>
+      </section>
+      <section>
+        <h4 data-i="policy_data_t">Dados e finalidades</h4>
+        <ul>
+          <li data-i="policy_data_1">Preferência de idioma: quando você troca o idioma, o site salva a escolha no navegador usando localStorage, na chave site_lang, para lembrar a preferência nos próximos acessos.</li>
+          <li data-i="policy_data_2">Formulário de contato: se você enviar uma mensagem, nome, e-mail e conteúdo da mensagem são enviados ao serviço Formspree e depois encaminhados ao e-mail de contato, apenas para responder sua solicitação.</li>
+          <li data-i="policy_data_3">GitHub API: o site consulta dados públicos de repositórios e perfil do GitHub para exibir projetos e linguagens. Essa requisição pode transmitir dados técnicos comuns, como IP, navegador e horário da solicitação, ao GitHub.</li>
+          <li data-i="policy_data_4">Fontes e scripts externos: o site carrega Google Fonts e bibliotecas hospedadas em CDNJS/Cloudflare. Esses provedores podem receber dados técnicos da conexão necessários para entregar os arquivos.</li>
+          <li data-i="policy_data_5">Links externos: links para GitHub, LinkedIn, Gmail, Formspree ou sites publicados levam você para serviços de terceiros, que possuem políticas próprias.</li>
+        </ul>
+      </section>
+      <section>
+        <h4 data-i="policy_cookies_t">Cookies e tecnologias semelhantes</h4>
+        <p data-i="policy_cookies_p">O site não cria cookies próprios de publicidade ou analytics. A preferência de idioma é armazenamento funcional local. Serviços externos carregados pelo site ou acessados por links podem usar suas próprias tecnologias conforme as políticas deles.</p>
+      </section>
+      <section>
+        <h4 data-i="policy_rights_t">Direitos do usuário</h4>
+        <p data-i="policy_rights_p">Você pode solicitar acesso, correção, exclusão, limitação, oposição ao tratamento ou informações sobre dados pessoais eventualmente enviados pelo contato. As solicitações devem ser feitas pelo e-mail informado acima.</p>
+      </section>
+      <section>
+        <h4 data-i="policy_retention_t">Retenção, segurança e transferências</h4>
+        <p data-i="policy_retention_p">Mensagens de contato são mantidas apenas pelo tempo necessário para comunicação profissional e eventual proteção de direitos. Provedores como Formspree, Google, GitHub, LinkedIn e Cloudflare podem processar dados em outros países. O site busca limitar a coleta ao necessário, mas depende das práticas desses provedores.</p>
+      </section>
+      <section>
+        <h4 data-i="policy_children_t">Menores de idade</h4>
+        <p data-i="policy_children_p">Este site não é direcionado a crianças e não solicita conscientemente dados de menores. Se um responsável identificar envio indevido de dados, pode pedir remoção pelo e-mail de contato.</p>
+      </section>
+      <section>
+        <h4 data-i="policy_limits_t">Limites deste aviso</h4>
+        <p data-i="policy_limits_p">Este aviso aumenta a transparência, mas não substitui auditoria jurídica, contratos com operadores, revisão das configurações dos provedores, controles de retenção, nem eventual banner de consentimento se no futuro forem adicionados analytics, publicidade, pixels, rastreamento ou cookies não essenciais.</p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   CONFIG
+   ===================================================================== */
+const CONFIG = {
+  githubUser: "GabrielFEmilio",
+  linkedin: "https://www.linkedin.com/in/gabriel-emilio/",
+  email: "gabriel.emilio.dev@gmail.com",
+  formEndpoint: "https://formspree.io/f/mdavbrkq",
+  name: "Gabriel Emilio",
+  stack: ["C","Java","JavaScript","Unity","C#","Node.js","WebGL","Automação"],
+  maxProjects: 6,
+  repoLanguages: {
+    atlas: ["Python"],
+    "atlas-das-promos": ["Python"],
+    "atlas-das-promos-showcase": ["Python"],
+    signlinked: ["HTML","CSS","JavaScript"],
+    "sign-linked": ["HTML","CSS","JavaScript"]
+  },
+  publishedSites: [
+    {
+      title: "SignLinked",
+      url: "https://signlinked.web.app",
+      type: "Autoral",
+      year: 2026,
+      stack: ["HTML","CSS","JavaScript"],
+      desc: {
+        pt: "Site publicado na web para o projeto SignLinked.",
+        en: "Published website for the SignLinked project.",
+        fr: "Site publie sur le web pour le projet SignLinked."
+      }
+    },
+    {
+      title: "Portfolio Gabriel Emilio",
+      url: "",
+      type: "Autoral",
+      year: 2026,
+      stack: ["HTML","CSS","JavaScript"],
+      desc: {
+        pt: "Site-portfolio pessoal publicado na web.",
+        en: "Personal portfolio website published on the web.",
+        fr: "Site portfolio personnel publie sur le web."
+      }
+    }
+  ]
+};
+
+const LANG_COLORS = {
+  "JavaScript":"#f1e05a","TypeScript":"#3178c6","C":"#9aa0a6","C++":"#f34b7d","C#":"#7a3fd6",
+  "Java":"#e8973b","HTML":"#e34c26","CSS":"#9b6dff","Python":"#4b8bbe","Shell":"#89e051",
+  "ShaderLab":"#43d6ee","GLSL":"#5686a5","HLSL":"#43d6ee","Lua":"#5b8cff","Go":"#00add8",
+  "Rust":"#dea584","PHP":"#8993be","Ruby":"#cc342d","Kotlin":"#a97bff","Dart":"#00b4ab",
+  "Vue":"#41b883","Jupyter Notebook":"#da5b0b","Unity":"#43d6ee","Automação":"#46d39a",
+  "WebGL":"#5b8cff","Node.js":"#46d39a"
+};
+const colorFor = n => LANG_COLORS[n] || ("#"+(Math.abs([...String(n)].reduce((a,c)=>a*31+c.charCodeAt(0),7))%0xffffff).toString(16).padStart(6,"0"));
+
+/* =====================================================================
+   i18n
+   ===================================================================== */
+const I18N = {
+  pt:{nav_about:"Sobre",nav_projects:"Projetos",nav_published:"Sites",nav_github:"Code Sphere",nav_contact:"Contato",
+    hero_tag:"Disponível para projetos globais",hero_a:"Eu construo",hero_b:"software de",hero_c:"alto impacto.",
+    hero_role:"Software Engineer",
+    hero_sub:"Sou estudante de Engenharia de Computação no IFSP e desenvolvedor em formação, construindo minha base por meio de projetos, estudos e prática constante. Busco transformar ideias e problemas em soluções claras, funcionais e bem estruturadas, evoluindo a cada desafio. Este portfólio reúne meus aprendizados, minhas iniciativas e meus projetos, refletindo minha vontade de crescer e me tornar um profissional cada vez mais completo em tecnologia.",
+    hero_cta1:"Ver sites",hero_cta2:"Falar comigo",hero_scroll:"role para explorar",
+    badge1:"Systems & Performance",badge2:"Global Mindset",
+    ro_status:"Status",ro_avail:"Disponível",ro_focus:"Foco",ro_scope:"Alcance",ro_global:"Global",
+    about_k:"Sobre",about_t:"Mentalidade de engenharia, visão de produto.",
+    about_p1:"Trabalho na interseção entre profundidade técnica e visão de mercado. Penso em sistemas: arquitetura limpa, performance no detalhe e decisões que escalam.",
+    about_p2:"Aprendizado contínuo impulsiona novas linguagens, novas tecnologias e novos idiomas. Busco problemas difíceis e os resolvo com discernimento, não com força bruta.",
+    st_repos:"Repositórios Públicos",st_sites:"Sites publicados",st_lang:"Linguagens",
+    proj_k:"Projetos & Cases",proj_t:"Construído de verdade.",proj_sub:"Projetos reais, direto do meu GitHub e atualizados automaticamente.",
+    proj_load:"Carregando repositórios públicos reais…",proj_fail:"Não consegui carregar do GitHub agora. Veja tudo direto no perfil:",proj_btn:"Abrir GitHub",
+    f_all:"Todos",m_repo:"Ver código",m_live:"Abrir projeto",m_forks:"forks",m_updated:"atualizado",
+    pub_k:"Sites publicados",pub_t:"No ar, funcionando, acessivel.",pub_sub:"Sites que construi/criei e que estao publicados na internet, entre projetos proprios e entregas para clientes.",pub_count:"sites publicados",pub_note:"Cada item aqui representa um projeto entregue e acessivel publicamente.",pub_empty:"Adicione seus sites publicados no CONFIG para preencher esta secao.",
+    gh_k:"Code Sphere",gh_t:"Dados de quem constrói de verdade.",gh_sub:"Repositórios públicos, linguagens e atividade da minha conta em tempo real.",
+    gh_constel:"Constelação de linguagens",gh_repos:"Repositórios Públicos",gh_sites:"Sites",gh_foll:"Seguidores",gh_langs:"Linguagens",gh_recent:"Repositórios públicos recentes",
+    c_k:"Contato",c_t:"Vamos construir algo notável.",c_sub:"Estou aberto a oportunidades globais, parcerias e projetos ambiciosos.",
+    f_name:"Nome",f_email:"E-mail",f_msg:"Mensagem",f_send:"Enviar mensagem",f_ok:"Mensagem enviada com sucesso!",f_sending:"Enviando...",f_fail:"Nao foi possivel enviar agora. Tente pelo e-mail ao lado.",f_mailto:"Abrindo o Gmail...",
+    policy_link:"Políticas",policy_cat:"Transparência e privacidade",policy_t:"Políticas do site",policy_updated:"Última atualização: 16 de junho de 2026.",
+    policy_owner_t:"Responsável e contato",policy_owner_p:"Este site-portfólio é mantido por Gabriel Emilio. Para solicitações sobre privacidade, dados pessoais, correções ou remoções, use o e-mail: gabriel.emilio.dev@gmail.com.",
+    policy_data_t:"Dados e finalidades",policy_data_1:"Preferência de idioma: quando você troca o idioma, o site salva a escolha no navegador usando localStorage, na chave site_lang, para lembrar a preferência nos próximos acessos.",policy_data_2:"Formulário de contato: se você enviar uma mensagem, nome, e-mail e conteúdo da mensagem são enviados ao serviço Formspree e depois encaminhados ao e-mail de contato, apenas para responder sua solicitação.",policy_data_3:"GitHub API: o site consulta dados públicos de repositórios e perfil do GitHub para exibir projetos e linguagens. Essa requisição pode transmitir dados técnicos comuns, como IP, navegador e horário da solicitação, ao GitHub.",policy_data_4:"Fontes e scripts externos: o site carrega Google Fonts e bibliotecas hospedadas em CDNJS/Cloudflare. Esses provedores podem receber dados técnicos da conexão necessários para entregar os arquivos.",policy_data_5:"Links externos: links para GitHub, LinkedIn, Gmail, Formspree ou sites publicados levam você para serviços de terceiros, que possuem políticas próprias.",
+    policy_cookies_t:"Cookies e tecnologias semelhantes",policy_cookies_p:"O site não cria cookies próprios de publicidade ou analytics. A preferência de idioma é armazenamento funcional local. Serviços externos carregados pelo site ou acessados por links podem usar suas próprias tecnologias conforme as políticas deles.",
+    policy_rights_t:"Direitos do usuário",policy_rights_p:"Você pode solicitar acesso, correção, exclusão, limitação, oposição ao tratamento ou informações sobre dados pessoais eventualmente enviados pelo contato. As solicitações devem ser feitas pelo e-mail informado acima.",
+    policy_retention_t:"Retenção, segurança e transferências",policy_retention_p:"Mensagens de contato são mantidas apenas pelo tempo necessário para comunicação profissional e eventual proteção de direitos. Provedores como Formspree, Google, GitHub, LinkedIn e Cloudflare podem processar dados em outros países. O site busca limitar a coleta ao necessário, mas depende das práticas desses provedores.",
+    policy_children_t:"Menores de idade",policy_children_p:"Este site não é direcionado a crianças e não solicita conscientemente dados de menores. Se um responsável identificar envio indevido de dados, pode pedir remoção pelo e-mail de contato.",
+    policy_limits_t:"Limites deste aviso",policy_limits_p:"Este aviso aumenta a transparência, mas não substitui auditoria jurídica, contratos com operadores, revisão das configurações dos provedores, controles de retenção, nem eventual banner de consentimento se no futuro forem adicionados analytics, publicidade, pixels, rastreamento ou cookies não essenciais.",
+    foot_r:"Todos os direitos reservados.",foot_b:"Projetado e codado com precisão, com apoio de Codex e Claude."},
+  en:{nav_about:"About",nav_projects:"Projects",nav_published:"Sites",nav_github:"Code Sphere",nav_contact:"Contact",
+    hero_tag:"Available for global projects",hero_a:"I build",hero_b:"software with",hero_c:"high impact.",
+    hero_role:"Software Engineer",
+    hero_sub:"I am a Computer Engineering student at IFSP and a developer in training, building my foundation through projects, study and constant practice. I aim to turn ideas and problems into clear, functional and well-structured solutions, improving with each challenge. This portfolio brings together my learning, initiatives and projects, reflecting my drive to grow and become an increasingly well-rounded technology professional.",
+    hero_cta1:"View sites",hero_cta2:"Get in touch",hero_scroll:"scroll to explore",
+    badge1:"Systems & Performance",badge2:"Global Mindset",
+    ro_status:"Status",ro_avail:"Available",ro_focus:"Focus",ro_scope:"Scope",ro_global:"Global",
+    about_k:"About",about_t:"Engineering mindset, product vision.",
+    about_p1:"I work at the intersection of technical depth and market vision. I think in systems: clean architecture, performance in the details, and decisions that scale.",
+    about_p2:"Continuous learning drives new languages, new technologies and new idioms. I seek out hard problems and solve them with judgment, not brute force.",
+    st_repos:"Public Repositories",st_sites:"Published sites",st_lang:"Languages",
+    proj_k:"Projects & Cases",proj_t:"Built for real.",proj_sub:"Real projects, straight from my GitHub and updated automatically.",
+    proj_load:"Loading real public repositories…",proj_fail:"Couldn't load from GitHub right now. See everything on the profile:",proj_btn:"Open GitHub",
+    f_all:"All",m_repo:"View code",m_live:"Open project",m_forks:"forks",m_updated:"updated",
+    pub_k:"Published sites",pub_t:"Live, working, accessible.",pub_sub:"Websites I built/created and published online, from client work to self-authored projects.",pub_count:"published sites",pub_note:"Each item here represents a delivered project that is publicly accessible.",pub_empty:"Add your published sites in CONFIG to fill this section.",
+    gh_k:"Code Sphere",gh_t:"Data from someone who actually builds.",gh_sub:"Public repositories, languages and activity from my account in real time.",
+    gh_constel:"Language constellation",gh_repos:"Public Repositories",gh_sites:"Sites",gh_foll:"Followers",gh_langs:"Languages",gh_recent:"Recent public repositories",
+    c_k:"Contact",c_t:"Let's build something remarkable.",c_sub:"I'm open to global opportunities, partnerships, and ambitious projects.",
+    f_name:"Name",f_email:"Email",f_msg:"Message",f_send:"Send message",f_ok:"Message sent successfully!",f_sending:"Sending...",f_fail:"Could not send right now. Try the email link beside the form.",f_mailto:"Opening Gmail...",
+    policy_link:"Policies",policy_cat:"Transparency and privacy",policy_t:"Site policies",policy_updated:"Last updated: June 16, 2026.",
+    policy_owner_t:"Controller and contact",policy_owner_p:"This portfolio website is maintained by Gabriel Emilio. For privacy, personal data, correction, or removal requests, use: gabriel.emilio.dev@gmail.com.",
+    policy_data_t:"Data and purposes",policy_data_1:"Language preference: when you change the language, the site stores the choice in the browser using localStorage, under the site_lang key, to remember it on future visits.",policy_data_2:"Contact form: if you send a message, your name, email, and message content are sent to Formspree and then forwarded to the contact email, only to answer your request.",policy_data_3:"GitHub API: the site requests public GitHub profile and repository data to display projects and languages. This request may transmit common technical data, such as IP address, browser, and request time, to GitHub.",policy_data_4:"External fonts and scripts: the site loads Google Fonts and libraries hosted on CDNJS/Cloudflare. These providers may receive technical connection data needed to deliver the files.",policy_data_5:"External links: links to GitHub, LinkedIn, Gmail, Formspree, or published sites take you to third-party services with their own policies.",
+    policy_cookies_t:"Cookies and similar technologies",policy_cookies_p:"The site does not create its own advertising or analytics cookies. The language preference is functional local storage. External services loaded by the site or accessed through links may use their own technologies under their own policies.",
+    policy_rights_t:"User rights",policy_rights_p:"You may request access, correction, deletion, restriction, objection to processing, or information about personal data eventually sent through contact. Requests should be made by the email above.",
+    policy_retention_t:"Retention, security, and transfers",policy_retention_p:"Contact messages are kept only for as long as needed for professional communication and possible protection of rights. Providers such as Formspree, Google, GitHub, LinkedIn, and Cloudflare may process data in other countries. The site seeks to limit collection to what is necessary, but depends on those providers' practices.",
+    policy_children_t:"Children",policy_children_p:"This site is not directed to children and does not knowingly request children's data. If a guardian identifies an improper submission, removal can be requested through the contact email.",
+    policy_limits_t:"Limits of this notice",policy_limits_p:"This notice improves transparency, but does not replace legal review, processor agreements, provider configuration review, retention controls, or a consent banner if analytics, advertising, pixels, tracking, or non-essential cookies are added in the future.",
+    foot_r:"All rights reserved.",foot_b:"Designed and coded with precision, with support from Codex and Claude."},
+  fr:{nav_about:"À propos",nav_projects:"Projets",nav_published:"Sites",nav_github:"Code Sphere",nav_contact:"Contact",
+    hero_tag:"Disponible pour des projets mondiaux",hero_a:"Je conçois",hero_b:"des logiciels à",hero_c:"fort impact.",
+    hero_role:"Ingénieur logiciel",
+    hero_sub:"Je suis étudiant en génie informatique à l'IFSP et développeur en formation, en construisant mes bases grâce à des projets, des études et une pratique constante. Je cherche à transformer les idées et les problèmes en solutions claires, fonctionnelles et bien structurées, en progressant à chaque défi. Ce portfolio réunit mes apprentissages, mes initiatives et mes projets, et reflète ma volonté de grandir pour devenir un professionnel de la technologie de plus en plus complet.",
+    hero_cta1:"Voir les sites",hero_cta2:"Me contacter",hero_scroll:"défilez pour explorer",
+    badge1:"Systèmes & Performance",badge2:"Vision mondiale",
+    ro_status:"Statut",ro_avail:"Disponible",ro_focus:"Focus",ro_scope:"Portée",ro_global:"Mondial",
+    about_k:"À propos",about_t:"Mentalité d'ingénieur, vision produit.",
+    about_p1:"Je travaille à l'intersection de la profondeur technique et de la vision marché. Je pense en systèmes : architecture propre, performance dans le détail et décisions qui passent à l'échelle.",
+    about_p2:"L'apprentissage continu nourrit de nouveaux langages, de nouvelles technologies et de nouvelles langues. Je cherche les problèmes difficiles et les résous avec discernement.",
+    st_repos:"Dépôts publics",st_sites:"Sites publies",st_lang:"Langages",
+    proj_k:"Projets & Cas",proj_t:"Construit pour de vrai.",proj_sub:"Projets réels, directement depuis mon GitHub et mis à jour automatiquement.",
+    proj_load:"Chargement des dépôts publics réels…",proj_fail:"Impossible de charger depuis GitHub. Voir tout sur le profil :",proj_btn:"Ouvrir GitHub",
+    f_all:"Tous",m_repo:"Voir le code",m_live:"Ouvrir le projet",m_forks:"forks",m_updated:"mis à jour",
+    pub_k:"Sites publies",pub_t:"En ligne, fonctionnel, accessible.",pub_sub:"Sites que j ai construits/crees et publies en ligne, pour des clients ou des projets personnels.",pub_count:"sites publies",pub_note:"Chaque element represente un projet livre et accessible publiquement.",pub_empty:"Ajoutez vos sites publies dans CONFIG pour remplir cette section.",
+    gh_k:"Code Sphere",gh_t:"Les données de quelqu'un qui construit vraiment.",gh_sub:"Dépôts publics, langages et activité issus directement de mon compte, en temps réel.",
+    gh_constel:"Constellation de langages",gh_repos:"Dépôts publics",gh_sites:"Sites",gh_foll:"Abonnés",gh_langs:"Langages",gh_recent:"Dépôts publics récents",
+    c_k:"Contact",c_t:"Construisons quelque chose de remarquable.",c_sub:"Je suis ouvert aux opportunités internationales, aux partenariats et aux projets ambitieux.",
+    f_name:"Nom",f_email:"E-mail",f_msg:"Message",f_send:"Envoyer le message",f_ok:"Message envoye avec succes!",f_sending:"Envoi...",f_fail:"Impossible d'envoyer maintenant. Utilisez l'e-mail a cote du formulaire.",f_mailto:"Ouverture de Gmail...",
+    policy_link:"Politiques",policy_cat:"Transparence et confidentialite",policy_t:"Politiques du site",policy_updated:"Derniere mise a jour : 16 juin 2026.",
+    policy_owner_t:"Responsable et contact",policy_owner_p:"Ce site portfolio est maintenu par Gabriel Emilio. Pour les demandes de confidentialite, donnees personnelles, correction ou suppression, utilisez : gabriel.emilio.dev@gmail.com.",
+    policy_data_t:"Donnees et finalites",policy_data_1:"Preference de langue : lorsque vous changez la langue, le site enregistre ce choix dans le navigateur avec localStorage, sous la cle site_lang, afin de s'en souvenir lors des prochaines visites.",policy_data_2:"Formulaire de contact : si vous envoyez un message, votre nom, votre e-mail et le contenu du message sont transmis a Formspree puis transferes a l'adresse de contact, uniquement pour repondre a votre demande.",policy_data_3:"API GitHub : le site consulte des donnees publiques du profil et des depots GitHub pour afficher les projets et langages. Cette requete peut transmettre a GitHub des donnees techniques courantes, comme l'adresse IP, le navigateur et l'heure de la requete.",policy_data_4:"Polices et scripts externes : le site charge Google Fonts et des bibliotheques hebergees sur CDNJS/Cloudflare. Ces fournisseurs peuvent recevoir les donnees techniques de connexion necessaires a la livraison des fichiers.",policy_data_5:"Liens externes : les liens vers GitHub, LinkedIn, Gmail, Formspree ou des sites publies vous dirigent vers des services tiers ayant leurs propres politiques.",
+    policy_cookies_t:"Cookies et technologies similaires",policy_cookies_p:"Le site ne cree pas ses propres cookies publicitaires ou analytiques. La preference de langue est un stockage local fonctionnel. Les services externes charges par le site ou accessibles via des liens peuvent utiliser leurs propres technologies selon leurs politiques.",
+    policy_rights_t:"Droits de l'utilisateur",policy_rights_p:"Vous pouvez demander l'acces, la correction, la suppression, la limitation, l'opposition au traitement ou des informations sur les donnees personnelles eventuellement envoyees par contact. Les demandes doivent etre faites par l'e-mail indique ci-dessus.",
+    policy_retention_t:"Conservation, securite et transferts",policy_retention_p:"Les messages de contact sont conserves uniquement le temps necessaire a la communication professionnelle et a l'eventuelle protection de droits. Des fournisseurs comme Formspree, Google, GitHub, LinkedIn et Cloudflare peuvent traiter des donnees dans d'autres pays. Le site cherche a limiter la collecte au necessaire, mais depend des pratiques de ces fournisseurs.",
+    policy_children_t:"Mineurs",policy_children_p:"Ce site ne s'adresse pas aux enfants et ne demande pas sciemment de donnees de mineurs. Si un responsable identifie un envoi inapproprie, il peut demander la suppression via l'e-mail de contact.",
+    policy_limits_t:"Limites de cet avis",policy_limits_p:"Cet avis ameliore la transparence, mais ne remplace pas une revue juridique, des contrats avec les sous-traitants, la verification de la configuration des fournisseurs, les controles de conservation, ni une banniere de consentement si des analytics, publicites, pixels, suivis ou cookies non essentiels sont ajoutes a l'avenir.",
+    foot_r:"Tous droits réservés.",foot_b:"Conçu et codé avec précision, avec l'appui de Codex et Claude."}
+};
+const SUPPORTED_LANGS = ["pt","en","fr"];
+const LANGUAGE_STORAGE_KEY = "site_lang";
+function normalizeLanguage(value){
+  return String(value||"").trim().toLowerCase().split(/[-_]/)[0];
+}
+function isSupportedLanguage(lang){
+  return SUPPORTED_LANGS.includes(lang);
+}
+function getSavedLanguage(){
+  try{
+    const saved=normalizeLanguage(localStorage.getItem(LANGUAGE_STORAGE_KEY));
+    return isSupportedLanguage(saved)?saved:"";
+  }catch(e){
+    return "";
+  }
+}
+function getDeviceLanguage(){
+  const primary=(Array.isArray(navigator.languages)&&navigator.languages.length)?navigator.languages[0]:navigator.language;
+  const lang=normalizeLanguage(primary);
+  return isSupportedLanguage(lang)?lang:"en";
+}
+function getInitialLanguage(){
+  return getSavedLanguage()||getDeviceLanguage();
+}
+function saveLanguage(lang){
+  try{localStorage.setItem(LANGUAGE_STORAGE_KEY,lang);}catch(e){}
+}
+let LANG = getInitialLanguage();
+const t = k => (I18N[LANG] && I18N[LANG][k]) || (I18N.en && I18N.en[k]) || (I18N.pt[k]||k);
+function applyI18n(){
+  document.documentElement.lang = LANG;
+  document.querySelectorAll("button[data-l]").forEach(b=>{
+    const active=b.dataset.l===LANG;
+    b.classList.toggle("on",active);
+    b.setAttribute("aria-pressed",active?"true":"false");
+  });
+  document.querySelectorAll("[data-i]").forEach(el=>{const v=t(el.dataset.i); if(v) el.textContent=v;});
+  renderStartLanguages();
+}
+function setLanguage(lang,persist=false){
+  const next=normalizeLanguage(lang);
+  if(!isSupportedLanguage(next))return;
+  LANG=next;
+  if(persist)saveLanguage(LANG);
+  applyI18n();
+  renderPublishedSites();
+  buildFilters();
+  renderProjects();
+  if(STAT)setStatCards(STAT.repos,STAT.sites,STAT.langs);
+}
+
+/* =====================================================================
+   helpers
+   ===================================================================== */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const RM = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+const COARSE = window.matchMedia("(hover:none),(pointer:coarse)").matches;
+const lerp = (a,b,n)=>a+(b-a)*n;
+
+/* =====================================================================
+   custom cursor
+   ===================================================================== */
+(function cursor(){
+  if(COARSE){document.body.classList.remove("cc");return;}
+  const dot=$(".cur-d"),ring=$(".cur-r");
+  let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+  addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;dot.style.transform=`translate(${mx}px,${my}px)`;
+    document.documentElement.style.setProperty("--mx",mx+"px");document.documentElement.style.setProperty("--my",my+"px");});
+  addEventListener("mousedown",()=>document.body.classList.add("down"));
+  addEventListener("mouseup",()=>document.body.classList.remove("down"));
+  (function loop(){rx=lerp(rx,mx,.18);ry=lerp(ry,my,.18);ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(loop);})();
+  const hov=()=>document.body.classList.add("hov"),out=()=>document.body.classList.remove("hov");
+  const bind=()=>$$('a,button,.card,[data-hover],input,textarea').forEach(el=>{el.removeEventListener("mouseenter",hov);el.removeEventListener("mouseleave",out);el.addEventListener("mouseenter",hov);el.addEventListener("mouseleave",out);});
+  bind(); window.__rebindCursor=bind;
+})();
+
+/* =====================================================================
+   magnetic buttons
+   ===================================================================== */
+(function magnetic(){
+  if(COARSE||RM) return;
+  const bind=el=>{
+    el.addEventListener("mousemove",e=>{
+      const r=el.getBoundingClientRect();
+      const x=(e.clientX-(r.left+r.width/2))*.32;
+      const y=(e.clientY-(r.top+r.height/2))*.42;
+      el.style.transform=`translate(${x}px,${y}px)`;
+    });
+    el.addEventListener("mouseleave",()=>{el.style.transition="transform .5s cubic-bezier(.16,1,.3,1)";el.style.transform="";setTimeout(()=>el.style.transition="",500);});
+  };
+  $$(".magnetic").forEach(bind);
+})();
+
+/* =====================================================================
+   ambient dust + constellation lines (canvas)
+   ===================================================================== */
+(function dust(){
+  const c=$("#dust"),x=c.getContext("2d");let w,h,parts=[],mouse={x:-999,y:-999};
+  const DPR=Math.min(devicePixelRatio||1,2);
+  const DENS = COARSE?0.00006:0.00011;
+  function size(){w=c.width=innerWidth*DPR;h=c.height=innerHeight*DPR;c.style.width=innerWidth+"px";c.style.height=innerHeight+"px";
+    const n=Math.min(150,Math.floor(w*h*DENS/DPR));parts=[];for(let i=0;i<n;i++)parts.push({
+      x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.12*DPR,vy:(Math.random()-.5)*.12*DPR,
+      r:(Math.random()*1.4+.4)*DPR,a:Math.random()*.5+.2});}
+  size();addEventListener("resize",size);
+  addEventListener("mousemove",e=>{mouse.x=e.clientX*DPR;mouse.y=e.clientY*DPR;});
+  const LINK=120*DPR;
+  let run=!RM;
+  function frame(){
+    if(!run)return;
+    x.clearRect(0,0,w,h);
+    for(let i=0;i<parts.length;i++){const p=parts[i];p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=w;if(p.x>w)p.x=0;if(p.y<0)p.y=h;if(p.y>h)p.y=0;
+      const dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.hypot(dx,dy)||1;
+      if(d<140*DPR){const f=(140*DPR-d)/(140*DPR);p.x+=dx/d*f*1.4;p.y+=dy/d*f*1.4;}
+      x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle=`rgba(156,192,255,${p.a})`;x.fill();
+      for(let j=i+1;j<parts.length;j++){const q=parts[j];const dd=Math.hypot(p.x-q.x,p.y-q.y);
+        if(dd<LINK){x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.strokeStyle=`rgba(91,140,255,${.1*(1-dd/LINK)})`;x.lineWidth=DPR*.6;x.stroke();}}}
+    requestAnimationFrame(frame);
+  }
+  if(run)frame(); else x.clearRect(0,0,w,h);
+  document.addEventListener("visibilitychange",()=>{run=!document.hidden&&!RM;if(run)frame();});
+})();
+
+/* =====================================================================
+   portrait aura net (canvas around photo)
+   ===================================================================== */
+(function net(){
+  const c=$("#net");if(!c)return;const x=c.getContext("2d");let w,h,nodes=[],motes=[],pulses=[];
+  const DPR=Math.min(devicePixelRatio||1,2);
+  const COL=fx=>fx<.5?"67,214,238":"217,189,140";
+  function size(){const r=c.getBoundingClientRect();w=c.width=Math.max(r.width,1)*DPR;h=c.height=Math.max(r.height,1)*DPR;
+    const n=COARSE?14:30;nodes=[];for(let i=0;i<n;i++)nodes.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:(Math.random()*1.7+.5)*DPR,ph:Math.random()*6.28});
+    const m=COARSE?10:22;motes=[];for(let i=0;i<m;i++)motes.push({x:Math.random()*w,y:Math.random()*h,vy:-(Math.random()*.3+.08)*DPR,r:(Math.random()*1.2+.3)*DPR,a:Math.random()*.45+.2,ph:Math.random()*6.28});
+    pulses=[];}
+  let run=!RM,T=0;
+  function spawnPulse(){if(pulses.length>5||nodes.length<2)return;const i=(Math.random()*nodes.length)|0;let j=-1,best=1e9;
+    for(let k=0;k<nodes.length;k++){if(k===i)continue;const d=Math.hypot(nodes[i].x-nodes[k].x,nodes[i].y-nodes[k].y);if(d<150*DPR&&d<best){best=d;j=k;}}
+    if(j>=0)pulses.push({a:i,b:j,t:0,sp:.012+Math.random()*.02});}
+  function frame(){if(!run)return;T++;x.clearRect(0,0,w,h);
+    // links
+    for(let i=0;i<nodes.length;i++){const p=nodes[i];p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;
+      for(let j=i+1;j<nodes.length;j++){const q=nodes[j];const d=Math.hypot(p.x-q.x,p.y-q.y);
+        if(d<108*DPR){const o=.18*(1-d/(108*DPR));x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.strokeStyle=`rgba(130,175,255,${o})`;x.lineWidth=DPR*.55;x.stroke();}}}
+    // glowing nodes (breathing)
+    for(let i=0;i<nodes.length;i++){const p=nodes[i];const pr=p.r*(1+.32*Math.sin(T*.03+p.ph));const c1=COL(p.x/w);
+      x.beginPath();x.arc(p.x,p.y,pr,0,7);x.fillStyle=`rgba(${c1},.88)`;x.shadowColor=`rgba(${c1},.9)`;x.shadowBlur=8*DPR;x.fill();x.shadowBlur=0;}
+    // traveling light pulses along links
+    if(T%70===0)spawnPulse();
+    for(let k=pulses.length-1;k>=0;k--){const pu=pulses[k];pu.t+=pu.sp;if(pu.t>=1){pulses.splice(k,1);continue;}
+      const a=nodes[pu.a],b=nodes[pu.b];if(!a||!b){pulses.splice(k,1);continue;}
+      const px=a.x+(b.x-a.x)*pu.t,py=a.y+(b.y-a.y)*pu.t,c1=COL(px/w);
+      x.beginPath();x.arc(px,py,2.2*DPR,0,7);x.fillStyle=`rgba(${c1},${.9*(1-Math.abs(.5-pu.t)*1.3)})`;x.shadowColor=`rgba(${c1},1)`;x.shadowBlur=12*DPR;x.fill();x.shadowBlur=0;}
+    // rising luminous motes
+    for(const mo of motes){mo.y+=mo.vy;mo.x+=Math.sin(T*.01+mo.ph)*.12*DPR;if(mo.y<0){mo.y=h;mo.x=Math.random()*w;}
+      const c1=COL(mo.x/w);x.beginPath();x.arc(mo.x,mo.y,mo.r,0,7);x.fillStyle=`rgba(${c1},${mo.a*(.5+.5*Math.sin(T*.02+mo.ph))})`;x.fill();}
+    requestAnimationFrame(frame);}
+  setTimeout(()=>{size();if(run)frame();},220);addEventListener("resize",()=>setTimeout(size,120));
+})();
+
+/* =====================================================================
+   language surfaces
+   ===================================================================== */
+function fallbackLanguageStats(){
+  const weights=CONFIG.stack.slice(0,7).map((name,i)=>({name,weight:7-i}));
+  const total=weights.reduce((sum,l)=>sum+l.weight,0)||1;
+  return weights.map(l=>({name:l.name,pct:l.weight/total*100}));
+}
+function constellationData(limit=7){
+  const data=LANG_STATS.length?LANG_STATS:fallbackLanguageStats();
+  return data.slice(0,limit);
+}
+function constellationLanguageNames(limit=7){
+  return constellationData(limit).map(l=>l.name);
+}
+function humanLanguageList(names){
+  const list=(names||[]).filter(Boolean);
+  if(!list.length)return"Code";
+  if(list.length===1)return list[0];
+  const joiner=LANG==="en"?"and":LANG==="fr"?"et":"e";
+  if(list.length===2)return`${list[0]} ${joiner} ${list[1]}`;
+  return`${list.slice(0,-1).join(", ")} ${joiner} ${list[list.length-1]}`;
+}
+function syncHeroSubtitle(names){
+  const el=$("#heroSub");if(!el)return;
+  el.textContent=t("hero_sub");
+}
+function renderStartLanguages(){
+  const names=constellationLanguageNames();
+  syncHeroSubtitle(names);
+  const m=$("#marq");
+  if(m){
+    const block=names.map(s=>`<span>${esc(s)}</span>`).join("");
+    m.innerHTML=block.repeat(4);
+  }
+  const focus=$("#heroFocusLangs");
+  if(focus)focus.textContent=names.join(" · ");
+  const terminal=$("#terminalFocusLangs");
+  if(terminal)terminal.textContent=`[${names.map(s=>`"${s}"`).join(",")}]`;
+}
+function renderLanguageSystem(){
+  renderLangs();
+  renderConstellation();
+  renderStartLanguages();
+}
+
+/* =====================================================================
+   nav behaviour
+   ===================================================================== */
+(function nav(){
+  const nav=$("#nav");let last=0;
+  addEventListener("scroll",()=>{const y=scrollY;nav.classList.toggle("sc",y>30);
+    if(y>last&&y>320&&!document.body.classList.contains("menu"))nav.classList.add("hide");else nav.classList.remove("hide");last=y;},{passive:true});
+  $("#burger").addEventListener("click",()=>document.body.classList.toggle("menu"));
+  $$("#panel a").forEach(a=>a.addEventListener("click",()=>document.body.classList.remove("menu")));
+})();
+
+/* =====================================================================
+   language switch
+   ===================================================================== */
+(function langSwitch(){
+  $$("button[data-l]").forEach(b=>b.addEventListener("click",()=>{
+    setLanguage(b.dataset.l,true);
+  }));
+})();
+
+/* =====================================================================
+   GitHub integration (LIVE, real data)
+   ===================================================================== */
+let REPOS=[], LANG_STATS=[], ACTIVE_FILTER="all", STAT=null;
+const publishedCount = () => (CONFIG.publishedSites||[]).filter(s=>s && s.title).length;
+const repoKey = name => String(name||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]/g,"");
+const unique = list => [...new Set((list||[]).filter(Boolean))];
+function manualLanguagesForRepo(repo){
+  const key=repoKey(repo&&repo.name);
+  const match=Object.entries(CONFIG.repoLanguages||{}).find(([name])=>{
+    const probe=repoKey(name);
+    return key && probe && (key===probe || key.includes(probe) || probe.includes(key));
+  });
+  return match?unique(match[1]):[];
+}
+function repoLanguages(repo){
+  const manual=manualLanguagesForRepo(repo);
+  return manual.length?manual:unique([repo&&repo.language]);
+}
+function primaryLanguage(repo){return repoLanguages(repo)[0]||(repo&&repo.language)||"Code";}
+function languageLabel(repo,limit=2){
+  const langs=repoLanguages(repo);
+  if(!langs.length)return"Code";
+  return langs.length>limit?`${langs.slice(0,limit).join(" / ")} +${langs.length-limit}`:langs.join(" / ");
+}
+
+async function loadGitHub(){
+  try{
+    const[uRes,rRes]=await Promise.all([
+      fetch(`https://api.github.com/users/${CONFIG.githubUser}`),
+      fetch(`https://api.github.com/users/${CONFIG.githubUser}/repos?per_page=100&sort=updated`)
+    ]);
+    if(!uRes.ok||!rRes.ok) throw new Error("gh");
+    const user=await uRes.json();
+    let repos=await rRes.json();
+    if(!Array.isArray(repos)) throw new Error("gh");
+
+    if(user.name){ $("#logoName").textContent=user.name; $("#whoName").textContent=user.name; $("#footName").textContent=user.name; $("#coreInit").textContent=(user.name[0]||"G").toUpperCase(); }
+
+    repos=repos.filter(r=>!r.fork).map(r=>({...r,languages:repoLanguages(r)}));
+    const map={};
+    repos.forEach(r=>{
+      const langs=r.languages.length?r.languages:repoLanguages(r);
+      const weight=Math.max(r.size||1,1)/Math.max(langs.length,1);
+      langs.forEach(l=>{map[l]=(map[l]||0)+weight;});
+    });
+    let langs=Object.entries(map).sort((a,b)=>b[1]-a[1]);
+    const total=langs.reduce((a,[,v])=>a+v,0)||1;
+    LANG_STATS=langs.map(([n,v])=>({name:n,pct:v/total*100}));
+
+    animateNum($("#ghRepos"),user.public_repos||repos.length);
+    animateNum($("#ghSites"),publishedCount());
+    animateNum($("#ghFoll"),user.followers||0);
+    setStatCards(user.public_repos||repos.length,publishedCount(),constellationLanguageNames().length);
+    renderPublishedSites();
+
+    renderLanguageSystem();
+    renderRecent(repos);
+
+    REPOS=[...repos].sort((a,b)=>new Date(b.pushed_at)-new Date(a.pushed_at)).slice(0,CONFIG.maxProjects);
+    buildFilters();
+    renderProjects();
+  }catch(e){
+    githubFallback();
+  }
+}
+
+function animateNum(el,to){
+  if(!el)return;const dur=1100,t0=performance.now();
+  (function step(now){const p=Math.min(1,(now-t0)/dur);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);})(t0);
+}
+function setStatCards(repos,sites,langs){
+  STAT={repos,sites,langs};
+  const wrap=$("#stats");
+  wrap.innerHTML=`
+    <div class="stat"><div class="n" data-n="${repos}">0</div><div class="l">${t("st_repos")}</div></div>
+    <div class="stat"><div class="n" data-n="${sites}">0</div><div class="l">${t("st_sites")}</div></div>
+    <div class="stat"><div class="n" data-n="${langs}">0</div><div class="l">${t("st_lang")}</div></div>`;
+  wrap.querySelectorAll(".n").forEach(el=>animateNum(el,+el.dataset.n));
+}
+function renderPublishedSites(){
+  const sites=(CONFIG.publishedSites||[]).filter(s=>s&&s.title);
+  animateNum($("#pubCount"),sites.length);
+  animateNum($("#ghSites"),sites.length);
+  const list=$("#pubList");
+  if(!list)return;
+  if(!sites.length){
+    list.innerHTML=`<div class="pub-empty">${t("pub_empty")}</div>`;
+    return;
+  }
+  list.innerHTML=sites.map((s,i)=>{
+    const desc=s.desc?(s.desc[LANG]||s.desc.pt||""):"";
+    const tech=(s.stack||[]).slice(0,4).join(" / ");
+    const href=s.url||"#";
+    const attrs=s.url?'target="_blank" rel="noopener"':'aria-disabled="true"';
+    return `<a class="pub-item" href="${esc(href)}" ${attrs} data-hover>
+      <div>
+        <div class="pub-title">${esc(s.title)}</div>
+        <div class="pub-meta">
+          <span><i class="pub-dot" style="background:${colorFor((s.stack||[])[0]||s.type||i)};box-shadow:0 0 10px ${colorFor((s.stack||[])[0]||s.type||i)}"></i>${esc(s.type||"Site")}</span>
+          <span>${esc(s.year||"")}</span>
+          <span>${esc(tech)}</span>
+        </div>
+        ${desc?`<p class="pub-note" style="margin-top:10px">${esc(desc)}</p>`:""}
+      </div>
+      <span class="pub-open"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+    </a>`;
+  }).join("");
+  if(window.__rebindCursor)window.__rebindCursor();
+}
+function renderLangs(){
+  const top=constellationData();
+  $("#lbar").innerHTML=top.map(l=>`<i style="width:${l.pct}%;background:${colorFor(l.name)}"></i>`).join("");
+  $("#llist").innerHTML=top.map(l=>`<li><span class="d" style="background:${colorFor(l.name)}"></span>${l.name} <span style="color:var(--faint)">${l.pct.toFixed(0)}%</span></li>`).join("");
+}
+function renderConstellation(){
+  const box=$("#constel");box.querySelectorAll(".spin,.links").forEach(n=>n.remove());
+  const data=constellationData();
+  const svgns="http://www.w3.org/2000/svg";
+  const svg=document.createElementNS(svgns,"svg");svg.setAttribute("class","links");svg.setAttribute("viewBox","0 0 390 390");
+  const spin=document.createElement("div");spin.className="spin";
+  spin.appendChild(svg);
+  const cx=195,cy=195;
+  const pct=v=>`${(v/390)*100}%`;
+  data.forEach((l,i)=>{
+    const radius=58+i*13;
+    const ang=(i*137.5)*Math.PI/180;
+    const px=cx+Math.cos(ang)*radius, py=cy+Math.sin(ang)*radius;
+    const orb=document.createElement("div");orb.className="orb";orb.style.width=orb.style.height=pct(radius*2);spin.appendChild(orb);
+    const ln=document.createElementNS(svgns,"line");ln.setAttribute("x1",cx);ln.setAttribute("y1",cy);ln.setAttribute("x2",px);ln.setAttribute("y2",py);
+    ln.setAttribute("stroke",colorFor(l.name));ln.setAttribute("stroke-width","1");ln.setAttribute("opacity",".22");svg.appendChild(ln);
+    const node=document.createElement("div");node.className="node";
+    const sz=Math.max(9,Math.min(26,l.pct*0.7+9));
+    node.innerHTML=`<div class="dot" style="width:${pct(sz)};height:${pct(sz)};left:${pct(px)};top:${pct(py)};background:${colorFor(l.name)};color:${colorFor(l.name)}"></div>
+      <small style="left:${pct(px)};top:${pct(py-sz/2-11)}">${l.name}</small>`;
+    spin.appendChild(node);
+  });
+  box.appendChild(spin);
+}
+function renderRecent(repos){
+  const recent=[...repos].sort((a,b)=>new Date(b.pushed_at)-new Date(a.pushed_at)).slice(0,5);
+  $("#repos").innerHTML=recent.map(r=>`
+    <a class="repo" href="${r.html_url}" target="_blank" rel="noopener" data-hover>
+      <span class="nm"><span class="d" style="background:${colorFor(primaryLanguage(r))}"></span><span>${r.name}</span></span>
+      <span class="mt"><span>${languageLabel(r)}</span><span>${fmtDate(r.pushed_at)}</span></span>
+    </a>`).join("")||`<div class="gh-load">Sem dados no momento.</div>`;
+  if(window.__rebindCursor)window.__rebindCursor();
+}
+function buildFilters(){
+  if(!REPOS.length){$("#filters").innerHTML="";return;}
+  const langs=unique(REPOS.flatMap(r=>repoLanguages(r)));
+  const f=$("#filters");
+  f.innerHTML=`<button class="filter ${ACTIVE_FILTER==="all"?"on":""}" data-f="all">${t("f_all")}</button>`+langs.map(l=>`<button class="filter ${ACTIVE_FILTER===l?"on":""}" data-f="${l}">${l}</button>`).join("");
+  f.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{
+    ACTIVE_FILTER=b.dataset.f;f.querySelectorAll(".filter").forEach(x=>x.classList.toggle("on",x===b));renderProjects();
+  }));
+  if(window.__rebindCursor)window.__rebindCursor();
+}
+function fmtDate(s){try{return new Date(s).toLocaleDateString(LANG==="pt"?"pt-BR":LANG==="fr"?"fr-FR":"en-US",{month:"short",year:"numeric"});}catch(e){return"";}}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function renderProjects(){
+  const grid=$("#grid");
+  if(!REPOS.length){return;}
+  const list=REPOS.filter(r=>ACTIVE_FILTER==="all"||repoLanguages(r).includes(ACTIVE_FILTER));
+  grid.innerHTML=list.map((r,i)=>{
+    const col=colorFor(primaryLanguage(r));
+    const big=i===0&&ACTIVE_FILTER==="all";
+    const desc=esc(r.description||"Repositório público no GitHub.");
+    const topics=unique([...repoLanguages(r),...((r.topics&&r.topics.length)?r.topics:[])]).slice(0,4);
+    return `<article class="card ${big?"big":""}" data-id="${r.id}" data-hover>
+      <div class="glw"></div><div class="mesh"></div>
+      <div class="top">
+        <span class="cat"><span class="dt" style="background:${col}"></span>${esc(languageLabel(r,1))}</span>
+        <span class="repo-meta"><b>${fmtDate(r.pushed_at)}</b><b>⑂ ${r.forks_count}</b></span>
+      </div>
+      <div class="body">
+        <h3>${esc(r.name)}</h3>
+        <p class="desc">${desc}</p>
+        <div class="tags">${topics.map(x=>`<span>${esc(x)}</span>`).join("")}</div>
+      </div>
+      <div class="open"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+    </article>`;
+  }).join("");
+  grid.querySelectorAll(".card").forEach(c=>{
+    const r=REPOS.find(x=>x.id==c.dataset.id);
+    c.addEventListener("mousemove",e=>{const b=c.getBoundingClientRect();c.style.setProperty("--cx",(e.clientX-b.left)+"px");c.style.setProperty("--cy",(e.clientY-b.top)+"px");});
+    c.addEventListener("click",()=>openModal(r));
+  });
+  revealBatch(grid.querySelectorAll(".card"));
+  if(window.__rebindCursor)window.__rebindCursor();
+}
+function githubFallback(){
+  const u=`https://github.com/${CONFIG.githubUser}`;
+  $("#grid").innerHTML=`<div class="p-empty"><p style="margin-bottom:18px">${t("proj_fail")}</p><a class="btn btn-p magnetic" data-hover href="${u}" target="_blank" rel="noopener">${t("proj_btn")} ↗</a></div>`;
+  $("#ghRepos").textContent="-";animateNum($("#ghSites"),publishedCount());$("#ghFoll").textContent="-";
+  LANG_STATS=fallbackLanguageStats();
+  renderLanguageSystem();renderPublishedSites();
+  setStatCards(0,publishedCount(),constellationLanguageNames().length);
+  $("#repos").innerHTML=`<a class="repo" href="${u}" target="_blank" rel="noopener" data-hover><span class="nm"><span class="d" style="background:var(--cyan)"></span><span>Ver perfil no GitHub</span></span><span class="mt">↗</span></a>`;
+  if(window.__rebindCursor)window.__rebindCursor();
+}
+
+/* modal */
+function openModal(r){
+  if(!r)return;
+  $("#mCat").innerHTML=`<span style="width:7px;height:7px;border-radius:50%;display:inline-block;background:${colorFor(primaryLanguage(r))}"></span>${esc(languageLabel(r)||"Repository")}`;
+  $("#mTitle").textContent=r.name;
+  $("#mDesc").textContent=r.description||"Repositório público no GitHub.";
+  $("#mStats").innerHTML=`<span>⑂ <b>${r.forks_count}</b> ${t("m_forks")}</span><span>${t("m_updated")}: <b>${fmtDate(r.pushed_at)}</b></span>`;
+  const topics=unique([...repoLanguages(r),...((r.topics&&r.topics.length)?r.topics:[])]);
+  $("#mTags").innerHTML=topics.map(x=>`<span>${esc(x)}</span>`).join("");
+  let acts=`<a class="btn btn-p magnetic" data-hover href="${r.html_url}" target="_blank" rel="noopener">${t("m_repo")}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>`;
+  if(r.homepage)acts+=`<a class="btn btn-g magnetic" data-hover href="${r.homepage}" target="_blank" rel="noopener">${t("m_live")} ↗</a>`;
+  $("#mActs").innerHTML=acts;
+  $("#modal").classList.add("on");document.body.style.overflow="hidden";
+  if(window.__rebindCursor)window.__rebindCursor();
+}
+$$("#modal [data-x]").forEach(el=>el.addEventListener("click",()=>{$("#modal").classList.remove("on");document.body.style.overflow="";}));
+addEventListener("keydown",e=>{if(e.key==="Escape"){$("#modal").classList.remove("on");document.body.style.overflow="";document.body.classList.remove("menu");}});
+
+const policyModal=$("#policyModal");
+function openPolicyModal(){
+  if(!policyModal)return;
+  policyModal.classList.add("on");
+  policyModal.setAttribute("aria-hidden","false");
+  document.body.style.overflow="hidden";
+}
+function closePolicyModal(){
+  if(!policyModal)return;
+  policyModal.classList.remove("on");
+  policyModal.setAttribute("aria-hidden","true");
+  document.body.style.overflow="";
+}
+$("#policyOpen")?.addEventListener("click",openPolicyModal);
+$$("[data-policy-x]").forEach(el=>el.addEventListener("click",closePolicyModal));
+addEventListener("keydown",e=>{if(e.key==="Escape")closePolicyModal();});
+
+/* =====================================================================
+   contact form
+   ===================================================================== */
+const contactForm = $("#form");
+const formStatus = $("#formOk");
+const formButton = contactForm.querySelector('button[type="submit"]');
+function emailComposeUrl(subject="",body=""){
+  const params = new URLSearchParams({view:"cm",fs:"1",to:CONFIG.email});
+  if(subject)params.set("su",subject);
+  if(body)params.set("body",body);
+  return `https://mail.google.com/mail/?${params.toString()}`;
+}
+function setFormStatus(key,isError=false){
+  formStatus.textContent = t(key);
+  formStatus.classList.toggle("err",isError);
+  formStatus.classList.add("show");
+  clearTimeout(formStatus._hide);
+  formStatus._hide = setTimeout(()=>formStatus.classList.remove("show"),5000);
+}
+contactForm.addEventListener("submit",async e=>{
+  e.preventDefault();
+  const n=$("#fn").value.trim(),em=$("#fe").value.trim(),msg=$("#fmsg").value.trim();
+  const endpoint=(CONFIG.formEndpoint||"").trim();
+
+  if(!endpoint){
+    const composeUrl=emailComposeUrl(`Contato de ${n}`,`${msg}\n\n${n} (${em})`);
+    const opened=window.open(composeUrl,"_blank","noopener");
+    if(!opened)window.location.href=composeUrl;
+    setFormStatus("f_mailto");
+    return;
+  }
+
+  formButton.disabled=true;
+  setFormStatus("f_sending");
+  try{
+    const res=await fetch(endpoint,{
+      method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify({
+        name:n,
+        email:em,
+        message:msg,
+        _replyto:em,
+        _subject:`Contato pelo portfolio - ${n}`
+      })
+    });
+    if(!res.ok)throw new Error("Form endpoint rejected the message");
+    contactForm.reset();
+    setFormStatus("f_ok");
+  }catch(err){
+    setFormStatus("f_fail",true);
+  }finally{
+    formButton.disabled=false;
+  }
+});
+
+/* =====================================================================
+   reveals + parallax (GSAP if present, else IntersectionObserver)
+   ===================================================================== */
+function revealBatch(els){
+  els.forEach(el=>{
+    const io=new IntersectionObserver((ents)=>{ents.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}});},{threshold:.15});
+    io.observe(el);
+  });
+}
+function initMotion(){
+  document.body.classList.add("ready");
+  if(window.gsap){
+    gsap.to(".hero h1 .ln>span",{y:0,duration:1.1,ease:"power4.out",stagger:.09,delay:.15});
+    if(window.ScrollTrigger){
+      gsap.registerPlugin(ScrollTrigger);
+      $$(".rv").forEach(el=>{
+        if(el.closest(".hero"))return;
+        gsap.fromTo(el,{y:42,opacity:0},{y:0,opacity:1,duration:1,ease:"power3.out",
+          scrollTrigger:{trigger:el,start:"top 86%"}});
+      });
+      $$(".stg").forEach(el=>{
+        ScrollTrigger.create({trigger:el,start:"top 85%",onEnter:()=>el.classList.add("in")});
+      });
+      gsap.to("#portrait",{yPercent:-7,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:.6}});
+      gsap.to(".n1",{yPercent:18,ease:"none",scrollTrigger:{start:0,end:"max",scrub:1}});
+      gsap.to(".n2",{yPercent:-16,ease:"none",scrollTrigger:{start:0,end:"max",scrub:1}});
+    }else{
+      $$(".rv").forEach(el=>{if(!el.closest(".hero"))revealBatch([el]);});
+      $$(".stg").forEach(el=>revealBatch([el]));
+    }
+  }else{
+    $$(".hero h1 .ln>span").forEach(s=>s.style.transform="none");
+    $$(".rv").forEach(el=>{if(!el.closest(".hero"))revealBatch([el]);});
+    $$(".stg").forEach(el=>revealBatch([el]));
+  }
+  if(!COARSE&&!RM){
+    const p=$("#portrait");
+    addEventListener("mousemove",e=>{
+      const rx=(e.clientY/innerHeight-.5)*-5, ry=(e.clientX/innerWidth-.5)*6;
+      p.style.transform=`perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    });
+  }
+}
+
+/* =====================================================================
+   boot
+   ===================================================================== */
+$("#yr").textContent=new Date().getFullYear();
+applyI18n();
+renderPublishedSites();
+renderLanguageSystem();
+loadGitHub();
+let __motionDone=false;
+function startMotion(){if(__motionDone)return;__motionDone=true;initMotion();}
+window.addEventListener("load",()=>setTimeout(startMotion,60));
+setTimeout(startMotion,1500);
+</script>
+</body>
+</html>

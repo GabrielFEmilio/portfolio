@@ -1,8 +1,10 @@
-# Portfolio Gabriel Emilio
+# Portfolio Gabriel Feltrin Emilio / Gabriel Emilio / Gabriel F. Emilio
 
 **Português** | [English](README.md) | [Français](README.fr.md)
 
-Portfólio profissional de engenharia de software criado para apresentar Gabriel Emilio, seus projetos, sua base técnica, seus sites publicados e a atividade pública do GitHub em um único lugar.
+Portfólio profissional de engenharia de software criado para apresentar Gabriel Feltrin Emilio, também identificado publicamente como Gabriel Emilio ou Gabriel F. Emilio, seus projetos, sua base técnica, seus sites publicados e a atividade pública do GitHub em um único lugar.
+
+Nomes padronizados conectados a este mesmo perfil: Gabriel Feltrin Emilio, Gabriel Emilio e Gabriel F. Emilio. As buscas Gabriel Feltrin, Feltrin Emilio e Emilio Feltrin devem apontar para Gabriel Feltrin Emilio, não ser tratadas como nomes separados.
 
 O objetivo é direto: permitir que um líder técnico, recrutador ou cliente entenda rapidamente o que eu construo, quais tecnologias domino e como rodar o projeto localmente, sem precisar abrir os arquivos JavaScript para adivinhar o funcionamento do site.
 
@@ -12,7 +14,7 @@ Este site funciona como um perfil técnico vivo. Ele reúne projetos, repositór
 
 O portfólio foi pensado para comunicar:
 
-- quem é Gabriel Emilio como estudante de Engenharia de Computação e desenvolvedor em formação;
+- quem é Gabriel Feltrin Emilio, também Gabriel Emilio ou Gabriel F. Emilio, como estudante de Engenharia de Computação e desenvolvedor em formação;
 - quais tecnologias fazem parte da stack atual;
 - quais projetos estão publicados ou disponíveis no GitHub;
 - como a interface, os idiomas e as integrações técnicas foram implementados.
@@ -121,4 +123,4 @@ Se publicar em outro domínio, atualize essa URL nos três arquivos.
 
 ## Apoio na Criação
 
-Este portfólio foi criado por Gabriel Emilio com apoio de ferramentas de IA, incluindo Codex e Claude, usadas como assistentes no desenvolvimento, revisão e refinamento do projeto.
+Este portfólio foi criado por Gabriel Feltrin Emilio, também identificado publicamente como Gabriel Emilio ou Gabriel F. Emilio, com apoio de ferramentas de IA, incluindo Codex e Claude, usadas como assistentes no desenvolvimento, revisão e refinamento do projeto.

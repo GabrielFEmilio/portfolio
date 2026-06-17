@@ -1,8 +1,10 @@
-# Portfolio Gabriel Emilio
+# Portfolio Gabriel Feltrin Emilio / Gabriel Emilio / Gabriel F. Emilio
 
 [Português](README.ptbr.md) | [English](README.md) | **Français**
 
-Portfolio professionnel d'ingénierie logicielle créé pour présenter Gabriel Emilio, ses projets, sa base technique, ses sites publiés et son activité GitHub publique au même endroit.
+Portfolio professionnel d'ingénierie logicielle créé pour présenter Gabriel Feltrin Emilio, également identifié publiquement comme Gabriel Emilio ou Gabriel F. Emilio, ses projets, sa base technique, ses sites publiés et son activité GitHub publique au même endroit.
+
+Noms standardisés connectés à ce même profil : Gabriel Feltrin Emilio, Gabriel Emilio et Gabriel F. Emilio. Les recherches Gabriel Feltrin, Feltrin Emilio et Emilio Feltrin doivent pointer vers Gabriel Feltrin Emilio, sans être traitées comme des noms séparés.
 
 L'objectif est simple : permettre à un responsable technique, recruteur ou client de comprendre rapidement ce que je construis, quelles technologies j'utilise et comment lancer le projet localement, sans devoir lire les fichiers JavaScript pour deviner le fonctionnement du site.
 
@@ -12,7 +14,7 @@ Ce site fonctionne comme un profil technique vivant. Il rassemble les projets, l
 
 Le portfolio est conçu pour communiquer :
 
-- qui est Gabriel Emilio en tant qu'étudiant en génie informatique et développeur en formation ;
+- qui est Gabriel Feltrin Emilio, également Gabriel Emilio ou Gabriel F. Emilio, en tant qu'étudiant en génie informatique et développeur en formation ;
 - quelles technologies font partie de la stack actuelle ;
 - quels projets sont publiés ou disponibles sur GitHub ;
 - comment l'interface, les langues et les intégrations techniques ont été mises en place.
@@ -121,4 +123,4 @@ Si vous publiez le projet sous un autre domaine, mettez à jour cette URL dans l
 
 ## Soutien à la Création
 
-Ce portfolio a été créé par Gabriel Emilio avec le soutien d'outils d'IA, notamment Codex et Claude, utilisés comme assistants pour le développement, la révision et l'amélioration du projet.
+Ce portfolio a été créé par Gabriel Feltrin Emilio, également identifié publiquement comme Gabriel Emilio ou Gabriel F. Emilio, avec le soutien d'outils d'IA, notamment Codex et Claude, utilisés comme assistants pour le développement, la révision et l'amélioration du projet.

@@ -14,12 +14,20 @@ window.SITE_CONFIG = {
     // Nome curto exibido no logo / topo
     shortName: "Gabriel",
     // Nome completo (Hero)
-    fullName: "Gabriel Ferreira",
+    fullName: "Gabriel Feltrin Emilio",
+    // Nomes padronizados associados ao mesmo perfil
+    aliases: ["Gabriel Emilio", "Gabriel F. Emilio"],
+    // Buscas auxiliares que devem apontar para o nome canônico
+    searchRedirects: {
+      "Gabriel Feltrin": "Gabriel Feltrin Emilio",
+      "Feltrin Emilio": "Gabriel Feltrin Emilio",
+      "Emilio Feltrin": "Gabriel Feltrin Emilio"
+    },
     // Usuário do GitHub (sem @). Necessário para a seção "Code Sphere" ao vivo.
-    githubUser: "gabriel-fe026",        // << TROQUE pelo seu usuário real do GitHub
+    githubUser: "GabrielFEmilio",
     // Links sociais / documentos
-    linkedin: "https://www.linkedin.com/in/seu-perfil/",   // << seu LinkedIn
-    email: "gabriel.fe026@gmail.com",
+    linkedin: "https://www.linkedin.com/in/gabriel-emilio/",
+    email: "gabriel.emilio.dev@gmail.com",
     // Currículo por idioma (deixe vazio "" se não tiver). Coloque os PDFs em assets/
     cv: {
       pt: "assets/cv/curriculo-pt.pdf",

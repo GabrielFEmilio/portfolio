@@ -1,8 +1,10 @@
-# Gabriel Emilio Portfolio
+# Gabriel Feltrin Emilio / Gabriel Emilio / Gabriel F. Emilio Portfolio
 
 [Português](README.ptbr.md) | **English** | [Français](README.fr.md)
 
-Professional software engineering portfolio built to present Gabriel Emilio's work, technical range, published projects and public GitHub activity in one place.
+Professional software engineering portfolio built to present Gabriel Feltrin Emilio's work, also identified publicly as Gabriel Emilio or Gabriel F. Emilio, technical range, published projects and public GitHub activity in one place.
+
+Standardized names connected to this same profile: Gabriel Feltrin Emilio, Gabriel Emilio and Gabriel F. Emilio. Search terms Gabriel Feltrin, Feltrin Emilio and Emilio Feltrin should be routed to Gabriel Feltrin Emilio, not treated as separate names.
 
 The goal is simple: give a technical lead or recruiter enough context to understand what I build, which technologies I work with and how to inspect the project without having to reverse-engineer the JavaScript files.
 
@@ -12,7 +14,7 @@ This site works as a living technical profile. It highlights software projects, 
 
 The portfolio is designed to communicate:
 
-- who Gabriel Emilio is as a software engineering student and developer;
+- who Gabriel Feltrin Emilio, also Gabriel Emilio or Gabriel F. Emilio, is as a software engineering student and developer;
 - which technologies are part of the current stack;
 - which projects are live or available on GitHub;
 - how the interface, multilingual content and GitHub integrations were implemented.
@@ -121,4 +123,4 @@ Update that URL in all three files if the project is published under a different
 
 ## Creation Support
 
-This portfolio was created by Gabriel Emilio with support from AI tools, including Codex and Claude, used as assistants for development, review and refinement.
+This portfolio was created by Gabriel Feltrin Emilio, also identified publicly as Gabriel Emilio or Gabriel F. Emilio, with support from AI tools, including Codex and Claude, used as assistants for development, review and refinement.

@@ -12,19 +12,19 @@
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
-<title>Gabriel F. Emilio — Portfólio</title>
-<meta name="description" content="Portfólio de Gabriel F. Emilio, estudante de Engenharia de Computação no IFSP e desenvolvedor de software. Conheça seus projetos e experiências." />
+<title>Gabriel Feltrin Emilio — Desenvolvedor de Software | Portfólio</title>
+<meta name="description" content="Portfólio de Gabriel Feltrin Emilio (Gabriel F. Emilio), estudante de Engenharia de Computação no IFSP e desenvolvedor de software. Conheça seus projetos e experiências." />
 <meta name="author" content="Gabriel Feltrin Emilio" />
 <meta name="creator" content="Gabriel Feltrin Emilio" />
 <meta name="publisher" content="Gabriel Feltrin Emilio" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-<meta name="application-name" content="Portfólio de Gabriel F. Emilio" />
+<meta name="application-name" content="Portfólio de Gabriel Feltrin Emilio" />
 <meta http-equiv="content-language" content="pt-BR" />
 <link rel="canonical" href="https://feltrinemilio.dev/" />
 <meta property="og:locale" content="pt_BR" />
-<meta property="og:site_name" content="Gabriel F. Emilio" />
-<meta property="og:title" content="Gabriel F. Emilio — Portfólio" />
+<meta property="og:site_name" content="Gabriel Feltrin Emilio" />
+<meta property="og:title" content="Gabriel Feltrin Emilio — Desenvolvedor de Software | Portfólio" />
 <meta property="og:description" content="Estudante de Engenharia de Computação no IFSP e desenvolvedor de software. Conheça seus projetos e experiências." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://feltrinemilio.dev/" />
@@ -32,7 +32,7 @@
 <meta property="og:image:alt" content="Retrato de Gabriel Feltrin Emilio no site-portfolio de engenharia de software" />
 <meta property="og:image:type" content="image/png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Gabriel F. Emilio — Portfólio" />
+<meta name="twitter:title" content="Gabriel Feltrin Emilio — Desenvolvedor de Software | Portfólio" />
 <meta name="twitter:description" content="Estudante de Engenharia de Computação no IFSP e desenvolvedor de software. Conheça seus projetos e experiências." />
 <meta name="twitter:image" content="https://feltrinemilio.dev/assets/profile-portrait.png" />
 
@@ -183,6 +183,12 @@ body.down .cur-r{width:26px;height:26px;margin:-13px 0 0 -13px}
 .nav-links a{font-size:.84rem;color:var(--muted);padding:9px 15px;border-radius:9px;position:relative;transition:color .3s;display:flex;align-items:center;gap:6px}
 .nav-links a:hover{color:var(--text)}
 .nav-links a i{color:var(--faint);font-family:var(--fm);font-size:.6rem;font-style:normal}
+.nav-links a.nav-showcase{isolation:isolate;overflow:hidden}
+.nav-links a.nav-showcase span,.nav-links a.nav-showcase i{position:relative;z-index:1}
+.nav-links a.nav-showcase::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(122deg,rgba(156,192,255,.08),rgba(67,214,238,.12),rgba(138,107,255,.09));opacity:0;animation:showcaseGlow 2.8s .75s var(--ease) 1 both;pointer-events:none}
+.nav-links a.nav-showcase::after{content:"";position:absolute;top:-42%;bottom:-42%;left:-54%;width:38%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.42),rgba(156,192,255,.25),transparent);filter:blur(.3px);transform:skewX(-18deg);animation:showcaseSweep 2.4s .9s var(--ease) 1 both;pointer-events:none}
+@keyframes showcaseGlow{0%,100%{opacity:0}24%{opacity:.9}58%{opacity:.42}}
+@keyframes showcaseSweep{0%{left:-58%;opacity:0}18%{opacity:.8}72%{opacity:.62}100%{left:122%;opacity:0}}
 .nav-right{display:flex;align-items:center;gap:10px;flex:none}
 .lang{display:flex;gap:1px;padding:3px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid var(--line2)}
 .lang button{font-family:var(--fm);font-size:.66rem;min-width:36px;min-height:34px;padding:6px 9px;border-radius:7px;color:var(--faint);transition:.3s;text-transform:uppercase;letter-spacing:.05em}
@@ -414,26 +420,45 @@ h1,h2,h3{font-family:var(--fd);font-weight:700;letter-spacing:-.02em;line-height
 .repo .mt{display:flex;gap:14px;font-size:.72rem;color:var(--faint);font-family:var(--fm);flex:none}
 .gh-load{color:var(--faint);font-family:var(--fm);font-size:.8rem;padding:16px 0}
 
-/* ===== published sites ===== */
-.published-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:22px;align-items:stretch}
-.pub-panel,.pub-list{border-radius:20px;background:linear-gradient(165deg,var(--ink),var(--bg2));border:1px solid var(--line);position:relative;overflow:hidden}
-.pub-panel{min-height:390px;padding:30px;display:flex;flex-direction:column;justify-content:space-between}
-.pub-panel::before,.pub-list::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--grad-cv);opacity:.58}
-.pub-count{font-family:var(--fd);font-size:clamp(4rem,10vw,7.2rem);font-weight:800;line-height:.9;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.pub-label{font-family:var(--fm);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:18px}
-.pub-note{color:var(--muted);max-width:340px}
-.pub-list{padding:10px 24px}
-.pub-item{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:19px 0;border-bottom:1px solid var(--line2)}
-.pub-item:last-child{border-bottom:none}
-.pub-item:hover .pub-title{color:var(--cyan)}
-.pub-title{font-family:var(--fd);font-size:1.1rem;font-weight:700;transition:.25s}
-.pub-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-family:var(--fm);font-size:.72rem;color:var(--faint)}
-.pub-meta span{display:inline-flex;align-items:center;gap:6px}
-.pub-dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
-.pub-open{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);color:var(--muted);transition:.25s;flex:none}
-.pub-item:hover .pub-open{border-color:rgba(67,214,238,.5);color:var(--cyan);transform:translateX(3px)}
-.pub-open svg{width:17px;height:17px;stroke:currentColor}
-.pub-empty{padding:28px 0;color:var(--faint);font-family:var(--fm);font-size:.82rem}
+/* ===== showcase portal ===== */
+.sc-portal{display:grid;grid-template-columns:1.04fr .96fr;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(165deg,var(--ink),var(--bg2));position:relative;min-height:430px;isolation:isolate}
+.sc-portal::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--grad-cv);opacity:.6;z-index:6}
+.sc-portal::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(120% 90% at 80% 16%,rgba(91,140,255,.1),transparent 60%)}
+.sc-portal:hover{border-color:rgba(67,214,238,.28);box-shadow:0 40px 90px rgba(0,0,0,.5)}
+/* left: animated star/screen preview */
+.sc-stage{position:relative;overflow:hidden;border-right:1px solid var(--line2);
+  background:radial-gradient(80% 70% at 30% 28%,rgba(67,108,255,.16),transparent 60%),radial-gradient(70% 70% at 78% 84%,rgba(138,107,255,.14),transparent 62%),linear-gradient(160deg,#070a14,#04050a)}
+.sc-stage .label{position:absolute;top:18px;left:20px;z-index:7;font-family:var(--fm);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.sc-stage .twk{position:absolute;border-radius:50%;background:var(--ice);box-shadow:0 0 6px var(--ice);animation:scTwk 4s ease-in-out infinite}
+@keyframes scTwk{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:.95;transform:scale(1)}}
+.sc-orbit{position:absolute;top:50%;left:50%;border:1px solid var(--line2);border-radius:50%;transform:translate(-50%,-50%);z-index:2}
+.sc-spin{position:absolute;inset:0;z-index:3;animation:scRot 52s linear infinite;transform-origin:center}
+@keyframes scRot{to{transform:rotate(360deg)}}
+.sc-node{position:absolute;width:9px;height:9px;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 14px currentColor;background:currentColor;animation:dotTwinkle 3.6s ease-in-out infinite}
+.sc-core{position:absolute;top:50%;left:50%;width:48px;height:48px;border-radius:50%;transform:translate(-50%,-50%);z-index:4;
+  background:radial-gradient(circle at 38% 32%,#fff,#5b8cff 66%);box-shadow:0 0 40px rgba(91,140,255,.7);animation:scCore 4.5s ease-in-out infinite}
+@keyframes scCore{0%,100%{box-shadow:0 0 30px rgba(91,140,255,.55),0 0 0 rgba(67,214,238,0)}50%{box-shadow:0 0 62px rgba(91,140,255,.95),0 0 26px rgba(67,214,238,.55)}}
+.sc-screen{position:absolute;z-index:5;border-radius:10px;border:1px solid var(--line);overflow:hidden;
+  background:linear-gradient(165deg,rgba(14,18,32,.94),rgba(8,11,20,.94));box-shadow:0 18px 42px rgba(0,0,0,.55);animation:scFloat 7s ease-in-out infinite}
+.sc-screen::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:var(--grad-cv);opacity:.55}
+.sc-screen i{position:absolute;left:10px;right:10px;height:5px;border-radius:3px;background:rgba(150,178,255,.18)}
+.sc-screen.s1{width:122px;height:84px;top:22%;left:17%;animation-delay:-1s}
+.sc-screen.s2{width:108px;height:74px;top:52%;left:56%;animation-delay:-3.6s}
+@keyframes scFloat{0%,100%{transform:translateY(-6px)}50%{transform:translateY(8px)}}
+.sc-scan{position:absolute;inset:0;z-index:6;pointer-events:none;mix-blend-mode:screen;opacity:.45;
+  background:linear-gradient(transparent,rgba(91,140,255,.1) 50%,transparent);background-size:100% 6px;animation:scScan 9s linear infinite}
+@keyframes scScan{to{background-position:0 -260px}}
+/* right: copy + CTA */
+.sc-body{position:relative;z-index:2;padding:clamp(28px,4vw,46px);display:flex;flex-direction:column;justify-content:center;gap:16px}
+.sc-pill{align-self:flex-start;display:inline-flex;align-items:center;gap:9px;font-family:var(--fm);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:8px 14px;border-radius:11px;background:rgba(255,255,255,.025);border:1px solid var(--line)}
+.sc-pill .p{width:7px;height:7px;border-radius:50%;background:#46d39a;box-shadow:0 0 0 0 rgba(70,211,154,.5);animation:pulse 2.4s infinite}
+.sc-h{font-family:var(--fh);font-size:clamp(1.5rem,2.7vw,2.05rem);font-weight:500;letter-spacing:-.012em;line-height:1.14}
+.sc-p{color:var(--muted);font-size:1rem;font-weight:300;line-height:1.72;max-width:440px}
+.sc-feats{display:flex;flex-wrap:wrap;gap:9px;margin-top:2px}
+.sc-feats span{font-family:var(--fm);font-size:.7rem;color:var(--ice);padding:7px 12px;border-radius:9px;background:rgba(255,255,255,.03);border:1px solid var(--line2);display:inline-flex;align-items:center;gap:7px}
+.sc-feats span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 9px var(--cyan)}
+.sc-act{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:10px}
+.sc-hint{font-family:var(--fm);font-size:.68rem;letter-spacing:.04em;color:var(--faint)}
 
 /* ===== contact ===== */
 .c-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,72px);align-items:start}
@@ -511,7 +536,9 @@ body.ready .hero .rv{opacity:1;transform:none;transition:opacity 1s var(--ease) 
 .pub-status.soon .sd{background:var(--gold);box-shadow:0 0 10px rgba(217,189,140,.6)}
 
 @media (max-width:1000px){
-  .hero-grid,.about-grid,.published-grid,.gh-grid,.c-grid{grid-template-columns:1fr;gap:40px}
+  .hero-grid,.about-grid,.gh-grid,.c-grid{grid-template-columns:1fr;gap:40px}
+  .sc-portal{grid-template-columns:1fr}
+  .sc-stage{min-height:300px;border-right:none;border-bottom:1px solid var(--line2)}
   .hero-visual{order:-1}
   .portrait{width:min(520px,94%)}
   .grid{grid-template-columns:repeat(2,1fr)}.card.big{grid-column:span 2}
@@ -537,9 +564,8 @@ body.ready .hero .rv{opacity:1;transform:none;transition:opacity 1s var(--ease) 
   .logo .sm{display:none}
   .scrollhint{display:none}
   .grid{grid-template-columns:1fr}.card.big{grid-column:auto}
-  .pub-panel{min-height:280px}
-  .pub-item{grid-template-columns:1fr}
-  .pub-open{width:100%;height:38px}
+  .sc-stage{min-height:240px}
+  .sc-screen.s1{left:12%}.sc-screen.s2{left:54%}
   .footer .in{flex-direction:column;text-align:center}
   .portrait .badge{display:none}
   .term code{font-size:.74rem;padding:20px 16px;overflow-wrap:anywhere}
@@ -570,7 +596,7 @@ body.ready .hero .rv{opacity:1;transform:none;transition:opacity 1s var(--ease) 
   <a href="#hero" class="logo magnetic" data-hover><span class="d"></span><b id="logoName">Gabriel Feltrin Emilio</b><span class="sm">/ SWE</span></a>
   <div class="nav-links">
     <a href="#about" data-hover><i>01</i><span data-i="nav_about">Sobre</span></a>
-    <a href="#published" data-hover><i>02</i><span data-i="nav_published">Sites</span></a>
+    <a href="#published" class="nav-showcase" data-hover><i>02</i><span data-i="nav_published">Showcase</span></a>
     <a href="#projects" data-hover><i>03</i><span data-i="nav_projects">Projetos</span></a>
     <a href="#github" data-hover><i>04</i><span data-i="nav_github">Code Sphere</span></a>
     <a href="#contact" data-hover><i>05</i><span data-i="nav_contact">Contato</span></a>
@@ -582,7 +608,7 @@ body.ready .hero .rv{opacity:1;transform:none;transition:opacity 1s var(--ease) 
 </nav>
 <div class="panel" id="panel">
   <a href="#about" data-i="nav_about">Sobre</a>
-  <a href="#published" data-i="nav_published">Sites</a>
+  <a href="#published" data-i="nav_published">Showcase</a>
   <a href="#projects" data-i="nav_projects">Projetos</a>
   <a href="#github" data-i="nav_github">Code Sphere</a>
   <a href="#contact" data-i="nav_contact">Contato</a>
@@ -672,20 +698,46 @@ gabriel.<span class="f">solve</span>(<span class="s">"hard problems"</span>);<br
   <section class="published" id="published">
     <div class="container">
       <div class="rv" style="margin-bottom:44px">
-        <span class="idx">02 - <span data-i="pub_k">Sites publicados</span></span>
-        <h2 class="s-title" data-i="pub_t">No ar, funcionando, acessível.</h2>
-        <p class="s-sub" data-i="pub_sub">Sites que construí/criei e que estão publicados na internet, entre projetos próprios e entregas para clientes.</p>
+        <span class="idx">02 - <span data-i="pub_k">Showcase</span></span>
+        <h2 class="s-title" data-i="pub_t">O portfólio de verdade é uma experiência.</h2>
+        <p class="s-sub" data-i="pub_sub">Troquei a lista por uma viagem por estrelas e constelações até as telas do que construí e publiquei.</p>
       </div>
-      <div class="published-grid">
-        <div class="pub-panel rv">
-          <div>
-            <div class="pub-count" id="pubCount">0</div>
-            <div class="pub-label" data-i="pub_count">sites publicados</div>
+      <a class="sc-portal rv" href="showcase.html" data-hover aria-label="Abrir o showcase">
+        <div class="sc-stage" aria-hidden="true">
+          <span class="label" data-i="sc_stage">Preview ao vivo</span>
+          <span class="twk" style="top:14%;left:26%;width:3px;height:3px;animation-delay:-.4s"></span>
+          <span class="twk" style="top:22%;left:74%;width:2px;height:2px;animation-delay:-1.6s"></span>
+          <span class="twk" style="top:38%;left:12%;width:2px;height:2px;animation-delay:-2.4s"></span>
+          <span class="twk" style="top:70%;left:30%;width:3px;height:3px;animation-delay:-3.1s"></span>
+          <span class="twk" style="top:82%;left:78%;width:2px;height:2px;animation-delay:-.9s"></span>
+          <span class="twk" style="top:60%;left:88%;width:3px;height:3px;animation-delay:-2.7s"></span>
+          <span class="twk" style="top:30%;left:50%;width:2px;height:2px;animation-delay:-1.2s"></span>
+          <div class="sc-orbit" style="width:158px;height:158px"></div>
+          <div class="sc-orbit" style="width:262px;height:262px"></div>
+          <div class="sc-spin">
+            <span class="sc-node" style="top:50%;left:calc(50% + 79px);color:#43d6ee"></span>
+            <span class="sc-node" style="top:calc(50% - 131px);left:50%;color:#8a6bff;width:7px;height:7px"></span>
+            <span class="sc-node" style="top:calc(50% + 92px);left:calc(50% - 92px);color:#5b8cff"></span>
+            <span class="sc-node" style="top:calc(50% + 110px);left:calc(50% + 110px);color:#d9bd8c;width:7px;height:7px"></span>
           </div>
-          <p class="pub-note" data-i="pub_note">Cada item aqui representa um projeto entregue e acessível publicamente.</p>
+          <div class="sc-core"></div>
+          <div class="sc-screen s1"><i style="top:16px;width:70%"></i><i style="top:30px;width:52%"></i><i style="top:44px;width:38%"></i></div>
+          <div class="sc-screen s2"><i style="top:14px;width:64%"></i><i style="top:28px;width:46%"></i><i style="top:42px;width:34%"></i></div>
+          <div class="sc-scan"></div>
         </div>
-        <div class="pub-list rv" id="pubList"></div>
-      </div>
+        <div class="sc-body">
+          <span class="sc-pill"><span class="p"></span><span data-i="sc_tag">Experiência imersiva</span></span>
+          <h3 class="sc-h" data-i="sc_h">Uma viagem até o que eu construí.</h3>
+          <p class="sc-p" data-i="sc_p">Aqui o trabalho publicado ganha movimento: você navega entre as estrelas e chega às telas reais dos projetos, não a uma lista estática.</p>
+          <div class="sc-feats">
+            <span data-i="sc_f1">WebGL</span><span data-i="sc_f2">Animado</span><span data-i="sc_f3">Imersivo</span>
+          </div>
+          <div class="sc-act">
+            <span class="btn btn-p magnetic"><span data-i="sc_cta">Entrar no showcase</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            <span class="sc-hint" data-i="sc_hint">Abre a experiência completa</span>
+          </div>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -841,6 +893,7 @@ const CONFIG = {
   name: "Gabriel Feltrin Emilio",
   stack: ["C","Java","JavaScript","Unity","C#","Node.js","WebGL","Automação"],
   maxProjects: 6,
+  publishedSitesCount: 4,
   repoLanguages: {
     atlas: ["Python"],
     "atlas-das-promos": ["Python"],
@@ -854,7 +907,7 @@ const CONFIG = {
       url: "https://signlinked.web.app",
       type: "Autoral",
       year: 2026,
-      stack: ["HTML","CSS","JavaScript"],
+      stack: ["HTML","CSS","JavaScript","Firebase","MediaPipe","Three.js"],
       desc: {
         pt: "Site publicado na web para o projeto SignLinked.",
         en: "Published website for the SignLinked project.",
@@ -867,7 +920,7 @@ const CONFIG = {
       live: true,
       type: "Autoral",
       year: 2026,
-      stack: ["HTML","CSS","JavaScript"],
+      stack: ["HTML","CSS","JavaScript","GSAP","Canvas API","Three.js","GitHub API","Formspree","Google Fonts"],
       desc: {
         pt: "Site-portfolio pessoal de Gabriel Feltrin Emilio, também Gabriel Emilio ou Gabriel F. Emilio, publicado na web. Buscas por Gabriel Feltrin, Feltrin Emilio e Emilio Feltrin são corrigidas para Gabriel Feltrin Emilio.",
         en: "Gabriel Feltrin Emilio's personal portfolio website, also identified as Gabriel Emilio or Gabriel F. Emilio, published on the web. Searches for Gabriel Feltrin, Feltrin Emilio, and Emilio Feltrin are corrected to Gabriel Feltrin Emilio.",
@@ -891,7 +944,7 @@ const colorFor = n => LANG_COLORS[n] || ("#"+(Math.abs([...String(n)].reduce((a,
    i18n
    ===================================================================== */
 const I18N = {
-  pt:{nav_about:"Sobre",nav_projects:"Projetos",nav_published:"Sites",nav_github:"Code Sphere",nav_contact:"Contato",
+  pt:{nav_about:"Sobre",nav_projects:"Projetos",nav_published:"Showcase",nav_github:"Code Sphere",nav_contact:"Contato",
     hero_tag:"Disponível para projetos globais",hero_a:"Projetando sistemas.",hero_b:"Escrevendo código",hero_c:"limpo.",
     hero_role:"Computer Engineering Student",
     hero_sub:"Sou estudante de Engenharia de Computação no IFSP e desenvolvedor em formação, construindo minha base por meio de projetos, estudos e prática constante. Busco transformar ideias e problemas em soluções claras, funcionais e bem estruturadas, evoluindo a cada desafio. Este portfólio reúne meus aprendizados, minhas iniciativas e meus projetos, refletindo minha vontade de crescer e me tornar um profissional cada vez mais completo em tecnologia.",
@@ -906,7 +959,8 @@ const I18N = {
     proj_k:"Projetos & Cases",proj_t:"Construído de verdade.",proj_sub:"Projetos reais, direto do meu GitHub e atualizados automaticamente.",
     proj_load:"Carregando repositórios públicos reais…",proj_fail:"Não consegui carregar do GitHub agora. Veja tudo direto no perfil:",proj_btn:"Abrir GitHub",
     f_all:"Todos",m_repo:"Ver código",m_live:"Abrir projeto",m_forks:"forks",m_updated:"atualizado",
-    pub_k:"Sites publicados",pub_t:"No ar, funcionando, acessível.",pub_sub:"Sites que construí/criei e que estão publicados na internet, entre projetos próprios e entregas para clientes.",pub_count:"sites publicados",pub_note:"Cada item aqui representa um projeto entregue e acessível publicamente.",pub_online:"Online",pub_soon:"Em breve",pub_empty:"Adicione seus sites publicados no CONFIG para preencher esta seção.",
+    pub_k:"Showcase",pub_t:"O portfólio de verdade é uma experiência.",pub_sub:"Troquei a lista por uma viagem por estrelas e constelações até as telas do que construí e publiquei.",pub_count:"sites publicados",pub_note:"Cada item aqui representa um projeto entregue e acessível publicamente.",pub_online:"Online",pub_soon:"Em breve",pub_empty:"Adicione seus sites publicados no CONFIG para preencher esta seção.",
+    sc_stage:"Preview ao vivo",sc_tag:"Experiência imersiva",sc_h:"Uma viagem até o que eu construí.",sc_p:"Aqui o trabalho publicado ganha movimento: você navega entre as estrelas e chega às telas reais dos projetos, não a uma lista estática.",sc_f1:"WebGL",sc_f2:"Animado",sc_f3:"Imersivo",sc_cta:"Entrar no showcase",sc_hint:"Abre a experiência completa",
     gh_k:"Code Sphere",gh_t:"Dados de quem constrói de verdade.",gh_sub:"Repositórios públicos, linguagens e atividade da minha conta em tempo real.",
     gh_constel:"Constelação de linguagens",gh_repos:"Repositórios Públicos",gh_sites:"Sites",gh_foll:"Seguidores",gh_langs:"Linguagens",gh_recent:"Repositórios públicos recentes",
     c_k:"Contato",c_t:"Vamos construir algo notável.",c_sub:"Estou aberto a oportunidades globais, parcerias e projetos ambiciosos.",
@@ -920,7 +974,7 @@ const I18N = {
     policy_children_t:"Menores de idade",policy_children_p:"Este site não é direcionado a crianças e não solicita conscientemente dados de menores. Se um responsável identificar envio indevido de dados, pode pedir remoção pelo e-mail de contato.",
     policy_limits_t:"Limites deste aviso",policy_limits_p:"Este aviso aumenta a transparência, mas não substitui auditoria jurídica, contratos com operadores, revisão das configurações dos provedores, controles de retenção, nem eventual banner de consentimento se no futuro forem adicionados analytics, publicidade, pixels, rastreamento ou cookies não essenciais.",
     foot_r:"Todos os direitos reservados.",foot_b:"Projetado e codado com precisão, com apoio de Codex e Claude."},
-  en:{nav_about:"About",nav_projects:"Projects",nav_published:"Sites",nav_github:"Code Sphere",nav_contact:"Contact",
+  en:{nav_about:"About",nav_projects:"Projects",nav_published:"Showcase",nav_github:"Code Sphere",nav_contact:"Contact",
     hero_tag:"Available for global projects",hero_a:"Designing systems.",hero_b:"Writing clean",hero_c:"code.",
     hero_role:"Computer Engineering Student",
     hero_sub:"I am a Computer Engineering student at IFSP and a developer in training, building my foundation through projects, study and constant practice. I aim to turn ideas and problems into clear, functional and well-structured solutions, improving with each challenge. This portfolio brings together my learning, initiatives and projects, reflecting my drive to grow and become an increasingly well-rounded technology professional.",
@@ -935,7 +989,8 @@ const I18N = {
     proj_k:"Projects & Cases",proj_t:"Built for real.",proj_sub:"Real projects, straight from my GitHub and updated automatically.",
     proj_load:"Loading real public repositories…",proj_fail:"Couldn't load from GitHub right now. See everything on the profile:",proj_btn:"Open GitHub",
     f_all:"All",m_repo:"View code",m_live:"Open project",m_forks:"forks",m_updated:"updated",
-    pub_k:"Published sites",pub_t:"Live, working, accessible.",pub_sub:"Websites I built/created and published online, from client work to self-authored projects.",pub_count:"published sites",pub_note:"Each item here represents a delivered project that is publicly accessible.",pub_online:"Live",pub_soon:"Soon",pub_empty:"Add your published sites in CONFIG to fill this section.",
+    pub_k:"Showcase",pub_t:"The real portfolio is an experience.",pub_sub:"I traded the list for a journey through stars and constellations to the screens of what I built and shipped.",pub_count:"published sites",pub_note:"Each item here represents a delivered project that is publicly accessible.",pub_online:"Live",pub_soon:"Soon",pub_empty:"Add your published sites in CONFIG to fill this section.",
+    sc_stage:"Live preview",sc_tag:"Immersive experience",sc_h:"A journey to what I built.",sc_p:"Here the published work comes alive: you drift through the stars and arrive at the real project screens, not a static list.",sc_f1:"WebGL",sc_f2:"Animated",sc_f3:"Immersive",sc_cta:"Enter the showcase",sc_hint:"Opens the full experience",
     gh_k:"Code Sphere",gh_t:"Data from someone who actually builds.",gh_sub:"Public repositories, languages and activity from my account in real time.",
     gh_constel:"Language constellation",gh_repos:"Public Repositories",gh_sites:"Sites",gh_foll:"Followers",gh_langs:"Languages",gh_recent:"Recent public repositories",
     c_k:"Contact",c_t:"Let's build something remarkable.",c_sub:"I'm open to global opportunities, partnerships, and ambitious projects.",
@@ -949,7 +1004,7 @@ const I18N = {
     policy_children_t:"Children",policy_children_p:"This site is not directed to children and does not knowingly request children's data. If a guardian identifies an improper submission, removal can be requested through the contact email.",
     policy_limits_t:"Limits of this notice",policy_limits_p:"This notice improves transparency, but does not replace legal review, processor agreements, provider configuration review, retention controls, or a consent banner if analytics, advertising, pixels, tracking, or non-essential cookies are added in the future.",
     foot_r:"All rights reserved.",foot_b:"Designed and coded with precision, with support from Codex and Claude."},
-  fr:{nav_about:"À propos",nav_projects:"Projets",nav_published:"Sites",nav_github:"Code Sphere",nav_contact:"Contact",
+  fr:{nav_about:"À propos",nav_projects:"Projets",nav_published:"Showcase",nav_github:"Code Sphere",nav_contact:"Contact",
     hero_tag:"Disponible pour des projets mondiaux",hero_a:"Concevoir des systèmes.",hero_b:"Écrire du code",hero_c:"propre.",
     hero_role:"Computer Engineering Student",
     hero_sub:"Je suis étudiant en génie informatique à l'IFSP et développeur en formation, en construisant mes bases grâce à des projets, des études et une pratique constante. Je cherche à transformer les idées et les problèmes en solutions claires, fonctionnelles et bien structurées, en progressant à chaque défi. Ce portfolio réunit mes apprentissages, mes initiatives et mes projets, et reflète ma volonté de grandir pour devenir un professionnel de la technologie de plus en plus complet.",
@@ -964,7 +1019,8 @@ const I18N = {
     proj_k:"Projets & Cas",proj_t:"Construit pour de vrai.",proj_sub:"Projets réels, directement depuis mon GitHub et mis à jour automatiquement.",
     proj_load:"Chargement des dépôts publics réels…",proj_fail:"Impossible de charger depuis GitHub. Voir tout sur le profil :",proj_btn:"Ouvrir GitHub",
     f_all:"Tous",m_repo:"Voir le code",m_live:"Ouvrir le projet",m_forks:"forks",m_updated:"mis à jour",
-    pub_k:"Sites publiés",pub_t:"En ligne, fonctionnel, accessible.",pub_sub:"Sites que j'ai construits/créés et publiés en ligne, entre projets personnels et livraisons pour des clients.",pub_count:"sites publiés",pub_note:"Chaque élément représente un projet livré et accessible publiquement.",pub_online:"En ligne",pub_soon:"Bientôt",pub_empty:"Ajoutez vos sites publiés dans CONFIG pour remplir cette section.",
+    pub_k:"Showcase",pub_t:"Le vrai portfolio est une expérience.",pub_sub:"J'ai troqué la liste contre un voyage à travers les étoiles et les constellations jusqu'aux écrans de ce que j'ai construit et publié.",pub_count:"sites publiés",pub_note:"Chaque élément représente un projet livré et accessible publiquement.",pub_online:"En ligne",pub_soon:"Bientôt",pub_empty:"Ajoutez vos sites publiés dans CONFIG pour remplir cette section.",
+    sc_stage:"Aperçu en direct",sc_tag:"Expérience immersive",sc_h:"Un voyage vers ce que j'ai construit.",sc_p:"Ici le travail publié prend vie : vous dérivez entre les étoiles et arrivez aux véritables écrans des projets, pas à une liste statique.",sc_f1:"WebGL",sc_f2:"Animé",sc_f3:"Immersif",sc_cta:"Entrer dans le showcase",sc_hint:"Ouvre l'expérience complète",
     gh_k:"Code Sphere",gh_t:"Les données de quelqu'un qui construit vraiment.",gh_sub:"Dépôts publics, langages et activité issus directement de mon compte, en temps réel.",
     gh_constel:"Constellation de langages",gh_repos:"Dépôts publics",gh_sites:"Sites",gh_foll:"Abonnés",gh_langs:"Langages",gh_recent:"Dépôts publics récents",
     c_k:"Contact",c_t:"Construisons quelque chose de remarquable.",c_sub:"Je suis ouvert aux opportunités internationales, aux partenariats et aux projets ambitieux.",
@@ -1038,6 +1094,8 @@ const $$ = s => [...document.querySelectorAll(s)];
 const RM = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
 const COARSE = window.matchMedia("(hover:none),(pointer:coarse)").matches;
 const lerp = (a,b,n)=>a+(b-a)*n;
+/* frame-rate-independent easing: same feel at 60/90/120Hz (dt is in 60fps-frame units) */
+const aprox = (a,b,k,dt)=>a+(b-a)*(1-Math.pow(1-k,dt));
 window.__heroOn = true; /* gate for hero-bound effects (canvases, portrait parallax) */
 
 /* =====================================================================
@@ -1051,7 +1109,7 @@ window.__heroOn = true; /* gate for hero-bound effects (canvases, portrait paral
     document.documentElement.style.setProperty("--mx",mx+"px");document.documentElement.style.setProperty("--my",my+"px");});
   addEventListener("mousedown",()=>document.body.classList.add("down"));
   addEventListener("mouseup",()=>document.body.classList.remove("down"));
-  (function loop(){rx=lerp(rx,mx,.18);ry=lerp(ry,my,.18);ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(loop);})();
+  let _lt=0;(function loop(now){const dt=_lt?Math.min(4,(now-_lt)/16.667):1;_lt=now;rx=aprox(rx,mx,.18,dt);ry=aprox(ry,my,.18,dt);ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(loop);})();
   const hov=()=>document.body.classList.add("hov"),out=()=>document.body.classList.remove("hov");
   const bind=()=>$$('a,button,.card,[data-hover],input,textarea').forEach(el=>{el.removeEventListener("mouseenter",hov);el.removeEventListener("mouseleave",out);el.addEventListener("mouseenter",hov);el.addEventListener("mouseleave",out);});
   bind(); window.__rebindCursor=bind;
@@ -1099,7 +1157,7 @@ window.__heroOn = true; /* gate for hero-bound effects (canvases, portrait paral
   size();addEventListener("resize",size);
   addEventListener("mousemove",e=>{mouse.x=e.clientX*DPR;mouse.y=e.clientY*DPR;});
   const LINK=120*DPR,CUR=170*DPR;
-  let run=false,T=0,nextShoot=160;
+  let run=false,T=0,nextShoot=160,last=0;
   function spawnShoot(){
     const fromLeft=Math.random()<.5,ang=Math.random()*.5+.18,sp=(Math.random()*5+7)*DPR;
     const col=Math.random()<.5?[67,214,238]:[236,217,175];
@@ -1107,15 +1165,16 @@ window.__heroOn = true; /* gate for hero-bound effects (canvases, portrait paral
       vx:(fromLeft?1:-1)*Math.cos(ang)*sp,vy:Math.sin(ang)*sp,
       len:(Math.random()*90+90)*DPR,col});
   }
-  function frame(){
-    if(!run)return;T++;
+  function frame(now){
+    if(!run)return;
+    const dt=last?Math.min(4,(now-last)/16.667):1;last=now;T+=dt;
     x.clearRect(0,0,w,h);
-    cx=cx<-900?mouse.x:lerp(cx,mouse.x,.12);cy=cy<-900?mouse.y:lerp(cy,mouse.y,.12);
+    cx=cx<-900?mouse.x:aprox(cx,mouse.x,.12,dt);cy=cy<-900?mouse.y:aprox(cy,mouse.y,.12,dt);
     for(let i=0;i<parts.length;i++){
-      const p=parts[i];p.x+=p.vx;p.y+=p.vy;
+      const p=parts[i];p.x+=p.vx*dt;p.y+=p.vy*dt;
       if(p.x<0)p.x=w;if(p.x>w)p.x=0;if(p.y<0)p.y=h;if(p.y>h)p.y=0;
       const dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.hypot(dx,dy)||1;
-      if(d<140*DPR){const f=(140*DPR-d)/(140*DPR);p.x+=dx/d*f*1.2;p.y+=dy/d*f*1.2;}
+      if(d<140*DPR){const f=(140*DPR-d)/(140*DPR);p.x+=dx/d*f*1.2*dt;p.y+=dy/d*f*1.2*dt;}
       const tw=p.a*(.55+.45*Math.sin(T*p.ts+p.tw));
       x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle=`rgba(${p.col[0]},${p.col[1]},${p.col[2]},${tw})`;
       if(p.glow){x.shadowColor=`rgba(${p.col[0]},${p.col[1]},${p.col[2]},${tw})`;x.shadowBlur=p.r*2.6;}
@@ -1128,7 +1187,7 @@ window.__heroOn = true; /* gate for hero-bound effects (canvases, portrait paral
           x.beginPath();x.arc(p.x,p.y,p.r+o*1.6*DPR,0,7);x.fillStyle=`rgba(${p.col[0]},${p.col[1]},${p.col[2]},${.5*o})`;x.fill();}}
     }
     if(T>=nextShoot&&shoot.length<2){spawnShoot();nextShoot=T+((Math.random()*420+360)|0);}
-    for(let k=shoot.length-1;k>=0;k--){const s=shoot[k];s.x+=s.vx;s.y+=s.vy;
+    for(let k=shoot.length-1;k>=0;k--){const s=shoot[k];s.x+=s.vx*dt;s.y+=s.vy*dt;
       const m=Math.hypot(s.vx,s.vy)||1,tx=s.x-s.vx/m*s.len,ty=s.y-s.vy/m*s.len;
       const g=x.createLinearGradient(s.x,s.y,tx,ty);
       g.addColorStop(0,`rgba(${s.col[0]},${s.col[1]},${s.col[2]},.9)`);g.addColorStop(1,`rgba(${s.col[0]},${s.col[1]},${s.col[2]},0)`);
@@ -1137,7 +1196,7 @@ window.__heroOn = true; /* gate for hero-bound effects (canvases, portrait paral
       if(s.x<-60*DPR||s.x>w+60*DPR||s.y>h+60*DPR)shoot.splice(k,1);}
     requestAnimationFrame(frame);
   }
-  function start(){if(RM||document.hidden||run)return;run=true;frame();}
+  function start(){if(RM||document.hidden||run)return;last=0;run=true;requestAnimationFrame(frame);}
   function stop(){run=false;x.clearRect(0,0,w,h);}
   window.__dust={start,stop};
   start();
@@ -1155,13 +1214,13 @@ window.__heroOn = true; /* gate for hero-bound effects (canvases, portrait paral
     const n=COARSE?14:30;nodes=[];for(let i=0;i<n;i++)nodes.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:(Math.random()*1.7+.5)*DPR,ph:Math.random()*6.28});
     const m=COARSE?10:22;motes=[];for(let i=0;i<m;i++)motes.push({x:Math.random()*w,y:Math.random()*h,vy:-(Math.random()*.3+.08)*DPR,r:(Math.random()*1.2+.3)*DPR,a:Math.random()*.45+.2,ph:Math.random()*6.28});
     pulses=[];}
-  let run=false,T=0;
+  let run=false,T=0,last=0,nextPulse=60;
   function spawnPulse(){if(pulses.length>5||nodes.length<2)return;const i=(Math.random()*nodes.length)|0;let j=-1,best=1e9;
     for(let k=0;k<nodes.length;k++){if(k===i)continue;const d=Math.hypot(nodes[i].x-nodes[k].x,nodes[i].y-nodes[k].y);if(d<150*DPR&&d<best){best=d;j=k;}}
     if(j>=0)pulses.push({a:i,b:j,t:0,sp:.012+Math.random()*.02});}
-  function frame(){if(!run)return;T++;x.clearRect(0,0,w,h);
+  function frame(now){if(!run)return;const dt=last?Math.min(4,(now-last)/16.667):1;last=now;T+=dt;x.clearRect(0,0,w,h);
     // links
-    for(let i=0;i<nodes.length;i++){const p=nodes[i];p.x+=p.vx;p.y+=p.vy;
+    for(let i=0;i<nodes.length;i++){const p=nodes[i];p.x+=p.vx*dt;p.y+=p.vy*dt;
       if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;
       for(let j=i+1;j<nodes.length;j++){const q=nodes[j];const d=Math.hypot(p.x-q.x,p.y-q.y);
         if(d<108*DPR){const o=.18*(1-d/(108*DPR));x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.strokeStyle=`rgba(130,175,255,${o})`;x.lineWidth=DPR*.55;x.stroke();}}}
@@ -1169,16 +1228,16 @@ window.__heroOn = true; /* gate for hero-bound effects (canvases, portrait paral
     for(let i=0;i<nodes.length;i++){const p=nodes[i];const pr=p.r*(1+.32*Math.sin(T*.03+p.ph));const c1=COL(p.x/w);
       x.beginPath();x.arc(p.x,p.y,pr,0,7);x.fillStyle=`rgba(${c1},.88)`;x.shadowColor=`rgba(${c1},.9)`;x.shadowBlur=8*DPR;x.fill();x.shadowBlur=0;}
     // traveling light pulses along links
-    if(T%70===0)spawnPulse();
-    for(let k=pulses.length-1;k>=0;k--){const pu=pulses[k];pu.t+=pu.sp;if(pu.t>=1){pulses.splice(k,1);continue;}
+    if(T>=nextPulse){spawnPulse();nextPulse=T+70;}
+    for(let k=pulses.length-1;k>=0;k--){const pu=pulses[k];pu.t+=pu.sp*dt;if(pu.t>=1){pulses.splice(k,1);continue;}
       const a=nodes[pu.a],b=nodes[pu.b];if(!a||!b){pulses.splice(k,1);continue;}
       const px=a.x+(b.x-a.x)*pu.t,py=a.y+(b.y-a.y)*pu.t,c1=COL(px/w);
       x.beginPath();x.arc(px,py,2.2*DPR,0,7);x.fillStyle=`rgba(${c1},${.9*(1-Math.abs(.5-pu.t)*1.3)})`;x.shadowColor=`rgba(${c1},1)`;x.shadowBlur=12*DPR;x.fill();x.shadowBlur=0;}
     // rising luminous motes
-    for(const mo of motes){mo.y+=mo.vy;mo.x+=Math.sin(T*.01+mo.ph)*.12*DPR;if(mo.y<0){mo.y=h;mo.x=Math.random()*w;}
+    for(const mo of motes){mo.y+=mo.vy*dt;mo.x+=Math.sin(T*.01+mo.ph)*.12*DPR*dt;if(mo.y<0){mo.y=h;mo.x=Math.random()*w;}
       const c1=COL(mo.x/w);x.beginPath();x.arc(mo.x,mo.y,mo.r,0,7);x.fillStyle=`rgba(${c1},${mo.a*(.5+.5*Math.sin(T*.02+mo.ph))})`;x.fill();}
     requestAnimationFrame(frame);}
-  function start(){if(RM||document.hidden||!window.__heroOn||run)return;run=true;frame();}
+  function start(){if(RM||document.hidden||!window.__heroOn||run)return;last=0;run=true;requestAnimationFrame(frame);}
   function stop(){run=false;x.clearRect(0,0,w,h);}
   window.__net={start,stop};
   setTimeout(()=>{size();start();},220);
@@ -1256,7 +1315,8 @@ function renderLanguageSystem(){
    GitHub integration (LIVE, real data)
    ===================================================================== */
 let REPOS=[], LANG_STATS=[], ACTIVE_FILTER="all", STAT=null;
-const publishedCount = () => (CONFIG.publishedSites||[]).filter(s=>s && s.title).length;
+const listedPublishedSites = () => (CONFIG.publishedSites||[]).filter(s=>s && s.title);
+const publishedCount = () => Number.isFinite(CONFIG.publishedSitesCount) ? CONFIG.publishedSitesCount : listedPublishedSites().length;
 const repoKey = name => String(name||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]/g,"");
 const unique = list => [...new Set((list||[]).filter(Boolean))];
 function manualLanguagesForRepo(repo){
@@ -1349,9 +1409,9 @@ function setStatCards(repos,sites,langs){
   wrap.querySelectorAll(".n").forEach(el=>animateNum(el,+el.dataset.n));
 }
 function renderPublishedSites(){
-  const sites=(CONFIG.publishedSites||[]).filter(s=>s&&s.title);
-  animateNum($("#pubCount"),sites.length);
-  animateNum($("#ghSites"),sites.length);
+  const sites=listedPublishedSites();
+  animateNum($("#pubCount"),publishedCount());
+  animateNum($("#ghSites"),publishedCount());
   const list=$("#pubList");
   if(!list)return;
   if(!sites.length){

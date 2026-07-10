@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#04050a" />
+<meta name="color-scheme" content="dark" />
+<title>Gabriel F. Emilio Showcase</title>
+<meta name="description" content="Showcase animado dos projetos de Gabriel Feltrin Emilio: uma viagem por estrelas e constelações até as telas do que ele construiu." />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+<link rel="canonical" href="https://feltrinemilio.dev/showcase.html" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" href="assets/showcase/optimized/cadillac-1440.avif" imagesrcset="assets/showcase/optimized/cadillac-960.avif 960w, assets/showcase/optimized/cadillac-1440.avif 1440w, assets/showcase/optimized/cadillac-1917.avif 1917w" imagesizes="(max-width: 860px) calc(100vw - 40px), min(54vw, 640px)" />
+
+<style>
+:root{
+  --bg:#04050a; --bg2:#070912; --ink:#0a0d18; --ink2:#0c1020;
+  --line:rgba(150,178,255,.11); --line2:rgba(150,178,255,.06);
+  --text:#eef0f7; --muted:#949bb2; --faint:#5a6178;
+  --cyan:#43d6ee; --blue:#5b8cff; --ice:#9cc0ff; --violet:#8a6bff;
+  --gold:#d9bd8c; --champ:#ecd9af;
+  --grad:linear-gradient(122deg,#9cc0ff 0%,#5b8cff 42%,#8a6bff 100%);
+  --grad-cv:linear-gradient(122deg,#43d6ee 0%,#5b8cff 50%,#8a6bff 100%);
+  --grad-gold:linear-gradient(120deg,#ecd9af,#d9bd8c);
+  --fd:"Syne",system-ui,sans-serif; --fb:"Inter",system-ui,sans-serif;
+  --fm:"JetBrains Mono",ui-monospace,monospace; --fh:"Fraunces",Georgia,serif;
+  --pad:clamp(20px,5vw,64px); --ease:cubic-bezier(.16,1,.3,1);
+  --accent:#5b8cff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+::selection{background:rgba(91,140,255,.3);color:#fff}
+
+/* ===== background layers ===== */
+#bg{position:fixed;inset:0;z-index:0;width:100%;height:100%;display:block}
+/* CSS fallback starfield (shown if WebGL unavailable / reduced motion) */
+.bg-fallback{position:fixed;inset:0;z-index:0;pointer-events:none;display:none;
+  background:
+    radial-gradient(60vw 60vw at 18% 12%,rgba(67,108,255,.18),transparent 60%),
+    radial-gradient(60vw 60vw at 82% 88%,rgba(138,107,255,.15),transparent 60%),
+    radial-gradient(40vw 40vw at 50% 50%,rgba(217,189,140,.06),transparent 66%),
+    #04050a}
+body.nogl .bg-fallback{display:block}
+body.nogl #bg{display:none}
+.bg-fallback .st{position:absolute;border-radius:50%;background:var(--ice);opacity:.5;animation:twk 4s ease-in-out infinite}
+@keyframes twk{0%,100%{opacity:.25}50%{opacity:.85}}
+.vig{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(135% 120% at 50% 0%,transparent 54%,rgba(0,0,0,.55))}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ===== shooting stars ===== */
+#shootBg{position:fixed;inset:0;pointer-events:none;z-index:2}
+#shootFg{display:none}
+
+/* ===== loader ===== */
+.loader{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:var(--bg);transition:opacity .8s var(--ease),visibility .8s}
+body.ready .loader{opacity:0;visibility:hidden}
+.loader .core{width:96px;height:96px;background:url("assets/logo-favicon-96.png") center/contain no-repeat;filter:drop-shadow(0 0 22px rgba(67,214,238,.48));animation:lp 1.4s ease-in-out infinite}
+.loader small{position:absolute;bottom:40px;left:0;right:0;text-align:center;font-family:var(--fm);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint)}
+@keyframes lp{0%,100%{transform:scale(.86);opacity:.72}50%{transform:scale(1.08);opacity:1}}
+
+/* ===== top nav ===== */
+.top{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:200;width:calc(100% - 28px);max-width:1150px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px 10px 16px;border-radius:16px;
+  background:rgba(8,10,18,.5);backdrop-filter:blur(12px) saturate(140%);-webkit-backdrop-filter:blur(12px) saturate(140%);
+  border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.4)}
+.top .home{display:inline-flex;align-items:center;gap:9px;font-family:var(--fm);font-size:.78rem;color:var(--muted);transition:color .3s}
+.top .home:hover{color:var(--text)}
+.top .home svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.top .brand{font-family:var(--fd);font-weight:700;font-size:.96rem;display:flex;align-items:center;gap:10px;min-width:0}
+.top .brand .d{width:9px;height:9px;border-radius:50%;background:var(--grad-cv);box-shadow:0 0 12px rgba(67,214,238,.8);flex:none}
+.top .brand b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top .tag{font-family:var(--fm);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.lang{display:flex;gap:1px;padding:3px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid var(--line2);flex:none}
+.lang button{font-family:var(--fm);font-size:.66rem;min-width:36px;min-height:34px;padding:6px 9px;border:0;border-radius:7px;background:transparent;color:var(--faint);transition:.3s;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
+.lang button.on{color:#05060c;background:var(--grad);font-weight:600}
+@media (max-width:640px){.top .brand b{max-width:34vw}.top .tag{display:none}}
+@media (max-width:560px){.top{padding:8px 10px}.top .home span{display:none}.lang button{min-width:31px;min-height:32px;padding:5px 7px}}
+
+/* ===== side dots (star map nav) ===== */
+.dots{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:200;display:flex;flex-direction:column;gap:18px}
+.dots button{position:relative;width:18px;height:18px;border:0;background:transparent;color:transparent;font-size:0;line-height:0;transition:.35s var(--ease);cursor:pointer;padding:0}
+.dots button::before{content:"";position:absolute;left:50%;top:50%;width:6px;height:6px;border-radius:50%;transform:translate(-50%,-50%) rotate(45deg);
+  background:radial-gradient(circle at 35% 35%,#fff 0 18%,var(--ice) 42%,rgba(156,192,255,.18) 68%,transparent 100%);
+  box-shadow:0 0 8px rgba(156,192,255,.55),0 0 18px rgba(91,140,255,.18);transition:.35s var(--ease)}
+.dots button::after{content:attr(data-label);position:absolute;right:24px;top:50%;transform:translateY(-50%) translateX(6px);
+  font-family:var(--fm);font-size:.66rem;color:var(--muted);white-space:nowrap;opacity:0;pointer-events:none;transition:.3s;
+  background:rgba(7,10,18,.7);padding:4px 9px;border-radius:7px;border:1px solid var(--line2)}
+.dots button:hover::after{opacity:1;transform:translateY(-50%) translateX(0)}
+.dots button:hover::before{width:8px;height:8px;box-shadow:0 0 10px rgba(255,255,255,.7),0 0 24px rgba(91,140,255,.3)}
+.dots button.on::before{width:10px;height:10px;background:radial-gradient(circle at 35% 35%,#fff 0 18%,var(--accent) 50%,rgba(91,140,255,.18) 72%,transparent 100%);animation:dotStar 1.9s ease-in-out infinite}
+@keyframes dotStar{0%,100%{box-shadow:0 0 9px var(--accent),0 0 20px rgba(91,140,255,.22);transform:translate(-50%,-50%) rotate(45deg) scale(1)}50%{box-shadow:0 0 22px var(--accent),0 0 42px rgba(91,140,255,.45);transform:translate(-50%,-50%) rotate(45deg) scale(1.35)}}
+@media (max-width:720px){.dots{display:none}}
+
+/* ===== mobile notice ===== */
+.mobile-notice{position:fixed;inset:0;z-index:1200;display:grid;place-items:center;padding:22px;background:rgba(4,5,10,.76);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s var(--ease),visibility .35s}
+.mobile-notice.on{opacity:1;visibility:visible;pointer-events:auto}
+.mn-card{position:relative;width:min(100%,420px);border-radius:16px;border:1px solid var(--line);background:linear-gradient(165deg,rgba(12,16,32,.96),rgba(7,9,18,.98));box-shadow:0 24px 70px rgba(0,0,0,.55);padding:22px;overflow:hidden}
+.mn-card::before{content:"";position:absolute;left:22px;top:22px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle,#fff,var(--accent) 62%,transparent 100%);box-shadow:0 0 18px var(--accent)}
+.mn-lang{display:flex;width:max-content;gap:1px;margin:0 0 22px auto;padding:3px;border-radius:10px;background:rgba(255,255,255,.035);border:1px solid var(--line2)}
+.mn-lang button{font-family:var(--fm);font-size:.66rem;min-width:38px;min-height:34px;padding:6px 9px;border:0;border-radius:7px;background:transparent;color:var(--faint);text-transform:uppercase;letter-spacing:.05em}
+.mn-lang button.on{color:#05060c;background:var(--grad);font-weight:600}
+.mn-k{display:block;margin-bottom:10px;font-family:var(--fm);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.mn-card h2{font-family:var(--fh);font-weight:500;font-size:clamp(1.6rem,8vw,2.15rem);line-height:1.05;margin-bottom:12px;letter-spacing:0}
+.mn-card p{color:var(--muted);font-size:.98rem;line-height:1.65;margin-bottom:20px}
+.mobile-notice.on .mn-card{pointer-events:none}
+.mobile-notice.on .mn-lang,.mobile-notice.on .mn-lang button,.mobile-notice.on .mn-close.ready{pointer-events:auto}
+.mn-close.btn-p{--mn-progress:0%;width:100%;min-height:52px;justify-content:center;border:1px solid var(--line);background:rgba(255,255,255,.035);color:var(--text);cursor:progress;transform:none;pointer-events:none}
+.mn-close.btn-p::before{content:"";position:absolute;inset:0 auto 0 0;z-index:0;width:var(--mn-progress);background:var(--grad);transition:width .12s linear,filter .3s}
+.mn-close span{position:relative;z-index:1;color:inherit}
+.mn-close.ready{color:#05060c;cursor:pointer;border-color:transparent;pointer-events:auto}
+.mn-close.ready:hover{transform:translateY(-2px)}
+body.mobile-notice-open{overflow:hidden}
+
+/* ===== content ===== */
+.wrap{position:relative;z-index:3}
+.scene{min-height:100svh;display:flex;align-items:center;padding:120px var(--pad) 90px}
+.inner{width:100%;max-width:1180px;margin-inline:auto}
+
+/* intro */
+.intro{text-align:center;flex-direction:column;justify-content:center;gap:8px}
+.intro .idx{font-family:var(--fm);font-size:.72rem;letter-spacing:.2em;color:var(--gold);margin-bottom:18px;display:inline-flex;align-items:center;gap:10px;justify-content:center}
+.intro .idx::before,.intro .idx::after{content:"";width:26px;height:1px;background:var(--grad-gold)}
+.intro h1{font-family:var(--fh);font-weight:400;font-size:clamp(2.4rem,7vw,5.2rem);line-height:1.04;letter-spacing:-.02em;margin-bottom:22px}
+.intro h1 .grad{font-style:italic;font-weight:500;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro p{color:var(--muted);font-weight:300;font-size:clamp(1rem,1.4vw,1.18rem);max-width:600px;margin:0 auto 38px}
+.intro .hint{font-family:var(--fm);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);display:inline-flex;flex-direction:column;align-items:center;gap:10px}
+.intro .hint .ms{width:21px;height:33px;border:1px solid var(--faint);border-radius:12px;position:relative}
+.intro .hint .ms::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:2.6px;height:6px;border-radius:3px;background:var(--cyan);animation:wheel 1.7s infinite}
+@keyframes wheel{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,9px)}}
+
+/* project scene */
+.proj .inner{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(30px,5vw,68px);align-items:center}
+.proj.flip .inner{grid-template-columns:1.08fr .92fr}
+.proj.flip .copy{order:2}
+.p-chapter{font-family:var(--fm);font-size:.72rem;letter-spacing:.18em;color:var(--gold);display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
+.p-chapter::before{content:"";width:26px;height:1px;background:var(--grad-gold)}
+.proj h2{font-family:var(--fh);font-weight:500;font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.06;letter-spacing:-.015em;margin-bottom:14px}
+.p-tagline{color:var(--muted);font-weight:300;font-size:clamp(1rem,1.3vw,1.12rem);max-width:480px;margin-bottom:24px}
+.p-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;font-family:var(--fm);font-size:.72rem}
+.p-meta span{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.025);color:var(--muted)}
+.p-status .sd{width:7px;height:7px;border-radius:50%;background:#46d39a;box-shadow:0 0 10px rgba(70,211,154,.7)}
+.p-status.soon .sd{background:var(--gold);box-shadow:0 0 10px rgba(217,189,140,.6)}
+.p-status em{font-style:normal}
+.p-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:28px}
+.p-tags span{font-family:var(--fm);font-size:.68rem;color:var(--muted);padding:6px 11px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid var(--line2)}
+.p-acts{display:flex;gap:12px;flex-wrap:wrap}
+.btn{position:relative;z-index:0;display:inline-flex;align-items:center;gap:10px;font-size:.9rem;font-weight:500;padding:14px 26px;border-radius:13px;overflow:hidden;isolation:isolate;transition:transform .3s var(--ease)}
+button.btn{border:0;background:transparent;font:inherit;cursor:pointer}
+.btn span,.btn svg{position:relative;z-index:1}
+.btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{color:#05060c;font-weight:600}
+.btn-p::before{content:"";position:absolute;inset:0;z-index:0;background:var(--grad);transition:filter .3s}
+.btn-p:hover::before{filter:brightness(1.1) saturate(1.15)}
+.btn-g{color:var(--text);border:1px solid var(--line);background:rgba(255,255,255,.02)}
+.btn-g:hover{border-color:rgba(67,214,238,.5);background:rgba(255,255,255,.05)}
+
+/* device mockup */
+.shot{position:relative;perspective:1400px}
+.frame{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(165deg,var(--ink),var(--bg2));
+  box-shadow:0 24px 50px rgba(0,0,0,.5);transform:rotateY(-9deg) rotateX(4deg);transition:transform .7s var(--ease);transform-style:preserve-3d}
+.proj.flip .frame{transform:rotateY(9deg) rotateX(4deg)}
+.shot:hover .frame{transform:rotateY(0) rotateX(0)}
+.frame::before{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(115deg,transparent 42%,rgba(141,238,255,.08) 50%,transparent 58%)}
+@keyframes sheen{0%,100%{background-position:0 0}50%{background-position:100% 100%}}
+.frame .bar{display:flex;align-items:center;gap:7px;padding:12px 15px;border-bottom:1px solid var(--line2);background:rgba(8,11,20,.6)}
+.frame .bar i{width:10px;height:10px;border-radius:50%}
+.frame .bar i:nth-child(1){background:#ff5f57}.frame .bar i:nth-child(2){background:#febc2e}.frame .bar i:nth-child(3){background:#28c840}
+.frame .bar em{margin-left:10px;font-family:var(--fm);font-size:.68rem;color:var(--faint);font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.frame .screen{position:relative;aspect-ratio:16/10;display:block;width:100%}
+.frame .screen picture{position:absolute;inset:0;display:block;width:100%;height:100%;opacity:0;transition:opacity .6s var(--ease)}
+.frame .screen img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.frame.has-img .screen picture{opacity:1}
+/* placeholder shown until a real image loads */
+.frame .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;
+  background:radial-gradient(circle at 50% 35%,rgba(91,140,255,.16),transparent 60%),linear-gradient(165deg,var(--ink),var(--bg2))}
+.frame .ph .star{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 38% 32%,#fff,var(--accent) 66%);box-shadow:0 0 30px var(--accent)}
+.frame .ph b{font-family:var(--fm);font-size:.72rem;letter-spacing:.06em;color:var(--muted)}
+.frame .ph small{font-family:var(--fm);font-size:.64rem;color:var(--faint)}
+.frame.has-img .ph{display:none}
+
+/* footer scene */
+.end{flex-direction:column;justify-content:center;text-align:center;gap:18px}
+.end h2{font-family:var(--fh);font-weight:500;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.015em;text-shadow:0 2px 18px rgba(4,5,10,.96),0 0 2px rgba(4,5,10,.9)}
+.end p{color:var(--muted);font-weight:300;max-width:520px;margin:0 auto;text-shadow:0 2px 16px rgba(4,5,10,.95)}
+.end small{font-family:var(--fm);font-size:.74rem;color:var(--faint);margin-top:26px}
+
+/* contact modal */
+body.contact-modal-open{overflow:hidden}
+.contact-modal{position:fixed;inset:0;z-index:1100;display:grid;place-items:center;padding:22px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s var(--ease),visibility .35s}
+.contact-modal.on{opacity:1;visibility:visible;pointer-events:auto}
+.cm-back{position:absolute;inset:0;background:rgba(4,5,10,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.cm-panel{position:relative;width:min(100%,880px);max-height:min(88vh,780px);overflow:auto;border-radius:18px;border:1px solid var(--line);background:linear-gradient(165deg,rgba(12,16,32,.97),rgba(7,9,18,.99));box-shadow:0 34px 100px rgba(0,0,0,.64);padding:clamp(22px,4vw,34px);transform:translateY(22px) scale(.98);transition:transform .42s var(--ease)}
+.contact-modal.on .cm-panel{transform:none}
+.cm-close{position:absolute;top:16px;right:16px;width:40px;height:40px;display:grid;place-items:center;border-radius:11px;border:1px solid var(--line);background:rgba(255,255,255,.045);color:var(--text);cursor:pointer;transition:.3s}
+.cm-close:hover{border-color:rgba(255,138,138,.45);background:rgba(255,138,138,.12)}
+.cm-close svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2}
+.cm-head{padding-right:44px;margin-bottom:24px}
+.cm-k{display:inline-flex;align-items:center;gap:9px;margin-bottom:12px;font-family:var(--fm);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.cm-k::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
+.cm-head h2{font-family:var(--fh);font-weight:500;font-size:clamp(1.7rem,4vw,2.45rem);line-height:1.08;letter-spacing:0;margin-bottom:12px}
+.cm-head p{max-width:600px;color:var(--muted);font-weight:300}
+.cm-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,52px);align-items:start}
+.contact-form{display:flex;flex-direction:column;gap:15px}
+.cm-field{position:relative}
+.cm-field input,.cm-field textarea{width:100%;padding:18px 17px;border-radius:13px;background:rgba(255,255,255,.025);border:1px solid var(--line);color:var(--text);font-family:inherit;font-size:.93rem;transition:.3s;resize:vertical}
+.cm-field textarea{min-height:140px}
+.cm-field input:focus,.cm-field textarea:focus{outline:none;border-color:rgba(67,214,238,.55);background:rgba(255,255,255,.05);box-shadow:0 0 0 4px rgba(67,214,238,.07)}
+.cm-field label{position:absolute;top:18px;left:16px;padding:0 5px;color:var(--faint);font-size:.93rem;pointer-events:none;transition:.22s var(--ease)}
+.cm-field input:focus+label,.cm-field input:not(:placeholder-shown)+label,.cm-field textarea:focus+label,.cm-field textarea:not(:placeholder-shown)+label{top:-8px;left:12px;font-size:.68rem;color:var(--cyan);background:#090c18}
+.cm-status{min-height:20px;font-family:var(--fm);font-size:.8rem;color:#46d39a;opacity:0;transition:.3s}
+.cm-status.err{color:#ff8a8a}
+.cm-status.show{opacity:1}
+.contact-form .btn{align-self:flex-start;min-height:52px;justify-content:center;white-space:nowrap;box-shadow:0 14px 34px rgba(91,140,255,.24)}
+.contact-form .btn:hover{box-shadow:0 18px 40px rgba(91,140,255,.3)}
+.contact-form button[disabled]{opacity:.58;cursor:progress}
+.cm-links{display:flex;flex-direction:column;gap:11px}
+.cm-link{display:flex;align-items:center;gap:15px;min-width:0;padding:17px 19px;border-radius:15px;border:1px solid var(--line);background:linear-gradient(165deg,var(--ink),var(--bg2));transition:transform .35s var(--ease),border-color .35s}
+.cm-link:hover{transform:translateX(6px);border-color:rgba(67,214,238,.4)}
+.cm-link .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+.cm-link .ic svg{width:19px;height:19px}
+.cm-link .txt{display:block;min-width:0}
+.cm-link .t{font-family:var(--fm);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.cm-link .t,.cm-link .v{display:block}
+.cm-link .v{font-size:.94rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cm-link .ar{margin-left:auto;color:var(--faint);transition:.3s;flex:none}
+.cm-link:hover .ar{transform:translateX(4px);color:var(--cyan)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
+
+@media (max-width:780px){
+  .cm-grid{grid-template-columns:1fr}
+  .cm-panel{max-height:86vh;padding:22px}
+  .cm-head{padding-right:36px}
+}
+@media (max-width:860px){
+  .proj .inner,.proj.flip .inner{grid-template-columns:1fr;gap:34px}
+  .proj.flip .copy{order:0}
+  .shot{order:-1}
+  .frame,.proj.flip .frame{transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .rv{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+<div class="bg-fallback" id="bgFallback"></div>
+<canvas id="shootBg"></canvas>
+<div class="vig"></div><div class="grain"></div>
+
+<div class="loader" id="loader"><div class="core"></div><small id="loaderText" data-i="loader" data-loader-cycle>carregando a constelação...</small></div>
+<script>
+(function(){
+  const text={en:"loading the constellation...",pt:"carregando a constelação...",fr:"chargement de la constellation..."};
+  const normalize=value=>String(value||"").trim().toLowerCase().split(/[-_]/)[0];
+  let lang="en";
+  try{
+    const saved=normalize(localStorage.getItem("site_lang"));
+    const device=normalize((Array.isArray(navigator.languages)&&navigator.languages.length?navigator.languages[0]:navigator.language));
+    lang=text[saved]?saved:(text[device]?device:"en");
+  }catch(e){}
+  window.__loaderStartLang=lang;
+  const loaderText=document.getElementById("loaderText");
+  if(loaderText)loaderText.textContent=text[lang];
+})();
+</script>
+
+<nav class="top">
+  <a class="home" href="index.html"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span data-i="nav_home">Portfólio</span></a>
+  <div class="brand"><span class="d"></span><b>Gabriel F. Emilio</b><span class="tag">/ <span data-i="nav_tag">Showcase</span></span></div>
+  <div class="lang" id="langSwitch" aria-label="Selecionar idioma">
+    <button type="button" data-l="pt">PT</button>
+    <button type="button" data-l="en">EN</button>
+    <button type="button" data-l="fr">FR</button>
+  </div>
+</nav>
+
+<div class="mobile-notice" id="mobileNotice" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="mobileNoticeTitle">
+  <div class="mn-card">
+    <div class="mn-lang" aria-label="Selecionar idioma do aviso">
+      <button type="button" data-l="pt">PT</button>
+      <button type="button" data-l="en">EN</button>
+      <button type="button" data-l="fr">FR</button>
+    </div>
+    <span class="mn-k" data-i="mobile_notice_kicker">Visualização recomendada</span>
+    <h2 id="mobileNoticeTitle" data-i="mobile_notice_title">Melhor experiência no computador</h2>
+    <p data-i="mobile_notice_copy">Este showcase também abre no celular, mas foi desenhado para telas maiores. Para acompanhar constelações, animações e transições com mais conforto e fluidez, prefira acessar pelo computador.</p>
+    <button type="button" class="btn btn-p mn-close" id="mobileNoticeClose" aria-disabled="true"><span data-i="mobile_notice_cta">Continuar mesmo assim</span></button>
+  </div>
+</div>
+
+<div class="dots" id="dots"></div>
+
+<main class="wrap" id="wrap">
+
+  <section class="scene intro" id="scene-intro" data-label="Início" data-label-key="scene_intro">
+    <div class="inner">
+      <span class="idx">SHOWCASE</span>
+      <h1 class="rv" data-ih="intro_title">Uma <span class="grad">constelação</span><br/>do que construí e ajudei a construir.</h1>
+      <p class="rv d1" data-i="intro_copy">Cada projeto é uma estrela. Role para viajar entre elas e toque em qualquer uma à direita para saltar direto à demonstração.</p>
+.</p>
+      <span class="hint rv d2"><span class="ms"></span><span data-i="intro_hint">role para explorar</span></span>
+    </div>
+  </section>
+
+  <!-- projects injected here -->
+
+  <section class="scene end" id="scene-end" data-label="Contato" data-label-key="scene_end">
+    <div class="inner">
+      <h2 class="rv" data-i="end_title">Vamos dar forma à próxima ideia.</h2>
+      <p class="rv d1" data-i="end_copy">Estou aberto a oportunidades, colaborações e projetos digitais com intenção, cuidado e ambição.</p>
+      <div class="p-acts rv d2" style="justify-content:center">
+        <button type="button" class="btn btn-p" id="contactOpen"><span data-i="end_cta">Entrar em contato</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <a class="btn btn-g" href="index.html"><span data-i="end_back">Voltar ao portfólio</span></a>
+      </div>
+      <small class="rv d3">© <span id="yr"></span> Gabriel Feltrin Emilio</small>
+    </div>
+  </section>
+
+</main>
+
+<div class="contact-modal" id="contactModal" aria-hidden="true">
+  <div class="cm-back" data-contact-x></div>
+  <section class="cm-panel" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <button type="button" class="cm-close" data-contact-x data-i-aria="contact_close" aria-label="Fechar contato">
+      <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+
+    <div class="cm-head">
+      <span class="cm-k" data-i="contact_k">Contato</span>
+      <h2 id="contactModalTitle" data-i="contact_title">Vamos conversar sobre o próximo projeto.</h2>
+      <p data-i="contact_copy">Envie uma mensagem direta ou continue a conversa pelos canais abaixo.</p>
+    </div>
+
+    <div class="cm-grid">
+      <form class="contact-form" id="showcaseContactForm">
+        <div class="cm-field">
+          <input id="scName" name="name" autocomplete="name" required placeholder=" " />
+          <label for="scName" data-i="f_name">Nome</label>
+        </div>
+
+        <div class="cm-field">
+          <input id="scEmail" name="email" type="email" autocomplete="email" required placeholder=" " />
+          <label for="scEmail" data-i="f_email">E-mail</label>
+        </div>
+
+        <div class="cm-field">
+          <textarea id="scMessage" name="message" required placeholder=" "></textarea>
+          <label for="scMessage" data-i="f_msg">Mensagem</label>
+        </div>
+
+        <button type="submit" class="btn btn-p" id="showcaseContactSubmit">
+          <span data-i="f_send">Enviar mensagem</span>
+          <svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+
+        <span class="cm-status" id="showcaseContactStatus" data-i="f_ok" role="status" aria-live="polite">Mensagem enviada com sucesso!</span>
+      </form>
+
+      <div class="cm-links">
+        <a class="cm-link" id="contactLinkedinLink" href="https://www.linkedin.com/in/gabriel-emilio/" target="_blank" rel="noopener">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V10.2H6.06V17h2.28zM7.2 9.24a1.32 1.32 0 1 0 0-2.64 1.32 1.32 0 0 0 0 2.64zM18 17v-3.73c0-1.99-.43-3.52-2.76-3.52-1.12 0-1.87.61-2.18 1.2h-.03v-1.02H10.84V17h2.27v-3.37c0-.89.17-1.75 1.27-1.75 1.09 0 1.1 1.02 1.1 1.81V17H18z"/></svg>
+          </span>
+          <span class="txt">
+            <span class="t">LinkedIn</span>
+            <span class="v">/in/gabriel-emilio</span>
+          </span>
+          <span class="ar">↗</span>
+        </a>
+
+        <a class="cm-link" id="contactGithubLink" href="https://github.com/GabrielFEmilio" target="_blank" rel="noopener">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.72c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          </span>
+          <span class="txt">
+            <span class="t">GitHub</span>
+            <span class="v">@GabrielFEmilio</span>
+          </span>
+          <span class="ar">↗</span>
+        </a>
+
+        <a class="cm-link" id="contactEmailLink" href="https://mail.google.com/mail/?view=cm&fs=1&to=gabriel.emilio.dev%40gmail.com" target="_blank" rel="noopener">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </span>
+          <span class="txt">
+            <span class="t">E-mail</span>
+            <span class="v">gabriel.emilio.dev@gmail.com</span>
+          </span>
+          <span class="ar">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<canvas id="shootFg"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* =====================================================================
+   CONFIG
+   ===================================================================== */
+const CONFIG = {
+  linkedin: "https://www.linkedin.com/in/gabriel-emilio/",
+  github: "https://github.com/GabrielFEmilio",
+  email: "gabriel.emilio.dev@gmail.com",
+  formEndpoint: "https://formspree.io/f/mdavbrkq"
+};
+
+/* =====================================================================
+   PROJECTS: edite aqui. Para adicionar a imagem real de um projeto,
+   coloque o arquivo em assets/showcase/ e aponte "img" para ele.
+   Enquanto a imagem não existir, aparece um placeholder elegante.
+   ===================================================================== */
+const I18N = {
+  pt:{
+    html_lang:"pt",
+    doc_title:"Gabriel F. Emilio Showcase",
+    doc_description:"Showcase animado dos projetos de Gabriel Feltrin Emilio, com uma viagem por estrelas e constelações até as telas do que ele construiu e ajudou a construir.",
+    nav_home:"Portfólio",
+    nav_tag:"Showcase",
+    lang_label:"Selecionar idioma",
+    lang_pt:"Português",
+    lang_en:"Inglês",
+    lang_fr:"Francês",
+    loader:"carregando a constelação...",
+    scene_intro:"Início",
+    scene_end:"Contato",
+    intro_title:"Uma <span class=\"grad\">constelação</span><br/>do que construí e ajudei a construir.",
+    intro_copy:"Cada projeto é uma estrela. Role para viajar entre elas e toque em qualquer uma à direita para saltar direto à demonstração.",
+    intro_hint:"role para explorar",
+    mobile_notice_kicker:"Visualização recomendada",
+    mobile_notice_title:"Melhor experiência no computador",
+    mobile_notice_copy:"Este showcase também abre no celular, mas foi desenhado para telas maiores. Para acompanhar constelações, animações e transições com mais conforto e fluidez, prefira acessar pelo computador.",
+    mobile_notice_cta:"Continuar mesmo assim",
+    end_title:"Vamos dar forma à próxima ideia.",
+    end_copy:"Estou aberto a oportunidades, colaborações e projetos digitais com intenção, cuidado e ambição.",
+    end_cta:"Entrar em contato",
+    end_back:"Voltar ao portfólio",
+    contact_k:"Contato",
+    contact_title:"Vamos conversar sobre o próximo projeto.",
+    contact_copy:"Envie uma mensagem direta ou continue a conversa pelos canais abaixo.",
+    contact_close:"Fechar contato",
+    f_name:"Nome",
+    f_email:"E-mail",
+    f_msg:"Mensagem",
+    f_send:"Enviar mensagem",
+    f_ok:"Mensagem enviada com sucesso!",
+    f_sending:"Enviando...",
+    f_fail:"Não foi possível enviar agora. Tente pelo e-mail abaixo.",
+    f_mailto:"Abrindo o Gmail...",
+    status_online:"Online",
+    status_soon:"Em breve",
+    open_project:"Abrir projeto",
+    project_label:"Projeto",
+    placeholder:"tela em"
+  },
+  en:{
+    html_lang:"en",
+    doc_title:"Gabriel F. Emilio Showcase",
+    doc_description:"Animated showcase of Gabriel Feltrin Emilio projects, traveling through stars and constellations toward the screens he built and helped build.",
+    nav_home:"Portfolio",
+    nav_tag:"Showcase",
+    lang_label:"Select language",
+    lang_pt:"Portuguese",
+    lang_en:"English",
+    lang_fr:"French",
+    loader:"loading the constellation...",
+    scene_intro:"Start",
+    scene_end:"Contact",
+    intro_title:"A <span class=\"grad\">constellation</span><br/>of what I built and helped build.",
+    intro_copy:"Each project is a star. Scroll to travel between them and tap a point on the right to jump straight to a showcase.",
+    intro_hint:"scroll to explore",
+    mobile_notice_kicker:"Recommended viewing",
+    mobile_notice_title:"Best experienced on desktop",
+    mobile_notice_copy:"This showcase also opens on mobile, but it was designed for larger screens. For a smoother, more comfortable view of the constellations, animations, and transitions, please use a computer.",
+    mobile_notice_cta:"Continue anyway",
+    end_title:"Let's shape the next idea.",
+    end_copy:"Open to opportunities, collaborations, and digital projects with care, purpose, and ambition.",
+    end_cta:"Get in touch",
+    end_back:"Back to portfolio",
+    contact_k:"Contact",
+    contact_title:"Let's talk about the next project.",
+    contact_copy:"Send a direct message or keep the conversation going through the channels below.",
+    contact_close:"Close contact",
+    f_name:"Name",
+    f_email:"Email",
+    f_msg:"Message",
+    f_send:"Send message",
+    f_ok:"Message sent successfully!",
+    f_sending:"Sending...",
+    f_fail:"Could not send right now. Try the email link below.",
+    f_mailto:"Opening Gmail...",
+    status_online:"Online",
+    status_soon:"Soon",
+    open_project:"Open project",
+    project_label:"Project",
+    placeholder:"screen at"
+  },
+  fr:{
+    html_lang:"fr",
+    doc_title:"Gabriel F. Emilio Showcase",
+    doc_description:"Showcase animé des projets de Gabriel Feltrin Emilio, avec un voyage entre étoiles et constellations vers les écrans qu'il a construits et aidé à construire.",
+    nav_home:"Portfolio",
+    nav_tag:"Showcase",
+    lang_label:"Choisir la langue",
+    lang_pt:"Portugais",
+    lang_en:"Anglais",
+    lang_fr:"Français",
+    loader:"chargement de la constellation...",
+    scene_intro:"Début",
+    scene_end:"Contact",
+    intro_title:"Une <span class=\"grad\">constellation</span><br/>de ce que j'ai construit et aidé à construire.",
+    intro_copy:"Chaque projet est une étoile. Faites défiler pour voyager entre eux et touchez un point à droite pour aller directement à une démonstration.",
+    intro_hint:"faites défiler pour explorer",
+    mobile_notice_kicker:"Affichage recommandé",
+    mobile_notice_title:"Meilleure expérience sur ordinateur",
+    mobile_notice_copy:"Ce showcase s'ouvre aussi sur mobile, mais il a été conçu pour les écrans plus grands. Pour suivre les constellations, animations et transitions avec plus de confort et de fluidité, privilégiez l'ordinateur.",
+    mobile_notice_cta:"Continuer quand même",
+    end_title:"Donnons forme à la prochaine idée.",
+    end_copy:"Ouvert aux opportunités, aux collaborations et aux projets numériques menés avec soin, intention et ambition.",
+    end_cta:"Prendre contact",
+    end_back:"Retour au portfolio",
+    contact_k:"Contact",
+    contact_title:"Parlons du prochain projet.",
+    contact_copy:"Envoyez un message direct ou poursuivez la conversation par les canaux ci-dessous.",
+    contact_close:"Fermer le contact",
+    f_name:"Nom",
+    f_email:"E-mail",
+    f_msg:"Message",
+    f_send:"Envoyer le message",
+    f_ok:"Message envoyé avec succès!",
+    f_sending:"Envoi...",
+    f_fail:"Impossible d'envoyer maintenant. Utilisez l'e-mail ci-dessous.",
+    f_mailto:"Ouverture de Gmail...",
+    status_online:"En ligne",
+    status_soon:"Bientôt",
+    open_project:"Ouvrir le projet",
+    project_label:"Projet",
+    placeholder:"écran dans"
+  }
+};
+const SUPPORTED_LANGS = ["pt","en","fr"];
+const LANGUAGE_STORAGE_KEY = "site_lang";
+const CONTACT_DRAFT_KEY = "showcase_contact_draft";
+function normalizeLanguage(value){
+  return String(value||"").trim().toLowerCase().split(/[-_]/)[0];
+}
+function isSupportedLanguage(lang){
+  return SUPPORTED_LANGS.includes(lang);
+}
+function getSavedLanguage(){
+  try{
+    const saved=normalizeLanguage(localStorage.getItem(LANGUAGE_STORAGE_KEY));
+    return isSupportedLanguage(saved)?saved:"";
+  }catch(e){
+    return "";
+  }
+}
+function getDeviceLanguage(){
+  const primary=(Array.isArray(navigator.languages)&&navigator.languages.length)?navigator.languages[0]:navigator.language;
+  const lang=normalizeLanguage(primary);
+  return isSupportedLanguage(lang)?lang:"en";
+}
+function getInitialLanguage(){
+  return getSavedLanguage()||getDeviceLanguage();
+}
+function saveLanguage(lang){
+  try{localStorage.setItem(LANGUAGE_STORAGE_KEY,lang);}catch(e){}
+}
+let LANG = getInitialLanguage();
+const t = key => (I18N[LANG] && I18N[LANG][key]) || (I18N.en && I18N.en[key]) || (I18N.pt && I18N.pt[key]) || key;
+const tr = value => {
+  if(value && typeof value==="object" && !Array.isArray(value)){
+    return value[LANG] || value.en || value.pt || value.fr || "";
+  }
+  return value == null ? "" : value;
+};
+const LOADER_MESSAGES = {
+  en:"loading the constellation...",
+  pt:"carregando a constelação...",
+  fr:"chargement de la constellation...",
+  es:"cargando la constelación...",
+  de:"lade die Konstellation...",
+  it:"caricamento della costellazione...",
+  ja:"星座を読み込み中...",
+  zh:"正在加载星座...",
+  ko:"별자리를 불러오는 중..."
+};
+const LOADER_CORE_LANGS = ["en","pt","fr"];
+const LOADER_EXTRA_LANGS = Object.keys(LOADER_MESSAGES).filter(lang=>!LOADER_CORE_LANGS.includes(lang));
+function shuffleLoaderLangs(langs){
+  const shuffled=[...langs];
+  for(let i=shuffled.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];
+  }
+  return shuffled;
+}
+function buildLoaderSequence(){
+  const early=normalizeLanguage(window.__loaderStartLang);
+  const first=isSupportedLanguage(LANG)?LANG:(isSupportedLanguage(early)?early:"en");
+  return [first,...LOADER_CORE_LANGS.filter(lang=>lang!==first),...shuffleLoaderLangs(LOADER_EXTRA_LANGS)];
+}
+function initLoaderTextCycle(){
+  const el=document.getElementById("loaderText");
+  if(!el)return ()=>{};
+  let sequence=buildLoaderSequence();
+  let index=0;
+  const update=()=>{
+    const lang=sequence[index%sequence.length];
+    el.textContent=LOADER_MESSAGES[lang]||t("loader");
+    index+=1;
+    if(index>=sequence.length){
+      sequence=shuffleLoaderLangs(Object.keys(LOADER_MESSAGES));
+      index=0;
+    }
+  };
+  update();
+  const timer=setInterval(update,520);
+  return ()=>clearInterval(timer);
+}
+
+const PROJECTS = [
+  {
+    id:"cadillac",
+    title:{pt:"Barbearia Cadillac",en:"Cadillac Barbershop",fr:"Barbershop Cadillac"},
+    tagline:{
+      pt:"Site real desenvolvido para uma empresa real, a Barbearia Cadillac. Apresenta serviços, horários, galeria do espaço e identidade visual, com chamadas de agendamento em uma página direta e fácil de navegar.",
+      en:"Real website developed for a real business, Cadillac Barbershop. It presents services, opening hours, a gallery of the space, and the visual identity, with booking calls in a direct page that is easy to browse.",
+      fr:"Site réel développé pour une entreprise réelle, Barbershop Cadillac. Il présente les services, les horaires, la galerie du lieu et l'identité visuelle, avec des appels à la réservation dans une page directe et facile à parcourir."
+    },
+    year:"2026",
+    type:{pt:"Site de empresa real",en:"Real business website",fr:"Site d'entreprise réelle"},
+    role:{pt:"Design e desenvolvimento",en:"Design and development",fr:"Design et développement"},
+    stack:["HTML","CSS","JavaScript","Google Fonts","Google Maps","Schema.org"],
+    url:"https://cadillacbarbearia.com.br",
+    live:true,
+    img:"assets/showcase/cadillac.png",
+    accent:"#d9bd8c"
+  },
+  {
+    id:"parrilla",
+    title:{pt:"Parrilla Churrascaria",en:"Parrilla Churrascaria",fr:"Parrilla Churrascaria"},
+    tagline:{
+      pt:"Site real desenvolvido para uma empresa real, a Parrilla Churrascaria. Funciona como um site portfólio da churrascaria, apresentando informações de atendimento, imagens do espaço, identidade visual e chamadas de reserva.",
+      en:"Real website developed for a real business, Parrilla Churrascaria. It works as the restaurant portfolio website, presenting service information, images of the place, visual identity, and reservation calls.",
+      fr:"Site réel développé pour une entreprise réelle, Parrilla Churrascaria. Il fonctionne comme le site portfolio du restaurant, avec les informations de service, les images du lieu, l'identité visuelle et les appels à la réservation."
+    },
+    year:"2026",
+    type:{pt:"Site de empresa real",en:"Real business website",fr:"Site d'entreprise réelle"},
+    role:{pt:"Design e desenvolvimento",en:"Design and development",fr:"Design et développement"},
+    stack:["HTML","CSS","JavaScript","Google Fonts","Google Maps","WhatsApp","Schema.org"],
+    url:"https://parrillachurrascaria.com.br",
+    live:true,
+    img:"assets/showcase/parrilla.png",
+    accent:"#8a6bff"
+  },
+  {
+    id:"signlinked",
+    title:{pt:"SignLinked",en:"SignLinked",fr:"SignLinked"},
+    tagline:{
+      pt:"Biblioteca comunitária de sinais em Libras criada em grupo. Participei da elaboração da ideia, da organização da experiência e da construção da interface, ajudando a tornar a consulta de sinais mais clara, acessível e colaborativa.",
+      en:"Community library of signs in Libras created as a group project. I contributed to shaping the idea, organizing the experience, and building the interface, helping make sign lookup clearer, more accessible, and collaborative.",
+      fr:"Bibliothèque communautaire de signes en Libras créée en projet de groupe. J'ai participé à l'élaboration de l'idée, à l'organisation de l'expérience et à la construction de l'interface, afin de rendre la consultation des signes plus claire, accessible et collaborative."
+    },
+    year:"2026",
+    type:{pt:"Projeto em grupo",en:"Group project",fr:"Projet de groupe"},
+    role:{pt:"Elaboração e desenvolvimento em equipe",en:"Ideation and team development",fr:"Élaboration et développement en équipe"},
+    stack:["HTML","CSS","JavaScript","Firebase","MediaPipe","Three.js"],
+    url:"https://signlinked.web.app",
+    live:true,
+    img:"assets/showcase/signlinked.png",   // ← envie a tela e salve com este nome
+    accent:"#43d6ee"
+  },
+  {
+    id:"portfolio",
+    title:{pt:"Portfólio",en:"Portfolio",fr:"Portfolio"},
+    tagline:{
+      pt:"Meu portfólio pessoal reúne apresentação profissional, sites e projetos em uma experiência visual com estrelas e constelações, transições suaves e animações como ponto forte da sua navegação e experiência.",
+      en:"My personal portfolio brings together my professional presentation, websites, and projects in a visual experience with constellations, smooth transitions, and animations as a strong point of the navigation.",
+      fr:"Mon portfolio personnel réunit ma présentation professionnelle, mes sites et mes projets dans une expérience visuelle avec constellations, transitions fluides et animations comme point fort de la navigation."
+    },
+    year:"2026",
+    type:{pt:"Portfólio pessoal",en:"Personal portfolio",fr:"Portfolio personnel"},
+    role:{pt:"Design, desenvolvimento e animações",en:"Design, development, and animations",fr:"Design, développement et animations"},
+    stack:["HTML","CSS","JavaScript","GSAP","Canvas API","Three.js","GitHub API","Formspree","Google Fonts"],
+    url:"https://feltrinemilio.dev/",
+    live:true,
+    img:"assets/showcase/portfolio.png",     // ← opcional: print da home
+    accent:"#5b8cff"
+  }
+];
+
+const SHOWCASE_IMAGE_META = {
+  cadillac:{w:1917,h:1032,widths:[960,1440,1917],bytes:1489338},
+  parrilla:{w:1917,h:1022,widths:[960,1440,1917],bytes:1767149},
+  signlinked:{w:1917,h:1020,widths:[960,1440,1917],bytes:368528},
+  portfolio:{w:1896,h:1018,widths:[960,1440,1896],bytes:1051856}
+};
+const SHOWCASE_IMAGE_SIZES = "(max-width: 860px) calc(100vw - 40px), min(54vw, 640px)";
+
+const RM = matchMedia("(prefers-reduced-motion:reduce)").matches;
+const COARSE = matchMedia("(hover:none),(pointer:coarse)").matches;
+const lerp=(a,b,n)=>a+(b-a)*n;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+/* frame-rate-independent easing: identical feel at 60/90/120Hz (dt in 60fps-frame units) */
+const aprox=(a,b,k,dt)=>a+(b-a)*(1-Math.pow(1-k,dt));
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const imgMeta=p=>SHOWCASE_IMAGE_META[p.id]||null;
+const imgBase=p=>`assets/showcase/optimized/${p.id}`;
+const imgSrcset=(p,ext)=>{
+  const meta=imgMeta(p);
+  return meta?meta.widths.map(w=>`${imgBase(p)}-${w}.${ext} ${w}w`).join(", "):"";
+};
+
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+function updateDotLabels(){
+  const scenes=SECTIONS.length?SECTIONS:[...document.querySelectorAll(".scene")];
+  document.querySelectorAll(".dots button").forEach((b,i)=>{
+    const scene=scenes[i];
+    if(scene){
+      const label=scene.dataset.label||"";
+      b.dataset.label=label;
+      b.setAttribute("aria-label",label);
+    }
+  });
+}
+function applyProjectI18n(){
+  PROJECTS.forEach((p,i)=>{
+    const sec=document.getElementById("scene-"+p.id);
+    if(!sec)return;
+    const title=tr(p.title);
+    const type=tr(p.type)||t("project_label");
+    const tagline=tr(p.tagline);
+    const role=tr(p.role);
+    const chapter=sec.querySelector('[data-p="chapter"]');
+    const titleEl=sec.querySelector('[data-p="title"]');
+    const taglineEl=sec.querySelector('[data-p="tagline"]');
+    const roleEl=sec.querySelector('[data-p="role"]');
+    const statusEl=sec.querySelector('[data-p="status"]');
+    const openEl=sec.querySelector('[data-p="open"]');
+    const barEl=sec.querySelector('[data-p="bar"]');
+    const phTitle=sec.querySelector('[data-p="placeholder-title"]');
+    const phSmall=sec.querySelector('[data-p="placeholder-small"]');
+    const img=sec.querySelector("img");
+    sec.dataset.label=title;
+    if(chapter)chapter.textContent=`${String(i+1).padStart(2,"0")} / ${type.toUpperCase()}`;
+    if(titleEl)titleEl.textContent=title;
+    if(taglineEl)taglineEl.textContent=tagline;
+    if(roleEl)roleEl.textContent=role;
+    if(statusEl)statusEl.textContent=p.live?t("status_online"):t("status_soon");
+    if(openEl)openEl.textContent=t("open_project");
+    if(barEl)barEl.textContent=p.url||title;
+    if(phTitle)phTitle.textContent=title;
+    if(phSmall)phSmall.textContent=`${t("placeholder")} assets/showcase/${p.id}.png`;
+    if(img)img.alt=title;
+  });
+}
+function applyI18n(){
+  document.documentElement.lang=t("html_lang")||LANG;
+  document.title=t("doc_title");
+  const metaDesc=document.querySelector('meta[name="description"]');
+  if(metaDesc)metaDesc.setAttribute("content",t("doc_description"));
+  const langSwitch=document.getElementById("langSwitch");
+  if(langSwitch)langSwitch.setAttribute("aria-label",t("lang_label"));
+  document.querySelectorAll("button[data-l]").forEach(b=>{
+    const active=b.dataset.l===LANG;
+    const label=t("lang_"+b.dataset.l);
+    b.classList.toggle("on",active);
+    b.setAttribute("aria-pressed",active?"true":"false");
+    b.setAttribute("aria-label",label);
+    b.title=label;
+  });
+  document.querySelectorAll("[data-i]").forEach(el=>{
+    const v=t(el.dataset.i);
+    if(v)el.textContent=v;
+  });
+  document.querySelectorAll("[data-ih]").forEach(el=>{
+    const v=t(el.dataset.ih);
+    if(v)el.innerHTML=v;
+  });
+  document.querySelectorAll("[data-i-aria]").forEach(el=>{
+    const v=t(el.dataset.iAria);
+    if(v)el.setAttribute("aria-label",v);
+  });
+  document.querySelectorAll("[data-label-key]").forEach(el=>{
+    el.dataset.label=t(el.dataset.labelKey);
+  });
+  applyProjectI18n();
+  updateDotLabels();
+}
+function setLanguage(lang,persist=false){
+  const next=normalizeLanguage(lang);
+  if(!isSupportedLanguage(next))return;
+  LANG=next;
+  if(persist)saveLanguage(LANG);
+  applyI18n();
+}
+function initLanguageSwitch(){
+  document.querySelectorAll("button[data-l]").forEach(b=>{
+    b.addEventListener("click",()=>setLanguage(b.dataset.l,true));
+  });
+}
+function initMobileNotice(){
+  const notice=document.getElementById("mobileNotice");
+  const closeBtn=document.getElementById("mobileNoticeClose");
+  if(!notice||!closeBtn)return;
+  const mobileQuery=matchMedia("(max-width: 760px), (hover:none), (pointer:coarse)");
+  const LOAD_MS=3600;
+  let shown=false;
+  let ready=false;
+  let progressStarted=false;
+  const locked=[];
+  function isOpen(){return notice.classList.contains("on");}
+  function allowedTarget(target){
+    const el=target instanceof Element?target:null;
+    if(!isOpen()||!el)return true;
+    if(el.closest(".mn-lang button"))return true;
+    if(ready&&el.closest("#mobileNoticeClose"))return true;
+    return false;
+  }
+  function guardInteraction(e){
+    if(!isOpen()||allowedTarget(e.target))return;
+    e.preventDefault();
+    e.stopPropagation();
+    if(e.stopImmediatePropagation)e.stopImmediatePropagation();
+  }
+  function focusAllowed(){
+    const allowed=[...notice.querySelectorAll(".mn-lang button"),...(ready?[closeBtn]:[])];
+    const current=document.activeElement;
+    if(!allowed.includes(current))allowed[0]?.focus({preventScroll:true});
+    return allowed;
+  }
+  function onKeydown(e){
+    if(!isOpen())return;
+    if(e.key==="Escape"){
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+    if(e.key==="Tab"){
+      const allowed=focusAllowed();
+      const i=allowed.indexOf(document.activeElement);
+      const next=allowed[(i+(e.shiftKey?-1:1)+allowed.length)%allowed.length];
+      e.preventDefault();
+      next?.focus({preventScroll:true});
+      return;
+    }
+    if(!allowedTarget(e.target)&&(e.key==="Enter"||e.key===" ")){
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }
+  function lockPage(){
+    locked.length=0;
+    document.querySelectorAll("body > *").forEach(el=>{
+      if(el===notice||el.tagName==="SCRIPT"||el.tagName==="STYLE")return;
+      locked.push([el,el.inert,el.getAttribute("aria-hidden")]);
+      el.inert=true;
+      el.setAttribute("aria-hidden","true");
+    });
+    document.body.classList.add("mobile-notice-open");
+  }
+  function unlockPage(){
+    locked.forEach(([el,wasInert,ariaHidden])=>{
+      el.inert=wasInert;
+      if(ariaHidden===null)el.removeAttribute("aria-hidden");
+      else el.setAttribute("aria-hidden",ariaHidden);
+    });
+    locked.length=0;
+    document.body.classList.remove("mobile-notice-open");
+  }
+  function setReady(next){
+    ready=next;
+    closeBtn.classList.toggle("ready",ready);
+    closeBtn.setAttribute("aria-disabled",ready?"false":"true");
+    if(ready)closeBtn.style.setProperty("--mn-progress","100%");
+  }
+  function startProgress(){
+    if(progressStarted)return;
+    progressStarted=true;
+    setReady(false);
+    closeBtn.style.setProperty("--mn-progress","0%");
+    const start=performance.now();
+    function tick(now){
+      if(!isOpen())return;
+      const pct=Math.min(100,((now-start)/LOAD_MS)*100);
+      closeBtn.style.setProperty("--mn-progress",pct.toFixed(2)+"%");
+      if(pct<100)requestAnimationFrame(tick);
+      else setReady(true);
+    }
+    requestAnimationFrame(tick);
+  }
+  function openNotice(){
+    if(shown||!mobileQuery.matches)return;
+    shown=true;
+    setReady(false);
+    notice.classList.add("on");
+    notice.setAttribute("aria-hidden","false");
+    lockPage();
+    startProgress();
+    setTimeout(()=>focusAllowed(),80);
+  }
+  function closeNotice(){
+    if(!ready)return;
+    notice.classList.remove("on");
+    notice.setAttribute("aria-hidden","true");
+    unlockPage();
+  }
+  closeBtn.addEventListener("click",closeNotice);
+  ["pointerdown","click","touchstart"].forEach(type=>addEventListener(type,guardInteraction,true));
+  addEventListener("keydown",onKeydown,true);
+  if(document.readyState==="complete"){
+    setTimeout(openNotice,520);
+  }else{
+    addEventListener("load",()=>setTimeout(openNotice,520),{once:true});
+  }
+  setTimeout(openNotice,2200);
+}
+
+function emailComposeUrl(subject="",body=""){
+  const params=new URLSearchParams({view:"cm",fs:"1",to:CONFIG.email});
+  if(subject)params.set("su",subject);
+  if(body)params.set("body",body);
+  return `https://mail.google.com/mail/?${params.toString()}`;
+}
+
+function initContactModal(){
+  const openBtn=document.getElementById("contactOpen");
+  const modal=document.getElementById("contactModal");
+  const form=document.getElementById("showcaseContactForm");
+  const status=document.getElementById("showcaseContactStatus");
+  const submit=document.getElementById("showcaseContactSubmit");
+  const linkedinLink=document.getElementById("contactLinkedinLink");
+  const githubLink=document.getElementById("contactGithubLink");
+  const emailLink=document.getElementById("contactEmailLink");
+  if(!openBtn||!modal||!form||!status||!submit)return;
+  const nameField=document.getElementById("scName");
+  const emailField=document.getElementById("scEmail");
+  const messageField=document.getElementById("scMessage");
+  const draftFields=[nameField,emailField,messageField].filter(Boolean);
+  const focusableSelector='a[href],button:not([disabled]),input:not([disabled]),textarea:not([disabled]),select:not([disabled]),[tabindex]:not([tabindex="-1"])';
+  let lastFocus=null;
+
+  if(linkedinLink)linkedinLink.href=CONFIG.linkedin;
+  if(githubLink)githubLink.href=CONFIG.github;
+  if(emailLink)emailLink.href=emailComposeUrl();
+  restoreDraft();
+  draftFields.forEach(field=>field.addEventListener("input",saveDraft));
+
+  function isOpen(){return modal.classList.contains("on");}
+  function getFocusable(){
+    return [...modal.querySelectorAll(focusableSelector)].filter(el=>el.offsetParent!==null);
+  }
+  function readDraft(){
+    try{
+      return JSON.parse(localStorage.getItem(CONTACT_DRAFT_KEY)||"{}")||{};
+    }catch(e){
+      return {};
+    }
+  }
+  function saveDraft(){
+    const draft={
+      name:nameField?.value||"",
+      email:emailField?.value||"",
+      message:messageField?.value||""
+    };
+    try{
+      if(draft.name||draft.email||draft.message)localStorage.setItem(CONTACT_DRAFT_KEY,JSON.stringify(draft));
+      else localStorage.removeItem(CONTACT_DRAFT_KEY);
+    }catch(e){}
+  }
+  function restoreDraft(){
+    const draft=readDraft();
+    if(nameField&&!nameField.value&&draft.name)nameField.value=draft.name;
+    if(emailField&&!emailField.value&&draft.email)emailField.value=draft.email;
+    if(messageField&&!messageField.value&&draft.message)messageField.value=draft.message;
+  }
+  function clearDraft(){
+    try{localStorage.removeItem(CONTACT_DRAFT_KEY);}catch(e){}
+  }
+  function setFormStatus(key,isError=false){
+    status.textContent=t(key);
+    status.classList.toggle("err",isError);
+    status.classList.add("show");
+    clearTimeout(status._hide);
+    status._hide=setTimeout(()=>status.classList.remove("show"),5000);
+  }
+  function openModal(){
+    lastFocus=document.activeElement;
+    modal.classList.add("on");
+    modal.setAttribute("aria-hidden","false");
+    document.body.classList.add("contact-modal-open");
+    setTimeout(()=>document.getElementById("scName")?.focus({preventScroll:true}),80);
+  }
+  function closeModal(){
+    if(!isOpen())return;
+    saveDraft();
+    modal.classList.remove("on");
+    modal.setAttribute("aria-hidden","true");
+    document.body.classList.remove("contact-modal-open");
+    if(lastFocus&&document.contains(lastFocus))lastFocus.focus({preventScroll:true});
+  }
+
+  openBtn.addEventListener("click",openModal);
+  modal.querySelectorAll("[data-contact-x]").forEach(el=>el.addEventListener("click",closeModal));
+  form.addEventListener("change",saveDraft);
+  addEventListener("beforeunload",saveDraft);
+  addEventListener("keydown",e=>{
+    if(!isOpen())return;
+    if(e.key==="Escape"){
+      e.preventDefault();
+      closeModal();
+      return;
+    }
+    if(e.key!=="Tab")return;
+    const focusable=getFocusable();
+    if(!focusable.length)return;
+    const first=focusable[0],last=focusable[focusable.length-1];
+    if(e.shiftKey&&document.activeElement===first){
+      e.preventDefault();
+      last.focus();
+    }else if(!e.shiftKey&&document.activeElement===last){
+      e.preventDefault();
+      first.focus();
+    }
+  });
+
+  form.addEventListener("submit",async e=>{
+    e.preventDefault();
+    if(!form.reportValidity())return;
+    const name=nameField.value.trim();
+    const email=emailField.value.trim();
+    const message=messageField.value.trim();
+    const endpoint=(CONFIG.formEndpoint||"").trim();
+
+    if(!endpoint){
+      saveDraft();
+      const composeUrl=emailComposeUrl(`Contato pelo showcase - ${name}`,`${message}\n\n${name} (${email})`);
+      const opened=window.open(composeUrl,"_blank","noopener");
+      if(!opened)window.location.href=composeUrl;
+      setFormStatus("f_mailto");
+      return;
+    }
+
+    submit.disabled=true;
+    setFormStatus("f_sending");
+    try{
+      const res=await fetch(endpoint,{
+        method:"POST",
+        headers:{"Content-Type":"application/json","Accept":"application/json"},
+        body:JSON.stringify({
+          name,
+          email,
+          message,
+          _replyto:email,
+          _subject:`Contato pelo showcase - ${name}`
+        })
+      });
+      if(!res.ok)throw new Error("Form endpoint rejected the message");
+      form.reset();
+      clearDraft();
+      setFormStatus("f_ok");
+    }catch(err){
+      setFormStatus("f_fail",true);
+    }finally{
+      submit.disabled=false;
+    }
+  });
+}
+
+/* =====================================================================
+   build project scenes from data
+   ===================================================================== */
+function buildScenes(){
+  const wrap=document.getElementById("wrap");
+  const endScene=document.getElementById("scene-end");
+  PROJECTS.forEach((p,i)=>{
+    const title=tr(p.title);
+    const type=tr(p.type)||t("project_label");
+    const tagline=tr(p.tagline);
+    const role=tr(p.role);
+    const meta=imgMeta(p);
+    const avifSet=imgSrcset(p,"avif");
+    const webpSet=imgSrcset(p,"webp");
+    const sec=document.createElement("section");
+    sec.className="scene proj"+(i%2?" flip":"");
+    sec.id="scene-"+p.id;
+    sec.dataset.project=p.id;
+    sec.dataset.label=title;
+    sec.dataset.accent=p.accent||"#5b8cff";
+    const chap=String(i+1).padStart(2,"0");
+    const statusTxt=p.live?t("status_online"):t("status_soon");
+    sec.innerHTML=`
+      <div class="inner">
+        <div class="copy">
+          <span class="p-chapter rv" data-p="chapter">${chap} / ${esc(type.toUpperCase())}</span>
+          <h2 class="rv d1" data-p="title">${esc(title)}</h2>
+          <p class="p-tagline rv d2" data-p="tagline">${esc(tagline)}</p>
+          <div class="p-meta rv d2">
+            <span>${esc(p.year||"")}</span>
+            <span data-p="role">${esc(role)}</span>
+            <span class="p-status ${p.live?"":"soon"}"><i class="sd"></i><em data-p="status">${statusTxt}</em></span>
+          </div>
+          <div class="p-tags rv d3">${(p.stack||[]).map(s=>`<span>${esc(s)}</span>`).join("")}</div>
+          <div class="p-acts rv d3">
+            ${p.url?`<a class="btn btn-p" href="${esc(p.url)}" ${/^https?:/.test(p.url)?'target="_blank" rel="noopener"':''}><span data-p="open">${t("open_project")}</span><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>`:""}
+          </div>
+        </div>
+        <div class="shot rv d1">
+          <div class="frame" data-frame>
+            <div class="bar"><i></i><i></i><i></i><em data-p="bar">${esc(p.url||title)}</em></div>
+            <div class="screen">
+              <div class="ph"><span class="star"></span><b data-p="placeholder-title">${esc(title)}</b><small data-p="placeholder-small">${t("placeholder")} assets/showcase/${esc(p.id)}.png</small></div>
+              <picture>
+                ${avifSet?`<source type="image/avif" srcset="${esc(avifSet)}" sizes="${esc(SHOWCASE_IMAGE_SIZES)}" />`:""}
+                ${webpSet?`<source type="image/webp" srcset="${esc(webpSet)}" sizes="${esc(SHOWCASE_IMAGE_SIZES)}" />`:""}
+                <img alt="${esc(title)}" src="${esc(p.img||"")}" ${meta?`width="${meta.w}" height="${meta.h}" data-heavy-weight="${meta.bytes}"`:""} sizes="${esc(SHOWCASE_IMAGE_SIZES)}" loading="eager" decoding="async" fetchpriority="${i===0?"high":"auto"}" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    wrap.insertBefore(sec,endScene);
+  });
+
+  // finale breathing room: an empty, full-height scene between the last project and the contact scene,
+  // so the fly-through and the reveal each get their own scroll distance (less crammed).
+  const spacer=document.createElement("section");
+  spacer.className="scene";
+  spacer.id="scene-finale";
+  spacer.dataset.label="";
+  spacer.setAttribute("aria-hidden","true");
+  wrap.insertBefore(spacer,endScene);
+
+  // reveal frame only if the browser-selected image actually exists
+  document.querySelectorAll(".frame").forEach(frame=>{
+    const img=frame.querySelector("img");
+    if(!img)return;
+    const show=()=>frame.classList.add("has-img");
+    const hide=()=>frame.classList.remove("has-img");
+    if(img.complete){
+      img.naturalWidth>0?show():hide();
+      return;
+    }
+    img.addEventListener("load",show,{once:true});
+    img.addEventListener("error",hide,{once:true});
+  });
+}
+
+/* =====================================================================
+   side dots (hybrid nav) + reveals + active section
+   ===================================================================== */
+let SECTIONS=[], activeIdx=0;
+function buildNav(){
+  SECTIONS=[...document.querySelectorAll(".scene")];
+  const dots=document.getElementById("dots");
+  dots.innerHTML=SECTIONS.map((s,i)=>`<button type="button" data-dot-index="${i}" data-label="${esc(s.dataset.label||"")}" aria-label="${esc(s.dataset.label||"")}"${s.id==="scene-finale"?' style="display:none"':''}></button>`).join("");
+  dots.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    SECTIONS[+b.dataset.dotIndex].scrollIntoView({behavior:RM?"auto":"smooth",block:"start"});
+  }));
+  updateDots(0);
+}
+function updateDots(i){
+  document.querySelectorAll(".dots button").forEach((b,k)=>b.classList.toggle("on",k===i));
+}
+function setAccent(hex){
+  if(!hex)return;
+  document.documentElement.style.setProperty("--accent",hex);
+}
+
+function initObservers(){
+  const revs=document.querySelectorAll(".rv");
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.18});
+  revs.forEach(el=>io.observe(el));
+
+  const sio=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){
+      const i=SECTIONS.indexOf(e.target);
+      if(i>=0){activeIdx=i;updateDots(i);setAccent(e.target.dataset.accent||"#5b8cff");
+        if(SCENE)SCENE.focusOn(i);}
+    }
+  }),{threshold:.5});
+  SECTIONS.forEach(s=>sio.observe(s));
+}
+
+/* =====================================================================
+   THREE.js: star/constellation field with scroll-driven camera travel
+   ===================================================================== */
+let SCENE=null;
+function makeStarTexture(){
+  const c=document.createElement("canvas");c.width=c.height=64;
+  const g=c.getContext("2d");
+  const grd=g.createRadialGradient(32,32,0,32,32,32);
+  grd.addColorStop(0,"rgba(255,255,255,1)");
+  grd.addColorStop(.25,"rgba(255,255,255,.9)");
+  grd.addColorStop(.5,"rgba(180,205,255,.35)");
+  grd.addColorStop(1,"rgba(180,205,255,0)");
+  g.fillStyle=grd;g.beginPath();g.arc(32,32,32,0,7);g.fill();
+  return new THREE.CanvasTexture(c);
+}
+function initThree(){
+  const bgCanvas=document.getElementById("bg");
+  if(RM||typeof THREE==="undefined"||!bgCanvas){document.body.classList.add("nogl");buildFallbackStars();return null;}
+  let renderer;
+  try{
+    renderer=new THREE.WebGLRenderer({canvas:bgCanvas,antialias:false,alpha:true,depth:false,stencil:false,powerPreference:"high-performance",failIfMajorPerformanceCaveat:false});
+  }catch(e){document.body.classList.add("nogl");buildFallbackStars();return null;}
+
+  const DPR=Math.min(devicePixelRatio||1,1.25);
+  renderer.setPixelRatio(DPR);
+  renderer.setSize(innerWidth,innerHeight);
+  const scene=new THREE.Scene();
+  scene.fog=new THREE.FogExp2(0x04050a,0.0012);
+  const camera=new THREE.PerspectiveCamera(62,innerWidth/innerHeight,0.1,3000);
+  camera.position.set(0,0,60);
+
+  const TRAVEL=1500;            // total depth travelled across the page
+  const tex=makeStarTexture();
+
+  // ---- ambient star field ----
+  const N=COARSE?300:700;
+  const pos=new Float32Array(N*3), col=new Float32Array(N*3);
+  const PAL=[[156/255,192/255,255/255],[156/255,192/255,255/255],[120/255,170/255,255/255],[67/255,214/255,238/255],[236/255,217/255,175/255]];
+  for(let i=0;i<N;i++){
+    pos[i*3]  =(Math.random()-.5)*900;
+    pos[i*3+1]=(Math.random()-.5)*600;
+    pos[i*3+2]=60-Math.random()*(TRAVEL+200);
+    const c=PAL[(Math.random()*PAL.length)|0];
+    col[i*3]=c[0];col[i*3+1]=c[1];col[i*3+2]=c[2];
+  }
+  const g=new THREE.BufferGeometry();
+  g.setAttribute("position",new THREE.BufferAttribute(pos,3));
+  g.setAttribute("color",new THREE.BufferAttribute(col,3));
+  const m=new THREE.PointsMaterial({size:3.4,map:tex,vertexColors:true,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true});
+  const stars=new THREE.Points(g,m);
+  scene.add(stars);
+
+  // ---- elegant, recognizable constellations (one per project) ----
+  // normalized coords (x right, y up) + explicit edges = real figures, not random blobs.
+  const SHAPES={
+    dipper:{pts:[[-1.05,.30],[-.62,.17],[-.24,.07],[.08,0],[.52,.13],[.62,-.30],[.16,-.40]],edges:[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,3]],anchors:[0,4,5]},          // Ursa Maior (Big Dipper)
+    orion:{pts:[[-.50,.85],[.45,.90],[-.14,.06],[0,0],[.14,-.06],[-.40,-.85],[.50,-.90]],edges:[[0,2],[1,4],[2,3],[3,4],[2,5],[4,6]],anchors:[0,1,5,6]},                 // Órion
+    cassiopeia:{pts:[[-1,.20],[-.50,-.22],[0,.28],[.50,-.22],[1,.20]],edges:[[0,1],[1,2],[2,3],[3,4]],anchors:[0,2,4]},                                                    // Cassiopeia (W)
+    cygnus:{pts:[[0,.92],[0,0],[0,-.86],[-.80,.10],[.80,.10],[-.40,.50],[.42,-.42]],edges:[[0,1],[1,2],[3,1],[1,4]],anchors:[0,2,3,4]},                                    // Cygnus (Cruzeiro do Norte)
+    lyra:{pts:[[0,.82],[-.46,.22],[.46,.22],[-.32,-.52],[.32,-.52]],edges:[[0,1],[0,2],[1,3],[2,4],[3,4],[1,2]],anchors:[0]},                                              // Lyra (diamante)
+    crux:{pts:[[0,.95],[0,-.88],[-.62,-.02],[.56,.08]],edges:[[0,1],[2,3]],anchors:[0,1,2,3]}                                                                              // Cruzeiro do Sul
+  };
+  const ORDER=["dipper","orion","cassiopeia","cygnus","lyra","crux"];
+  const SCALE=60, STAND=240;
+  function buildConstellation(shape,hex){
+    const grp=new THREE.Group(), accent=new THREE.Color(hex);
+    const lpts=[];
+    shape.edges.forEach(([a,b])=>{const A=shape.pts[a],B=shape.pts[b];
+      lpts.push(new THREE.Vector3(A[0]*SCALE,A[1]*SCALE,0),new THREE.Vector3(B[0]*SCALE,B[1]*SCALE,0));});
+    const lg=new THREE.BufferGeometry().setFromPoints(lpts);
+    const lm=new THREE.LineBasicMaterial({color:accent,transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending});
+    lm.__max=.55;grp.add(new THREE.LineSegments(lg,lm));
+    const mk=(isAnchor,size,col,max)=>{
+      const arr=shape.pts.filter((_,k)=>shape.anchors.includes(k)===isAnchor);
+      if(!arr.length)return null;
+      const pos=new Float32Array(arr.length*3);
+      arr.forEach((p,k)=>{pos[k*3]=p[0]*SCALE;pos[k*3+1]=p[1]*SCALE;pos[k*3+2]=0;});
+      const g=new THREE.BufferGeometry();g.setAttribute("position",new THREE.BufferAttribute(pos,3));
+      const m=new THREE.PointsMaterial({size,map:tex,color:col,transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true});
+      m.__max=max;grp.add(new THREE.Points(g,m));return m;
+    };
+    const mats=[lm,mk(false,7,new THREE.Color(0xdfe9ff),.9),mk(true,16,new THREE.Color(0xffffff),1)].filter(Boolean);
+    grp.userData.mats=mats;grp.visible=false;
+    return grp;
+  }
+  // ---- the favicon rebuilt as a REAL constellation: exact node positions, sizes & cyan colours ----
+  function buildFavicon(){
+    const grp=new THREE.Group(), NORM=170, mats=[];
+    const P=v=>[v[0]/NORM*SCALE,-v[1]/NORM*SCALE];                 // svg (centre-relative) → 3D (y up)
+    // [x, y] in favicon units relative to its centre (256,256), point size, colour
+    const NODES=[
+      [   0,   0, 22, 0xdaf7ff],   // centre — biggest, white-cyan (the heart we plunge into)
+      [-152,-128, 10, 0x2fd2ff],
+      [  90,-140, 15, 0x27ccff],
+      [ 168,   2, 10, 0x33d4ff],
+      [  32, 154, 11, 0x2bcfff],
+      [-152,  84, 17, 0x22c6ff]
+    ];
+    // 1) radiating lines: centre → each outer node
+    const lp=[];
+    for(let k=1;k<NODES.length;k++){const a=P(NODES[0]),b=P(NODES[k]);lp.push(new THREE.Vector3(a[0],a[1],0),new THREE.Vector3(b[0],b[1],0));}
+    const lm=new THREE.LineBasicMaterial({color:new THREE.Color(0x1ba9ff),transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending});
+    lm.__max=.6;grp.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(lp),lm));mats.push(lm);
+    // 2) orbital arcs — exact SVG elliptical-arc sampling
+    const svgArc=(x1,y1,r,fA,fS,x2,y2,seg)=>{
+      const dx=(x1-x2)/2,dy=(y1-y2)/2;let rr=r;const lam=(dx*dx+dy*dy)/(rr*rr);if(lam>1)rr*=Math.sqrt(lam);
+      let num=rr*rr*(rr*rr-dx*dx-dy*dy);if(num<0)num=0;const den=rr*rr*(dx*dx+dy*dy);
+      let co=den?Math.sqrt(num/den):0;if(fA===fS)co=-co;
+      const cxp=co*dy,cyp=-co*dx,cx=cxp+(x1+x2)/2,cy=cyp+(y1+y2)/2;
+      const ang=(ux,uy,vx,vy)=>{const d=Math.sqrt((ux*ux+uy*uy)*(vx*vx+vy*vy))||1;let c=Math.max(-1,Math.min(1,(ux*vx+uy*vy)/d)),a=Math.acos(c);if(ux*vy-uy*vx<0)a=-a;return a;};
+      const t1=ang(1,0,(dx-cxp)/rr,(dy-cyp)/rr);let dth=ang((dx-cxp)/rr,(dy-cyp)/rr,(-dx-cxp)/rr,(-dy-cyp)/rr);
+      if(!fS&&dth>0)dth-=2*Math.PI;if(fS&&dth<0)dth+=2*Math.PI;
+      const o=[];for(let i=0;i<=seg;i++){const th=t1+dth*(i/seg);o.push([cx+rr*Math.cos(th),cy+rr*Math.sin(th)]);}return o;
+    };
+    [[112,324,170,0,1,360,140],[386,154,170,0,1,334,418],[151,286,118,0,1,358,206],[160,336,118,0,0,350,244]].forEach(A=>{
+      try{
+        const v=svgArc(A[0]-256,A[1]-256,A[2],A[3],A[4],A[5]-256,A[6]-256,28).map(pp=>{const q=P(pp);return new THREE.Vector3(q[0],q[1],0);});
+        const am=new THREE.LineBasicMaterial({color:new THREE.Color(0x63e3ff),transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending});
+        am.__max=.48;grp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(v),am));mats.push(am);
+      }catch(e){}
+    });
+    // 3) nodes — each with its own size & colour
+    NODES.forEach((nd,idx)=>{
+      const q=P(nd),g2=new THREE.BufferGeometry();
+      g2.setAttribute("position",new THREE.BufferAttribute(new Float32Array([q[0],q[1],0]),3));
+      const m2=new THREE.PointsMaterial({size:nd[2],map:tex,color:new THREE.Color(nd[3]),transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true});
+      m2.__max=idx===0?1:.95;grp.add(new THREE.Points(g2,m2));mats.push(m2);
+    });
+    grp.userData.mats=mats;grp.visible=false;
+    return grp;
+  }
+  function buildFaviconLogo(){
+    const grp=new THREE.Group(), mats=[];
+    const CENTER=256, NORM=235, SVG_ZOOM=1, NODE_BASE=52;
+    const P=(x,y)=>new THREE.Vector3((x-CENTER)*SVG_ZOOM/NORM*SCALE,(CENTER-y)*SVG_ZOOM/NORM*SCALE,0);
+    const R=r=>r*SVG_ZOOM/NORM*SCALE;
+    const nodes=[
+      {x:256,y:256,r:68,c:0xdaf7ff},
+      {x:104,y:128,r:31,c:0x2fd2ff},
+      {x:346,y:116,r:48,c:0x27ccff},
+      {x:424,y:258,r:31,c:0x33d4ff},
+      {x:288,y:410,r:35,c:0x2bcfff},
+      {x:104,y:340,r:52,c:0x22c6ff}
+    ];
+    const circleArc=(radius,startDeg,endDeg,seg)=>{
+      const pts=[],r=R(radius),span=endDeg-startDeg;
+      for(let i=0;i<=seg;i++){
+        const a=(startDeg+span*(i/seg))*Math.PI/180;
+        pts.push(new THREE.Vector3(Math.cos(a)*r,Math.sin(a)*r,0));
+      }
+      return pts;
+    };
+    const linePts=[];
+    nodes.slice(1).forEach(n=>linePts.push(P(256,256),P(n.x,n.y)));
+    const lm=new THREE.LineBasicMaterial({color:new THREE.Color(0xb8f3ff),transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending});
+    lm.__max=.58;grp.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(linePts),lm));mats.push(lm);
+    [
+      {arc:[170,205,48],c:0x09c8ff,m:.46},
+      {arc:[170,38,-64],c:0xf8fbff,m:.44},
+      {arc:[118,196,26],c:0xdff8ff,m:.38},
+      {arc:[118,-140,7],c:0x63e3ff,m:.42}
+    ].forEach(a=>{
+      try{
+        const angles=a.arc;
+        const pts=circleArc(angles[0],angles[1],angles[2],36);
+        const am=new THREE.LineBasicMaterial({color:new THREE.Color(a.c),transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending});
+        am.__max=a.m;grp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),am));mats.push(am);
+      }catch(e){}
+    });
+    nodes.forEach((n,idx)=>{
+      const p=P(n.x,n.y),g2=new THREE.BufferGeometry();
+      g2.setAttribute("position",new THREE.BufferAttribute(new Float32Array([p.x,p.y,0]),3));
+      const m2=new THREE.PointsMaterial({size:NODE_BASE*(n.r/68)*SVG_ZOOM,map:tex,color:new THREE.Color(n.c),transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true});
+      m2.__max=idx===0?1:.95;grp.add(new THREE.Points(g2,m2));mats.push(m2);
+    });
+    grp.userData.mats=mats;grp.visible=false;
+    return grp;
+  }
+  // ---- place each constellation at its OWN location in space ----
+  const SIDE=85;
+  const cons=PROJECTS.map((p,i)=>{
+    const g=buildConstellation(SHAPES[ORDER[i%ORDER.length]],p.accent||"#5b8cff");
+    const x=(i%2?-1:1)*SIDE, y=((i%3)-1)*34, z=-((i+1)/(PROJECTS.length+1))*TRAVEL;
+    g.position.set(x,y,z);
+    scene.add(g);
+    return g;
+  });
+
+  // ---- finale: the favicon constellation becomes a small crest above the closing title. ----
+  const first=cons[0], last=cons[cons.length-1];
+  const CORE_Z=(last?last.position.z:-TRAVEL)-STAND*1.25;
+  const END_Z=CORE_Z-STAND*1.2;
+  const FAV_START=new THREE.Vector3(0,0,CORE_Z);
+  const FAV_POS=new THREE.Vector3(0,42,CORE_Z);
+  const FAV_LOOK=new THREE.Vector3(0,-44,CORE_Z);
+  const fav=buildFaviconLogo();fav.position.copy(FAV_START);fav.scale.setScalar(.84);scene.add(fav);
+  // scratch vectors for the finale composition (avoid per-frame allocations)
+  const _v1=new THREE.Vector3(),_v2=new THREE.Vector3(),_v3=new THREE.Vector3(),_v4=new THREE.Vector3(),_look=new THREE.Vector3();
+
+  // ---- camera flight path: one stop per section (intro + projects + end) ----
+  const stops=[];
+  stops.push({p:new THREE.Vector3(0,0,(first?first.position.z:0)+STAND*2.3), l:(first?first.position.clone():new THREE.Vector3(0,0,-300)), side:0});
+  cons.forEach((g,i)=>stops.push({p:new THREE.Vector3(g.position.x,g.position.y,g.position.z+STAND), l:g.position.clone(), side:(i%2?-1:1)}));
+  // favicon waypoint: an extra stop AT the favicon (matches the empty spacer scene) so the approach and the reveal each get their own scroll distance
+  stops.push({p:new THREE.Vector3(0,0,CORE_Z), l:new THREE.Vector3(0,0,CORE_Z-360), side:0});
+  // end stop: gaze stays below the crest so the text remains readable.
+  stops.push({p:new THREE.Vector3(0,0,END_Z), l:FAV_LOOK.clone(), side:0});
+
+  // ---- scroll + mouse ----
+  let scrollProg=0, tScrollProg=0, mx=0,my=0, tmx=0,tmy=0, focusI=0;
+  function onScroll(){const max=document.documentElement.scrollHeight-innerHeight;tScrollProg=max>0?clamp(scrollY/max,0,1):0;}
+  addEventListener("scroll",onScroll,{passive:true});
+  if(!COARSE)addEventListener("mousemove",e=>{tmx=(e.clientX/innerWidth-.5);tmy=(e.clientY/innerHeight-.5);},{passive:true});
+  onScroll();scrollProg=tScrollProg;
+
+  const tpPos=new THREE.Vector3().copy(stops[0].p);
+  const tpLook=new THREE.Vector3().copy(stops[0].l);
+  const curLook=new THREE.Vector3().copy(stops[0].l);
+  camera.position.copy(stops[0].p);
+  const smooth=t=>t*t*(3-2*t);
+
+  // continuous flight path driven by the EXACT scroll fraction → no discrete section jumps
+  function flightTarget(){
+    const n=stops.length, f=clamp(scrollProg,0,1)*(n-1);
+    const i=Math.min(f|0,n-2), fr=smooth(f-i);
+    const A=stops[i], B=stops[i+1];
+    tpPos.lerpVectors(A.p,B.p,fr);
+    tpLook.lerpVectors(A.l,B.l,fr);
+    return A.side+(B.side-A.side)*fr;
+  }
+
+  let raf=null,running=false,T=0,lt=0;
+  function render(now){
+    if(!running)return;
+    raf=requestAnimationFrame(render);
+    const dt=lt?Math.min(4,(now-lt)/16.667):1;lt=now;T+=dt;
+    // smooth the raw scroll input, then fly continuously along the path (buttery at any refresh rate)
+    scrollProg=aprox(scrollProg,tScrollProg,.2,dt);
+    const ev=1-Math.pow(1-.16,dt);                 // frame-rate-independent camera easing
+    mx=aprox(mx,tmx,.06,dt);my=aprox(my,tmy,.06,dt);
+    const side=flightTarget();
+    // shift the figure into open space (opposite the mockup), fully on-screen; centered on mobile
+    const off=(camera.aspect>1?Math.min(120,STAND*0.6*camera.aspect*0.42):0)*side;
+    tpLook.x+=off; tpLook.y-=22*Math.min(1,Math.abs(side));
+    // ---- finale: settle the constellation above the title, then let it rotate slowly. ----
+    const finProg=cons.length/(stops.length-1);                 // scroll fraction at the last project (finale spans the spacer + end)
+    const seg=clamp((scrollProg-finProg)/Math.max(1e-3,1-finProg),0,1);
+    let ROLL=0;
+    fav.position.copy(FAV_START);
+    if(seg>0){
+      const center=smooth(clamp(seg/0.3,0,1));                  // ease onto the axis for a dead-center plunge
+      tpPos.x=lerp(tpPos.x,0,center*0.95); tpPos.y=lerp(tpPos.y,0,center*0.95);
+      const drift=smooth(clamp((seg-0.5)/0.5,0,1));
+      const turn=smooth(clamp((seg-0.42)/0.58,0,1));
+      fav.position.lerpVectors(FAV_START,FAV_POS,turn);
+      tpPos.x+=STAND*0.18*drift; tpPos.y+=STAND*0.08*drift;
+      _look.copy(FAV_START).lerp(FAV_LOOK,turn);
+      tpLook.lerp(_look,center);
+      ROLL=turn*Math.PI*.12;
+    }
+    tpPos.x+=mx*40; tpPos.y+=-my*26;
+    camera.position.lerp(tpPos,ev);
+    curLook.lerp(tpLook,ev);
+    if(ROLL!==0){
+      _v1.copy(curLook).sub(camera.position);
+      if(_v1.lengthSq()>1e-6){
+        _v1.normalize();
+        _v2.set(0,1,0);if(Math.abs(_v1.y)>0.98)_v2.set(0,0,1);
+        _v3.copy(_v2).addScaledVector(_v1,-_v2.dot(_v1)).normalize();
+        _v4.copy(_v1).cross(_v3);
+        camera.up.copy(_v3).multiplyScalar(Math.cos(ROLL)).addScaledVector(_v4,Math.sin(ROLL));
+      }
+    }else{
+      camera.up.set(Math.sin(T*0.0009)*0.06,1,0);
+    }
+    camera.lookAt(curLook);
+    fav.quaternion.copy(camera.quaternion);
+    fav.rotateZ(T*0.00018);
+    stars.rotation.z+=0.0003*dt;
+    // constellations live in space: brightness by distance (you see them approach as you fly in)
+    cons.forEach((g,k)=>{
+      g.rotation.z=T*0.00018+k*.18;
+      const dist=camera.position.distanceTo(g.position);
+      let o=clamp(1-(dist-STAND)/(STAND*1.7),0,1);
+      if(k===focusI)o=Math.max(o,.9);
+      const tw=.82+.18*Math.sin(T*.035+k*1.3);
+      let vis=false;
+      g.userData.mats.forEach(mat=>{mat.opacity=aprox(mat.opacity,o*tw*mat.__max,.08,dt);if(mat.opacity>.012)vis=true;});
+      g.visible=vis;
+    });
+    // the favicon stays lit through the whole finale — we plunge through it, then the POV turns back onto it
+    const seen=smooth(clamp((seg-0.04)/0.26,0,1));
+    const textGuard=lerp(1,.72,smooth(clamp((seg-.45)/.55,0,1)));
+    fav.userData.mats.forEach(mat=>{mat.opacity=aprox(mat.opacity,seen*textGuard*mat.__max,.12,dt);});
+    fav.visible=seen>0.012;
+    renderer.render(scene,camera);
+  }
+  function start(){if(running||document.hidden)return;lt=0;running=true;requestAnimationFrame(render);}
+  function stop(){running=false;if(raf)cancelAnimationFrame(raf);}
+
+  addEventListener("resize",()=>{
+    camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
+    renderer.setSize(innerWidth,innerHeight);
+  });
+  document.addEventListener("visibilitychange",()=>{document.hidden?stop():start();});
+  bgCanvas.addEventListener("webglcontextlost",e=>{
+    e.preventDefault();
+    stop();
+    document.body.classList.add("nogl");
+    buildFallbackStars();
+  },{once:true});
+
+  return {
+    start,stop,
+    focusOn(i){focusI=clamp(i-1,0,Math.max(cons.length-1,0));}
+  };
+}
+
+function buildFallbackStars(){
+  const box=document.getElementById("bgFallback");
+  const n=COARSE?40:90;
+  let html="";
+  for(let i=0;i<n;i++){
+    const s=(Math.random()*2+1).toFixed(1);
+    html+=`<span class="st" style="left:${(Math.random()*100).toFixed(2)}%;top:${(Math.random()*100).toFixed(2)}%;width:${s}px;height:${s}px;animation-delay:${(Math.random()*4).toFixed(2)}s"></span>`;
+  }
+  box.innerHTML=html;
+}
+
+/* =====================================================================
+   shooting stars (2D overlay): come from ALL directions and always
+   ENTER FROM OFF-SCREEN (never spawn in the middle). Foreground ones grow
+   as they cross and pass in front of the content.
+   ===================================================================== */
+function ShootingStars(canvas,opts){
+  if(!canvas)return {start(){},stop(){}};
+  const x=canvas.getContext("2d");let w,h;
+  const DPR=Math.min(devicePixelRatio||1,1.25);
+  function size(){w=canvas.width=innerWidth*DPR;h=canvas.height=innerHeight*DPR;canvas.style.width=innerWidth+"px";canvas.style.height=innerHeight+"px";}
+  size();addEventListener("resize",size);
+  const COLORS=[[67,214,238],[236,217,175],[156,192,255]];
+  let list=[],T=0,next=opts.firstDelay||120,run=false,raf=null,last=0;const FT=1000/60;
+  function spawn(){
+    const ang=Math.random()*Math.PI*2;                 // any direction
+    const dx=Math.cos(ang),dy=Math.sin(ang);
+    const px=(0.18+Math.random()*0.64)*w, py=(0.18+Math.random()*0.64)*h; // crossing point on-screen
+    const diag=Math.hypot(w,h), startDist=diag*0.62;   // begin well outside the viewport
+    list.push({x:px-dx*startDist,y:py-dy*startDist,dx,dy,
+      sp:(opts.speed[0]+Math.random()*(opts.speed[1]-opts.speed[0]))*DPR,
+      col:COLORS[(Math.random()*COLORS.length)|0],
+      len:(opts.len[0]+Math.random()*(opts.len[1]-opts.len[0]))*DPR,
+      base:(opts.size[0]+Math.random()*(opts.size[1]-opts.size[0]))*DPR,
+      travelled:0,total:startDist*2});
+  }
+  function frame(now){
+    if(!run)return;
+    raf=requestAnimationFrame(frame);
+    if(last&&now-last<FT)return;
+    const dt=last?Math.min(4,(now-last)/16.667):1;last=now;T+=dt;
+    x.clearRect(0,0,w,h);
+    if(T>=next&&list.length<opts.max){spawn();next=T+((opts.rate[0]+Math.random()*(opts.rate[1]-opts.rate[0]))|0);}
+    for(let k=list.length-1;k>=0;k--){const s=list[k];
+      s.x+=s.dx*s.sp*dt;s.y+=s.dy*s.sp*dt;s.travelled+=s.sp*dt;
+      const prog=clamp(s.travelled/s.total,0,1);
+      const scale=opts.grow?(0.4+prog*2.1):1;
+      const alpha=clamp(Math.min(prog,1-prog)*6+0.12,0,1); // fade in/out at the edges
+      const lw=s.base*scale, len=s.len*(opts.grow?(0.6+scale*0.5):1);
+      const tx=s.x-s.dx*len, ty=s.y-s.dy*len;
+      const g=x.createLinearGradient(s.x,s.y,tx,ty);
+      g.addColorStop(0,`rgba(${s.col[0]},${s.col[1]},${s.col[2]},${0.95*alpha})`);
+      g.addColorStop(1,`rgba(${s.col[0]},${s.col[1]},${s.col[2]},0)`);
+      x.strokeStyle=g;x.lineWidth=lw;x.lineCap="round";
+      x.beginPath();x.moveTo(s.x,s.y);x.lineTo(tx,ty);x.stroke();
+      x.beginPath();x.arc(s.x,s.y,lw*0.9,0,7);x.fillStyle=`rgba(${s.col[0]},${s.col[1]},${s.col[2]},${alpha})`;x.fill();
+      if(prog>=1||s.x<-160*DPR||s.x>w+160*DPR||s.y<-160*DPR||s.y>h+160*DPR)list.splice(k,1);
+    }
+  }
+  function start(){if(run||RM||document.hidden)return;last=0;run=true;requestAnimationFrame(frame);}
+  function stop(){run=false;if(raf)cancelAnimationFrame(raf);x.clearRect(0,0,w,h);}
+  document.addEventListener("visibilitychange",()=>{document.hidden?stop():start();});
+  return {start,stop};
+}
+
+/* =====================================================================
+   boot preloader: keep the loader until at least 60% of heavy assets
+   are fetched/decoded, with a hard escape hatch for bad networks.
+   ===================================================================== */
+const BOOT_MIN_MS=1800;
+const BOOT_MAX_MS=6800;
+const BOOT_HEAVY_RATIO=.6;
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+
+function imageReady(img){
+  if(!img)return Promise.resolve();
+  const decode=()=>img.decode?img.decode().catch(()=>{}):Promise.resolve();
+  if(img.complete)return img.naturalWidth>0?decode():Promise.resolve();
+  return new Promise(resolve=>{
+    const done=()=>decode().finally(resolve);
+    img.addEventListener("load",done,{once:true});
+    img.addEventListener("error",resolve,{once:true});
+  });
+}
+
+function waitForHeavyAssets(targetRatio=BOOT_HEAVY_RATIO){
+  const assets=[...document.querySelectorAll("[data-heavy-weight]")].map(img=>({
+    weight:Math.max(1,Number(img.dataset.heavyWeight)||1),
+    promise:imageReady(img)
+  }));
+  if(document.fonts&&document.fonts.ready){
+    assets.push({weight:300000,promise:document.fonts.ready.catch(()=>{})});
+  }
+  if(!assets.length)return Promise.resolve();
+  const total=assets.reduce((sum,a)=>sum+a.weight,0);
+  let complete=0,settled=false;
+  return new Promise(resolve=>{
+    const maybeResolve=()=>{
+      if(!settled&&complete/total>=targetRatio){
+        settled=true;
+        resolve();
+      }
+    };
+    assets.forEach(asset=>{
+      asset.promise.finally(()=>{
+        complete+=asset.weight;
+        maybeResolve();
+      });
+    });
+    maybeResolve();
+  });
+}
+
+/* =====================================================================
+   boot
+   ===================================================================== */
+initLanguageSwitch();
+buildScenes();
+buildNav();
+applyI18n();
+const stopLoaderTextCycle=initLoaderTextCycle();
+initContactModal();
+initMobileNotice();
+SCENE=initThree();
+initObservers();
+const SHOOT_BG=ShootingStars(document.getElementById("shootBg"),{speed:[6,11],len:[80,150],size:[1,1.8],rate:[260,520],max:2,grow:false,firstDelay:120});
+let revealed=false;
+function reveal(){
+  if(revealed)return;
+  revealed=true;
+  stopLoaderTextCycle();
+  document.body.classList.add("ready");
+  if(SCENE)SCENE.start();
+  SHOOT_BG.start();
+}
+Promise.race([
+  Promise.all([delay(BOOT_MIN_MS),waitForHeavyAssets()]),
+  delay(BOOT_MAX_MS)
+]).then(reveal);
+</script>
+</body>
+</html>
